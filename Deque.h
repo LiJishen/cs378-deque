@@ -1041,61 +1041,7 @@ class my_deque {
          */
         void resize (size_type s, const_reference v = value_type()) {
             // <your code>
-            iterator eIter(this, _size);
-                //cout<<"s is  " << s<<endl;
-                //cout<<"size() is  "<< size()<<endl;
 
-            if( s == size()){
-                //cout<<"1 "<<endl;
-                return;
-            }
-            else if (s < size()) {
-                //cout<<"2 "<<endl;
-                eIter = destroy(_a, begin() + difference_type(s), end());
-                _end = &*eIter;
-                _oend = _obegin + ((s + (_begin - *_obegin)) / _arraySize);
-            } 
-            else {
-                //cout<<"3 "<<endl;
-                // get hypothetical row number of bigger size's back element
-                int endRowNum = (s + (_begin - *_obegin)) / _arraySize;
-                //fly
-
-
-                if(endRowNum == (_oend - _obegin)) {
-                   // cout<<"3_1 "<<endl;
-                    _size = s;
-                    eIter = uninitialized_fill(_a, end(), begin() + difference_type(s), v);
-                    _end = &*eIter;
-                    // _oe stays the same
-                } 
-                else if (endRowNum < (_olast - _obegin)) {
-                    //cout<<"3_2 "<<endl;
-
-                    _size = s;          
-                    int moreRows = endRowNum - (_oend - _obegin);
-
-                    for (int i = 0; i < moreRows; ++i) {
-                        ++_oend;
-                        *_oend = _a.allocate(_arraySize);       
-                    }
-
-                    eIter = uninitialized_fill(_a, end(), begin() + difference_type(s), v);
-                    _end = &*eIter;
-                } 
-                else{
-                    //cout<<"3_3 "<<endl;
-
-                    int moreRows = endRowNum - (_olast - _obegin) + 1;
-                    int totalRows = _olast - _ofirst + moreRows;
-                    my_deque x(*this, totalRows);
-                    swap(x);
-                    resize(s, v);
-                }
-            }
-        
-            _size = s;
-            assert(valid());
         }
 
         // ----
