@@ -1055,8 +1055,13 @@ class my_deque {
                 _end = &*eIter;
                 _oend = _obegin + ((s + (_begin - *_obegin)) / _arraySize);
             } 
-            else {
-                //cout<<"3 "<<endl;
+            else {//
+                //cout<<" s > size() "<<endl;
+                // get hypothetical row number of bigger size's back element
+                int endRowNum = (s + (_begin - *_obegin)) / _arraySize;
+                //fly
+
+
                 if(endRowNum == (_oend - _obegin)) {
                    // cout<<"3_1 "<<endl;
                     _size = s;
