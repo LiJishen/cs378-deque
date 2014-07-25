@@ -112,8 +112,9 @@ class my_deque {
         friend bool operator == (const my_deque& lhs, const my_deque& rhs) {
             // <your code>
             // you must use std::equal()
-            return equal(lhs.begin(), lhs.end(), rhs.begin() && lhs.size() == rhs.size());
-        }
+            return (lhs.size() == 0 && rhs.size() == 0) || ((lhs.size() == rhs.size()) && 
+                std::equal(lhs.begin(), lhs.end(), rhs.begin()));
+        }        
 
         // ----------
         // operator <
@@ -656,7 +657,7 @@ class my_deque {
             _olast = _ofirst + (that._olast - that._ofirst);
 
             for(int i = 0; i <= (_oend - _obegin); ++i) {
-                    *(_obegin+i) = _a.allocate(_arraySize); 
+                *(_obegin+i) = _a.allocate(_arraySize); 
             }
             _begin = *_obegin + (that._begin - *(that._obegin));
             _end = *_oend + (that._end - *(that._oend));
@@ -963,10 +964,12 @@ class my_deque {
          */
         void pop_front () {
             // <your code>
+            //cout << "here >> "<< _size <<endl;
             assert(!empty());
             _a.destroy(_begin);
             _begin = &at(1);
             --_size;
+            //cout << "here >> "<< _size <<endl;
             assert(valid());
         }
 
