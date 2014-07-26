@@ -1,0 +1,155 @@
+commit 507b91a8c09ed9e359f038524699b5b146a477bc
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 17:25:59 2014 -0500
+
+    add html files
+
+commit d52a88e879786c133403ae6dcfb4b7258c29ec73
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 17:13:03 2014 -0500
+
+    add files
+
+commit 1d2e17af79d840e878245c7a6cd78428a6520e6c
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 17:07:31 2014 -0500
+
+    add files
+
+commit c04e963242967919f2e39687d183a3bdb995aef8
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 16:55:20 2014 -0500
+
+    added documentation
+
+commit ffeb3a048948d6bbae91972115e8f55191ed30b3
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 16:37:15 2014 -0500
+
+    added documentation
+
+commit b9bc1f8a21858c34b11533f770e2424b9a1cd76a
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 16:23:00 2014 -0500
+
+     pretty much done   except adding documentations
+
+commit 3426a1404e32f8778030b344623e20f03c33f2b4
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 16:21:18 2014 -0500
+
+     delete comments
+
+commit 6da58287a31671819832edfa6afa6932c3de74a7
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 16:16:29 2014 -0500
+
+    fixed issues and delete comments
+
+commit f2456db2f64f895b14a80ec8732e414fe286d3db
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 15:54:48 2014 -0500
+
+    fixed resize
+
+commit 990e4344111bdf715703a49f4382ba1ebbba3caf
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 14:33:35 2014 -0500
+
+    iusse with adding more capacity
+
+commit 607163986067b7b918dbd4a43482bedd2efb880a
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 13:51:22 2014 -0500
+
+    issues with resize and push front
+
+commit b631232803ca06610b1e59fa90d5e2aeaa88426d
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 13:50:50 2014 -0500
+
+    fixed some methods
+
+commit 6ca88f21eebb4a17a9ce69fe1e4729814eb58598
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 09:46:39 2014 -0500
+
+    resize still need to be fixed
+
+commit 8470430e95d3f6b26c91fd7de2e805cf3c9d6e36
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 09:42:23 2014 -0500
+
+    fixed swap
+
+commit 65c7c7ec9c4ff0ae64096d32980d5dbe306f3724
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 09:40:22 2014 -0500
+
+    fixing swap
+
+commit 131018fde46a5af98db46ffe764d21136898d2ea
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sat Jul 26 09:34:09 2014 -0500
+
+    changed some function
+
+commit 39a13bd2340c7cea1bbebb30d7a34293a225f07b
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Fri Jul 25 15:22:59 2014 -0500
+
+    problems with resize need to be fixed
+
+commit 89e7abab453ff16996337875417b6cb7ab070bf4
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Fri Jul 25 15:17:56 2014 -0500
+
+    add more tests
+
+commit 02b62788cc72c92b8901198c8e1a6629702139db
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Fri Jul 25 15:16:26 2014 -0500
+
+    add more tests
+
+commit 419535fbea4a394c3b056697411e61b8ec6f5f5a
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Fri Jul 25 15:04:59 2014 -0500
+
+    add more tests
+
+commit abfc0dacf7519ec0afae82ad61efaf25933df5c7
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Fri Jul 25 12:28:24 2014 -0500
+
+    add test case
+
+commit aeab568b72c59ada3781ff360fa5bcbbfeff09a0
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Fri Jul 25 12:26:57 2014 -0500
+
+    add test case
+
+commit 46e538139b4f7f21b349e9005faf08af363956a0
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Thu Jul 24 17:47:31 2014 -0500
+
+    add tests
+
+commit d9908b1c2c7c4f4b95c52340f6c1a60213705a71
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sun Jul 20 12:34:02 2014 -0500
+
+    change command lines
+
+commit f61027b983a97588a359fea3d40946efa0be6a23
+Author: Jishen Li <ljs765@gmail.com>
+Date:   Sun Jul 20 12:29:58 2014 -0500
+
+    initial commit
+
+commit 28f68aef98df6c314fc408cc618b44a7deb55771
+Author: LiJishen <jishen@utexas.edu>
+Date:   Sun Jul 20 12:25:35 2014 -0500
+
+    Initial commit
