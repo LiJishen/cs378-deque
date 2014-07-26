@@ -136,7 +136,6 @@ class my_deque {
         pointer_allocator_type _pa; // T* allocator (outer array allocator )
         
         pointer_pointer _fr;    // front of outer array (dFro)
-        pointer_pointer _ba;    // back of outer array  (dEnd)
 
 
         pointer _front;     // front of allocated space
@@ -268,8 +267,7 @@ return (!_front && !_begin && !_end && !_back) ||
                  */
                 reference operator * () const {
                     // <your code>
-                    return (*_d)[idx];
-                    //return x->at(index);
+                    return _d->operator[](idx);
                 }
 
                 // -----------
@@ -445,7 +443,8 @@ return (!_front && !_begin && !_end && !_back) ||
                  * <your documentation>
                  */
                 const_iterator (const my_deque* d, size_type i){
-                    _d = d; idx = i; 
+                    _d = d; 
+                    idx = i; 
                     assert(valid());}
 
                 /**
@@ -466,8 +465,8 @@ return (!_front && !_begin && !_end && !_back) ||
                  */
                 reference operator * () const {
                     // <your code>
-                    return (*_d)[idx];// return x->at(index);
-                    
+                    return _d->operator[](idx);
+
                 }
 
                 // -----------
@@ -571,8 +570,8 @@ return (!_front && !_begin && !_end && !_back) ||
          * by default. Will initialize the size and capacity to 0 and the pointers to the
          * beginning and the end to 0.
          */
-        explicit my_deque (const allocator_type& a = allocator_type() ):_pa(){
-            _a = a;  _fr=0; _ba=0; _front=0; _begin=0; _end=0; _back=0;
+        explicit my_deque (const allocator_type& a = allocator_type() ){
+            _pa = a ;_a = a;  _fr=0; _front=0; _begin=0; _end=0; _back=0;
             assert(valid() );
         }
 
@@ -589,35 +588,22 @@ return (!_front && !_begin && !_end && !_back) ||
          * type of the contents of the deque. It will also use the standard allocator if none is
          * given.
          */
-        explicit my_deque (size_type s, const_reference v = value_type(), const allocator_type& a = allocator_type()): _pa() {
+        explicit my_deque (size_type s, const_reference v = value_type(), const allocator_type& a = allocator_type())
+        {
             // <your code>
             _a = a;
-            // we need s / WIDTH(50) full arrays, and possibly 1 partial array
-            size_type num_arrays = s / WIDTH + (s % WIDTH? 1 : 0);//ok
-            //size_t outer_size = s/50 + (s%50 1: 0);
-            // allocate outer array and save pointer to front
-            _fr = _pa.allocate(num_arrays);//ok
-            // allocate inner arrays
-            for (size_type i = 0; i < num_arrays; ++i) {
-                _fr[i] = _a.allocate(WIDTH);//ok
-            }
-            // set pointer to back
-            
-            _ba = _fr + num_arrays;
-            // set pointer to beginning of data
-            //_b = _fr[0];
-            // offset < WIDTH if we have a partial array
-            size_type offset = WIDTH - (WIDTH * num_arrays - s); 
-            assert  (0 < offset and offset <= WIDTH);
-            // set pointer to end of data
-            //_e = _fr[num_arrays - 1] + offset;
-            // fill inner arrays with default value
-            for (size_type i = 0; i < num_arrays; ++i) {
-                _a.deallocate(_fr[i], WIDTH);//??why deallocate
-            }
-            _pa.deallocate(_fr, num_arrays);
-            _front = _begin = _a.allocate(s);
-            _end = _back = _begin + s;
+            unsigned int num_arrays;
+            if(s % WIDTH != 0)
+                num_arrays = s / WIDTH + 1;
+            num_arrays = s / WIDTH;
+
+            _fr = _pa.allocate(num_arrays);
+            for (unsigned int i = 0; i < num_arrays; ++i)
+                _fr[i] = _a.allocate(WIDTH);
+            _begin = _a.allocate(s);
+            _end  = _begin + s;
+            _front = _begin;
+            _back = _end;
             uninitialized_fill(_a, begin(), end(), v);
             assert(valid());
         }
@@ -634,12 +620,12 @@ return (!_front && !_begin && !_end && !_back) ||
         my_deque (const my_deque& that) {
             // <your code>
             _a = that._a;
-            _pa = pointer_allocator_type();
-            _fr = _ba = 0;
-            //_b = _e;
-            _front = _begin = _a.allocate(that.size());
-            _end = _back = _begin + that.size();
-            uninitialized_copy(_a, that.begin(), that.end(), begin()); 
+            _pa = that._pa;
+            _begin = _a.allocate(that._end - that._begin);
+            _end =  _begin + (that._end - that._begin);            
+            uninitialized_copy(_a, that.begin(), that.end(), begin());             
+            _front = _begin;
+            _back  = _end;
             assert(valid());
         }
 
@@ -652,22 +638,13 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         ~my_deque () {
             // <your code>
-            if (_front) {
+            int capacity = _back - _front;
+
+            if (_begin) {
                 clear();
-                _a.deallocate(_front, (_back - _front));}
+                _a.deallocate(_front, capacity);
+            }
             assert(valid() );
-
-            // if (_begin) {
-            //     clear();
-            //     int rowsDeall = _obegin - _oend + 1;
-
-            //     for (int i = 0; i < rowsDeall; ++i) {
-            //         _a.deallocate(*_obegin, _arraySize);
-            //         ++_obegin;
-            //     }
-            //     _oa.deallocate(_ofirst, _olast - _ofirst);
-            // }
-            // //assert(valid());
         }
 
         // ----------
@@ -686,20 +663,27 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         my_deque& operator = (const my_deque& rhs) {
             // <your code>
+           unsigned int filled_space  =  _end - _begin;
+           unsigned int begin_to_back = _back - _begin;
            if (this == &rhs)
                 return *this;
-            if (rhs.size() == size())
+            if (rhs.size() == filled_space)
                 std::copy(rhs.begin(), rhs.end(), begin());
-            else if (rhs.size() < size()) {
+
+            else if (rhs.size() < filled_space) {
                 std::copy(rhs.begin(), rhs.end(), begin());
-                resize(rhs.size());}    
-            else if ((unsigned)rhs.size() <= (unsigned)(_back - _begin)) {
-                std::copy(rhs.begin(), rhs.begin() + size(), begin());
-                _end = &(*uninitialized_copy(_a, rhs.begin() + size(), rhs.end(), end()));}
+                resize(rhs._end - rhs._begin);
+            }   
+
+            else if (rhs.size() <= begin_to_back) {
+                std::copy(rhs.begin(), rhs.begin() + begin_to_back, begin());
+                _end = &(*uninitialized_copy(_a, rhs.begin() + begin_to_back, rhs.end(), end()));
+            }
             else {
                 clear();
                 my_deque x(rhs);
-                swap(x);}
+                swap(x);
+            }
             assert(valid() );
             return *this;
         }
@@ -743,7 +727,7 @@ return (!_front && !_begin && !_end && !_back) ||
         reference at (size_type index) {
             // <your code>
             if (index >= size() )
-                throw std::out_of_range("deque::_M_range_check");
+                throw std::out_of_range("out_of_range");
             return (*this)[index];
         }
 
@@ -823,7 +807,8 @@ return (!_front && !_begin && !_end && !_back) ||
          * Will return true if the deque is empty and false otherwise.
          */
         bool empty () const {
-            return !size();}
+            return (_end - _begin <= 0);
+        }
 
         // ---
         // end
@@ -836,7 +821,7 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         iterator end () {
             // <your code>
-            return iterator(this, size());}
+            return iterator(this, _end - _begin);}
 
         /**
          * @return a const_iterator
@@ -845,7 +830,7 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         const_iterator end () const {
             // <your code>
-            return const_iterator(this, size());}
+            return const_iterator(this, _end - _begin);}
 
         // -----
         // erase
@@ -859,6 +844,13 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         iterator erase (iterator pos) {
             // <your code>
+            //assert(valid());
+            //return iterator();
+            iterator it(pos);
+            std::copy(pos +1, end(), pos);
+            resize(_end - _begin - 1);
+            assert(valid());
+            return it;
         }
 
         // -----
@@ -872,11 +864,8 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         reference front () {
             // <your code>
-            return *(_begin);
-            // assert(!empty());
-            // return *begin();
-            //return at(0);
-            
+            assert(!empty());
+            return *begin();
         }
 
         /**
@@ -898,16 +887,24 @@ return (!_front && !_begin && !_end && !_back) ||
          * Will insert the given value into the deque at the iterator
          * position and move all the elements after that position down in the deque.
          */
-        iterator insert (iterator pos, const_reference v) {
+        iterator insert (iterator i, const_reference v) {
             // <your code>
-                    if(pos == end() )
+            if (i == begin()) {
+                push_front(v);
+                return begin();
+            }
+            else if (i == end()) {
                 push_back(v);
+                return --(end());
+            }
             else {
-                resize(size()+1);
-                std::copy(pos, end(), pos+1);
-                *pos = v;}
-            assert(valid());
-            return iterator(this); 
+                iterator it(i);
+                resize(_end - _begin + 1);
+                std::copy_backward(i, end() -1, end());
+                *it = v;
+                assert(valid());
+                return it;
+            }  
    
         }
 
@@ -921,8 +918,7 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void pop_back () {
             // <your code>
-            assert(!empty());
-            resize(size() - 1);
+            resize(_end - _begin - 1);
             assert(valid());
         }
 
@@ -932,15 +928,9 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void pop_front () {
             // <your code>
-            destroy(_a, begin(), begin()+1);
+            assert(!empty());
+            _a.destroy(_begin);
             ++_begin;
-            assert(valid() );
-            //cout << "here >> "<< _size <<endl;
-            // assert(!empty());
-            // _a.destroy(_begin);
-            // _begin = &at(1);
-            // --_size;
-            //cout << "here >> "<< _size <<endl;
             assert(valid());    
         }
 
@@ -955,9 +945,7 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void push_back (const_reference v) {
             // <your code>
-            // resize(size() + 1, v);
-            // assert(valid());
-            resize(_size + 1);
+            resize(size() + 1);
             *(end() - 1) = v;
             assert(valid());
         }
@@ -969,21 +957,13 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void push_front (const_reference v) {
             // <your code>
-            using namespace std;
-            if (*_obegin != _begin) {
-            //space available on this row
-                --_begin;
-                *begin() = v;
-                ++_size;
-            }
-            else if (_obegin != _ofirst) {
-                //space available for a new row
-                --_obegin;
-                *_obegin = _a.allocate(_arraySize);
-                _begin = *_obegin + _arraySize - 1;
-                *begin() = v;
-                ++_size;
-            }
+            if (_front == _begin) {
+                 resize(size() + 1);
+                 pop_back();}    
+             --_begin;
+             _a.construct(&*begin(), v); 
+             assert(valid());
+            
         }
 
         // ------
@@ -1002,35 +982,30 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void resize (size_type s, const_reference v = value_type()) {
             // <your code>
-                if(endRowNum == (_oend - _obegin)) {
-                   // cout<<"3_1 "<<endl;
-                    _size = s;
-                    eIter = uninitialized_fill(_a, end(), begin() + difference_type(s), v);
-                    _end = &*eIter;
-                    // _oe stays the same
-                } 
-                else if (endRowNum < (_olast - _obegin)) {
-                    //cout<<"3_2 "<<endl;
+            if (s == size())
+                _end = &*uninitialized_fill(_a, end(), begin() + s, v);
+            
+            if (s < size())
+                _end = &*destroy(_a, begin() + s, end() );
 
-                    _size = s;          
-                    int moreRows = endRowNum - (_oend - _obegin);
+            else if ( (unsigned)s <= (unsigned)(_back - _begin))
+                _end = &*uninitialized_fill(_a, end(), begin() + s, v);
 
-                    for (int i = 0; i < moreRows; ++i) {
-                        ++_oend;
-                        *_oend = _a.allocate(_arraySize);       
-                    }
-
-                    eIter = uninitialized_fill(_a, end(), begin() + difference_type(s), v);
-                    _end = &*eIter;
-                } 
-                else{
-                    //cout<<"3_3 "<<endl;
-
-                    int moreRows = endRowNum - (_olast - _obegin) + 1;
-                    int totalRows = _olast - _ofirst + moreRows;
-                    my_deque x(*this, totalRows);
-                    swap(x);
-                    resize(s, v);
+            else {      // allocate more capacity
+                size_type capacity = std::max(s, 2 * size());
+                size_type temp1 = (capacity - s) / 2;
+                if (temp1 == 0) {
+                    capacity += 5;}
+                temp1 = (capacity - s) / 2;
+                size_type temp2 = (capacity - s) % 2? temp1 + 1: temp1;
+                my_deque x(capacity, v);
+                std::copy(begin(), end(), x.begin()+temp1);
+                destroy(x._a, x.begin(), x.begin()+temp1);
+                destroy(x._a, x.end()-temp2, x.end());
+                x._begin += temp1;
+                x._end -= temp2;
+                swap(x);}
+            assert(valid() );
         }
 
         // ----
