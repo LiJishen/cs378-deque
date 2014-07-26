@@ -137,8 +137,7 @@ class my_deque {
         
         pointer_pointer _fr;    // front of outer array (dFro)
         pointer_pointer _ba;    // back of outer array  (dEnd)
-        pointer _b;     // beginning of inner array     ()
-        pointer _e;     // end of inner array
+
 
         pointer _front;     // front of allocated space
         pointer _begin;     // beginning of used space
@@ -452,12 +451,6 @@ return (!_front && !_begin && !_end && !_back) ||
                 /**
                  * constructor talking a non constant iterator
                  */
-                // const_iterator(iterator it) 
-                // {
-                //     current_beginlock = const_cast<pointer*>(it.get_beginlock_address());
-                //     current_beginlock_index = it.get_beginlock_index();
-                //     assert(valid());
-                // }
 
                 // Default copy, destructor, and copy assignment.
                 // const_iterator (const const_iterator&);
@@ -579,7 +572,7 @@ return (!_front && !_begin && !_end && !_back) ||
          * beginning and the end to 0.
          */
         explicit my_deque (const allocator_type& a = allocator_type() ):_pa(){
-            _a = a;  _fr=0; _ba=0; _b=0; _e=0; _front=0; _begin=0; _end=0; _back=0;
+            _a = a;  _fr=0; _ba=0; _front=0; _begin=0; _end=0; _back=0;
             assert(valid() );
         }
 
@@ -612,12 +605,12 @@ return (!_front && !_begin && !_end && !_back) ||
             
             _ba = _fr + num_arrays;
             // set pointer to beginning of data
-            _b = _fr[0];
+            //_b = _fr[0];
             // offset < WIDTH if we have a partial array
             size_type offset = WIDTH - (WIDTH * num_arrays - s); 
             assert  (0 < offset and offset <= WIDTH);
             // set pointer to end of data
-            _e = _fr[num_arrays - 1] + offset;
+            //_e = _fr[num_arrays - 1] + offset;
             // fill inner arrays with default value
             for (size_type i = 0; i < num_arrays; ++i) {
                 _a.deallocate(_fr[i], WIDTH);//??why deallocate
@@ -643,7 +636,7 @@ return (!_front && !_begin && !_end && !_back) ||
             _a = that._a;
             _pa = pointer_allocator_type();
             _fr = _ba = 0;
-            _b = _e;
+            //_b = _e;
             _front = _begin = _a.allocate(that.size());
             _end = _back = _begin + that.size();
             uninitialized_copy(_a, that.begin(), that.end(), begin()); 
@@ -1004,7 +997,16 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void swap (my_deque& that) {
             // <your code>
-
+            if (_a == that._a) {
+                std::swap(_front, that._front);
+                std::swap(_begin, that._begin);
+                std::swap(_end, that._end);
+                std::swap(_back, that._back);}
+            else {
+                my_deque x(*this);
+                *this = that;
+                that = x;}
+            assert(valid() );
         }
 
 
