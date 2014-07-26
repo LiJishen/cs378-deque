@@ -1,0 +1,2285 @@
+        -:    0:Source:Deque.h
+        -:    0:Graph:TestDeque.gcno
+        -:    0:Data:TestDeque.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// ----------------------
+        -:    2:// projects/deque/Deque.h
+        -:    3:// Copyright (C) 2014
+        -:    4:// Glenn P. Downing
+        -:    5:// ----------------------
+        -:    6:
+        -:    7:#ifndef Deque_h
+        -:    8:#define Deque_h
+        -:    9:#define ARRAY_SIZE 36
+        -:   10:#define HEAD_SPACE 6
+        -:   11:#define TAIL_SPACE 6
+        -:   12:
+        -:   13:// --------
+        -:   14:// includes
+        -:   15:// --------
+        -:   16:
+        -:   17:#include <algorithm> // copy, equal, lexicographical_compare, max, swap
+        -:   18:#include <cassert>   // assert
+        -:   19:#include <iterator>  // iterator, bidirectional_iterator_tag
+        -:   20:#include <memory>    // allocator
+        -:   21:#include <stdexcept> // out_ofirst_range
+        -:   22:#include <utility>   // !=, <=, >, >=
+        -:   23:#include <iostream>
+        -:   24:// -----
+        -:   25:// using
+        -:   26:// -----
+        -:   27:
+        -:   28:using std::rel_ops::operator!=;
+        -:   29:using std::rel_ops::operator<=;
+        -:   30:using std::rel_ops::operator>;
+        -:   31:using std::rel_ops::operator>=;
+        -:   32:
+        -:   33:// -------
+        -:   34:// destroy
+        -:   35:// -------
+        -:   36:
+        -:   37:template <typename A, typename BI>
+function _Z7destroyISaIiEN8my_dequeIiS0_E8iteratorEET0_RT_S4_S4_ called 5321 returned 100% blocks executed 100%
+function _Z7destroyISaIdEN8my_dequeIdS0_E8iteratorEET0_RT_S4_S4_ called 5321 returned 100% blocks executed 100%
+    10642:   38:BI destroy (A& a, BI b, BI e) {
+   338020:   39:    while (b != e) {
+call    0 returned 100%
+branch  1 taken 97%
+branch  2 taken 3% (fallthrough)
+call    3 returned 100%
+branch  4 taken 97%
+branch  5 taken 3% (fallthrough)
+   316736:   40:        --e;
+call    0 returned 100%
+call    1 returned 100%
+   316736:   41:        a.destroy(&*e);}
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+    10642:   42:    return b;}
+        -:   43:
+        -:   44:// ------------------
+        -:   45:// uninitialized_copy
+        -:   46:// ------------------
+        -:   47:
+        -:   48:template <typename A, typename II, typename BI>
+function _Z18uninitialized_copyISaIiEN8my_dequeIiS0_E14const_iteratorENS2_8iteratorEET1_RT_T0_S8_S5_ called 73 returned 100% blocks executed 59%
+function _Z18uninitialized_copyISaIdEN8my_dequeIdS0_E14const_iteratorENS2_8iteratorEET1_RT_T0_S8_S5_ called 73 returned 100% blocks executed 59%
+      146:   49:BI uninitialized_copy (A& a, II b, II e, BI x) {
+      146:   50:    BI p = x;
+        -:   51:    try {
+     2912:   52:        while (b != e) {
+call    0 returned 100%
+branch  1 taken 95%
+branch  2 taken 5% (fallthrough)
+call    3 returned 100%
+branch  4 taken 95%
+branch  5 taken 5% (fallthrough)
+     2620:   53:            a.construct(&*x, *b);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 100% (fallthrough)
+branch  8 taken 0% (throw)
+call    9 returned 100%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0% (throw)
+call   12 returned 100%
+call   13 returned 100%
+     2620:   54:            ++b;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+     2620:   55:            ++x;}}
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+    =====:   56:    catch (...) {
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    =====:   57:        destroy(a, p, x);
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    =====:   58:        throw;}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+      146:   59:    return x;}
+        -:   60:
+        -:   61:// ------------------
+        -:   62:// uninitialized_fill
+        -:   63:// ------------------
+        -:   64:
+        -:   65:template <typename A, typename BI, typename U>
+function _Z18uninitialized_fillISaIiEN8my_dequeIiS0_E8iteratorEiET0_RT_S4_S4_RKT1_ called 1684 returned 100% blocks executed 53%
+function _Z18uninitialized_fillISaIdEN8my_dequeIdS0_E8iteratorEdET0_RT_S4_S4_RKT1_ called 1684 returned 100% blocks executed 53%
+     3368:   66:BI uninitialized_fill (A& a, BI b, BI e, const U& v) {
+     3368:   67:    BI p = b;
+        -:   68:    try {
+   318280:   69:        while (b != e) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 99%
+branch  4 taken 1% (fallthrough)
+branch  5 taken 100% (fallthrough)
+branch  6 taken 0% (throw)
+call    7 returned 100%
+branch  8 taken 99%
+branch  9 taken 1% (fallthrough)
+   311544:   70:            a.construct(&*b, v);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 returned 100%
+   311544:   71:            ++b;}}
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+    =====:   72:    catch (...) {
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    =====:   73:        destroy(a, p, b);
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    =====:   74:        throw;}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+     3368:   75:    return e;}
+        -:   76:
+        -:   77:// -------
+        -:   78:// my_deque
+        -:   79:// -------
+        -:   80:
+        -:   81:template < typename T, typename A = std::allocator<T> >
+        -:   82:class my_deque {
+        -:   83:    // typedefs
+        -:   84:    public:
+        -:   85:        // --------
+        -:   86:        // typedefs
+        -:   87:        // --------
+        -:   88:
+        -:   89:        typedef A                                       allocator_type;
+        -:   90:        typedef typename allocator_type::value_type     value_type;    
+        -:   91:
+        -:   92:        typedef typename allocator_type::size_type          size_type;
+        -:   93:        typedef typename allocator_type::difference_type    difference_type;
+        -:   94:
+        -:   95:        typedef typename allocator_type::pointer            pointer;    
+        -:   96:        typedef typename allocator_type::const_pointer      const_pointer;
+        -:   97:
+        -:   98:        typedef typename allocator_type::reference          reference;
+        -:   99:        typedef typename allocator_type::const_reference    const_reference;
+        -:  100:        
+        -:  101:        typedef typename allocator_type::template rebind<T*>::other pointer_allocator_type;
+        -:  102:        typedef typename pointer_allocator_type::pointer    pointer_pointer; 
+        -:  103:
+        -:  104:    public:
+        -:  105:        // -----------
+        -:  106:        // operator ==
+        -:  107:        // -----------
+        -:  108:
+        -:  109:        /**
+        -:  110:         * @param lhs my_deque to compare to rhs
+        -:  111:         * @param rhs my_deque to test equality with lhs
+        -:  112:         * @return True if my_deques are the same size and have the same contents
+        -:  113:         */
+function _ZeqRK8my_dequeIiSaIiEES3_ called 3 returned 100% blocks executed 88%
+function _ZeqRK8my_dequeIdSaIdEES3_ called 3 returned 100% blocks executed 88%
+        6:  114:        friend bool operator == (const my_deque& lhs, const my_deque& rhs) {
+        -:  115:            // <your code>
+        -:  116:            // you must use std::equal()
+        -:  117:            return (lhs.size() == 0 && rhs.size() == 0) || ((lhs.size() == rhs.size()) && 
+        6:  118:                std::equal(lhs.begin(), lhs.end(), rhs.begin()));
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 returned 100%
+call    7 returned 100%
+branch  8 taken 67% (fallthrough)
+branch  9 taken 33%
+call   10 returned 100%
+call   11 returned 100%
+call   12 returned 100%
+call   13 returned 100%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+call   16 returned 100%
+branch 17 taken 0% (fallthrough)
+branch 18 taken 100%
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+call   22 returned 100%
+call   23 returned 100%
+branch 24 taken 67% (fallthrough)
+branch 25 taken 33%
+call   26 returned 100%
+call   27 returned 100%
+call   28 returned 100%
+call   29 returned 100%
+branch 30 taken 100% (fallthrough)
+branch 31 taken 0%
+        -:  119:        }        
+        -:  120:
+        -:  121:        // ----------
+        -:  122:        // operator <
+        -:  123:        // ----------
+        -:  124:
+        -:  125:        /**
+        -:  126:         *  * @param lhs my_deque to compare to rhs
+        -:  127:         * @param rhs my_deque to test order with lhs
+        -:  128:         * @return True if lhs comes before rhs in the lexicographical compare
+        -:  129:    
+        -:  130:         */
+function _ZltRK8my_dequeIiSaIiEES3_ called 6 returned 100% blocks executed 100%
+function _ZltRK8my_dequeIdSaIdEES3_ called 6 returned 100% blocks executed 100%
+       12:  131:        friend bool operator < (const my_deque& lhs, const my_deque& rhs) {
+        -:  132:            // <your code>
+        -:  133:            // you must use std::lexicographical_compare()
+       12:  134:            return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+call    7 returned 100%
+call    8 returned 100%
+call    9 returned 100%
+        -:  135:        }
+        -:  136:    // data
+        -:  137:    private:
+        -:  138:        // ----
+        -:  139:        // data
+        -:  140:        // ----
+        -:  141:        allocator_type _a;      //inner allocator
+        -:  142:        pointer_allocator_type outer_alloc; // outer array allocator
+        -:  143:        pointer_pointer outer_front;    // front of outer array 
+        -:  144:        pointer head;     // head of allocated space
+        -:  145:        pointer tail;      // tail of allocated space
+        -:  146:        pointer _begin;     // beginning of used space
+        -:  147:        pointer _end;       // end of used space
+        -:  148:
+        -:  149:
+        -:  150:
+        -:  151:    //valid
+        -:  152:    private:
+        -:  153:        // -----
+        -:  154:        // valid
+        -:  155:        // -----
+        -:  156:
+function _ZNK8my_dequeIiSaIiEE5validEv called 14073 returned 100% blocks executed 91%
+function _ZNK8my_dequeIdSaIdEE5validEv called 14073 returned 100% blocks executed 91%
+    28146:  157:        bool valid () const {
+        -:  158:            // <your code>
+        -:  159:            return (!head && !_begin && !_end && !tail) ||
+    28146:  160:            ((head <= _begin) && (_begin <= _end) && (_end <= tail));
+branch  0 taken 3% (fallthrough)
+branch  1 taken 97%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 0% (fallthrough)
+branch  7 taken 100%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 3% (fallthrough)
+branch 15 taken 97%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 0% (fallthrough)
+branch 21 taken 100%
+branch 22 taken 100% (fallthrough)
+branch 23 taken 0%
+branch 24 taken 100% (fallthrough)
+branch 25 taken 0%
+branch 26 taken 100% (fallthrough)
+branch 27 taken 0%
+        -:  161:        }
+        -:  162:
+        -:  163:    //iterator class
+        -:  164:    public:
+        -:  165:        // --------
+        -:  166:        // iterator
+        -:  167:        // --------
+        -:  168:
+        -:  169:        class iterator {
+        -:  170:            // typedefs
+        -:  171:            public:
+        -:  172:                // --------
+        -:  173:                // typedefs
+        -:  174:                // --------
+        -:  175:
+        -:  176:                typedef std::bidirectional_iterator_tag   iterator_category;
+        -:  177:                typedef typename my_deque::value_type      value_type;
+        -:  178:                typedef typename my_deque::difference_type difference_type;
+        -:  179:                typedef typename my_deque::pointer         pointer;
+        -:  180:                typedef typename my_deque::reference       reference;
+        -:  181:
+        -:  182:            // == != + -
+        -:  183:            public:
+        -:  184:                // -----------
+        -:  185:                // operator ==
+        -:  186:                // -----------
+        -:  187:
+        -:  188:                /**
+        -:  189:                * @return true if both iterators are indexing the same my_deque and pointing to the same element
+        -:  190:
+        -:  191:                 */
+function _ZeqRKN8my_dequeIiSaIiEE8iteratorES4_ called 452751 returned 100% blocks executed 100%
+function _ZeqRKN8my_dequeIdSaIdEE8iteratorES4_ called 452751 returned 100% blocks executed 100%
+   905502:  192:                friend bool operator == (const iterator& lhs, const iterator& rhs) {
+        -:  193:                    // <your code>
+   905502:  194:                    return (lhs.idx == rhs.idx) && (lhs._d == rhs._d);
+branch  0 taken 2% (fallthrough)
+branch  1 taken 98%
+branch  2 taken 99% (fallthrough)
+branch  3 taken 1%
+branch  4 taken 2% (fallthrough)
+branch  5 taken 98%
+branch  6 taken 99% (fallthrough)
+branch  7 taken 1%
+        -:  195:                }
+        -:  196:
+        -:  197:                /**
+        -:  198:                @return true if operator == returns false
+        -:  199:                */
+function _ZneRKN8my_dequeIiSaIiEE8iteratorES4_ called 452573 returned 100% blocks executed 100%
+function _ZneRKN8my_dequeIdSaIdEE8iteratorES4_ called 452573 returned 100% blocks executed 100%
+   905146:  200:                friend bool operator != (const iterator& lhs, const iterator& rhs) {
+   905146:  201:                    return !(lhs == rhs);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  202:
+        -:  203:                // ----------
+        -:  204:                // operator +
+        -:  205:                // ----------
+        -:  206:
+        -:  207:                /**
+        -:  208:                * NEEDS UPDATING WITH ARRAY OF ARRAYS IMPLEMENTATION
+        -:  209:                */
+function _ZplN8my_dequeIiSaIiEE8iteratorEl called 5514 returned 100% blocks executed 100%
+function _ZplN8my_dequeIdSaIdEE8iteratorEl called 5514 returned 100% blocks executed 100%
+    11028:  210:                friend iterator operator + (iterator lhs, difference_type rhs) {
+    11028:  211:                    return lhs += rhs;}
+call    0 returned 100%
+call    1 returned 100%
+        -:  212:
+        -:  213:                // ----------
+        -:  214:                // operator -
+        -:  215:                // ----------
+        -:  216:
+        -:  217:                /**
+        -:  218:                 * * NEEDS UPDATING WITH ARRAY OF ARRAYS IMPLEMENTATION
+        -:  219:        
+        -:  220:                 */
+function _ZmiN8my_dequeIiSaIiEE8iteratorEl called 3069 returned 100% blocks executed 100%
+function _ZmiN8my_dequeIdSaIdEE8iteratorEl called 3069 returned 100% blocks executed 100%
+     6138:  221:                friend iterator operator - (iterator lhs, difference_type rhs) {
+     6138:  222:                    return lhs -= rhs;}
+call    0 returned 100%
+call    1 returned 100%
+        -:  223:            private:
+        -:  224:                // ----
+        -:  225:                // data
+        -:  226:                // ----
+        -:  227:
+        -:  228:                // <your data>
+        -:  229:                my_deque* _d;
+        -:  230:                std::size_t idx;
+        -:  231:
+        -:  232:            private:
+        -:  233:                // -----
+        -:  234:                // valid
+        -:  235:                // -----
+        -:  236:
+function _ZNK8my_dequeIiSaIiEE8iterator5validEv called 607688 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE8iterator5validEv called 607688 returned 100% blocks executed 100%
+  1215376:  237:                bool valid () const {
+        -:  238:                    // <your code>
+  1215376:  239:                    return idx >= 0;
+        -:  240:                }
+        -:  241:
+        -:  242:            public:
+        -:  243:                // -----------
+        -:  244:                // constructor
+        -:  245:                // -----------
+        -:  246:
+        -:  247:                /**
+        -:  248:                 * Two-arg constructor for the read/write iterator
+        -:  249:                 * @param p a pointer to the my_deque this iterator is associated with
+        -:  250:                 * @param i an int value which represents the zero-based index this iterator should point at in the my_deque
+        -:  251:                 */
+function _ZN8my_dequeIiSaIiEE8iteratorC2EPS1_m called 23877 returned 100% blocks executed 75%
+function _ZN8my_dequeIdSaIdEE8iteratorC2EPS1_m called 23877 returned 100% blocks executed 75%
+    47754:  252:                iterator (my_deque* d, std::size_t i = 0) {
+        -:  253:                    // <your code>
+    47754:  254:                    idx = i;
+    47754:  255:                    _d = d;
+    47754:  256:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+    47754:  257:                }
+        -:  258:
+        -:  259:                // Default copy, destructor, and copy assignment.
+        -:  260:                // iterator (const iterator&);
+        -:  261:                // ~iterator ();
+        -:  262:                // iterator& operator = (const iterator&);
+        -:  263:
+        -:  264:                // ----------
+        -:  265:                // operator *
+        -:  266:                // ----------
+        -:  267:
+        -:  268:                /**
+        -:  269:         * @return a reference to the element this iterator is pointing at
+        -:  270:         */
+function _ZNK8my_dequeIiSaIiEE8iteratordeEv called 578203 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE8iteratordeEv called 578203 returned 100% blocks executed 100%
+  1156406:  271:                reference operator * () const {
+        -:  272:                    // <your code>
+  1156406:  273:                    return _d->operator[](idx);
+call    0 returned 100%
+call    1 returned 100%
+        -:  274:                }
+        -:  275:
+        -:  276:                // -----------
+        -:  277:                // operator ->
+        -:  278:                // -----------
+        -:  279:
+        -:  280:                /**
+        -:  281:         * @return the address of the element this iterator is pointing at
+        -:  282:         */
+        -:  283:                pointer operator -> () const {
+        -:  284:                    return &**this;}
+        -:  285:
+        -:  286:                // -----------
+        -:  287:                // operator ++
+        -:  288:                // -----------
+        -:  289:
+        -:  290:                /**
+        -:  291:         * @return the reference to this iterator after its index has been incremented
+        -:  292:         */
+function _ZN8my_dequeIiSaIiEE8iteratorppEv called 414752 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE8iteratorppEv called 414752 returned 100% blocks executed 80%
+   829504:  293:                iterator& operator ++ () {
+        -:  294:                    // <your code>
+   829504:  295:                    ++idx;
+   829504:  296:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+   829504:  297:                    return *this;}
+        -:  298:
+        -:  299:                 /**
+        -:  300:         * @return a copy of this iterator, the original having had its index incremented
+function _ZN8my_dequeIiSaIiEE8iteratorppEi called 416 returned 100% blocks executed 71%
+function _ZN8my_dequeIdSaIdEE8iteratorppEi called 416 returned 100% blocks executed 71%
+      832:  301:         */                iterator operator ++ (int) {
+      832:  302:                    iterator x = *this;
+      832:  303:                    ++(*this);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+      832:  304:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      832:  305:                    return x;}
+call    0 never executed
+call    1 never executed
+        -:  306:
+        -:  307:                // -----------
+        -:  308:                // operator --
+        -:  309:                // -----------
+        -:  310:
+        -:  311:                /**
+        -:  312:                 *       * @return the reference to this iterator after its index has been decremented
+        -:  313:
+        -:  314:                 */
+function _ZN8my_dequeIiSaIiEE8iteratormmEv called 159323 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE8iteratormmEv called 159323 returned 100% blocks executed 80%
+   318646:  315:                iterator& operator -- () {
+        -:  316:                    // <your code>
+   318646:  317:                    --idx;
+   318646:  318:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+   318646:  319:                    return *this;}
+        -:  320:
+        -:  321:                /**
+        -:  322:                 * * @return a copy of this iterator, the original having had its index decremented
+        -:  323:        
+        -:  324:                 */
+function _ZN8my_dequeIiSaIiEE8iteratormmEi called 506 returned 100% blocks executed 71%
+function _ZN8my_dequeIdSaIdEE8iteratormmEi called 506 returned 100% blocks executed 71%
+     1012:  325:                iterator operator -- (int) {
+     1012:  326:                    iterator x = *this;
+     1012:  327:                    --(*this);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+     1012:  328:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     1012:  329:                    return x;}
+call    0 never executed
+call    1 never executed
+        -:  330:
+        -:  331:                // -----------
+        -:  332:                // operator +=
+        -:  333:                // -----------
+        -:  334:
+        -:  335:                /**
+        -:  336:                * @param d a difference_type value which represents the change in the index of the iterator
+        -:  337:                * @return a reference to this iterator after it has had its index updated
+        -:  338:                         */
+function _ZN8my_dequeIiSaIiEE8iteratorpLEl called 5685 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE8iteratorpLEl called 5685 returned 100% blocks executed 80%
+    11370:  339:                iterator& operator += (difference_type d) {
+        -:  340:                    // <your code>
+    11370:  341:                    idx += d;
+    11370:  342:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+    11370:  343:                    return *this;
+        -:  344:                }
+        -:  345:
+        -:  346:                // -----------
+        -:  347:                // operator -=
+        -:  348:                // -----------
+        -:  349:
+        -:  350:                /**
+        -:  351:                * @param d a difference_type value which represents the change in the index of the iterator
+        -:  352:                 * @return a reference to this iterator after it has had its index updated
+        -:  353:                 */
+function _ZN8my_dequeIiSaIiEE8iteratormIEl called 3129 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE8iteratormIEl called 3129 returned 100% blocks executed 80%
+     6258:  354:                iterator& operator -= (difference_type d) {
+        -:  355:                    // <your code>
+     6258:  356:                    idx -= d; 
+     6258:  357:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     6258:  358:                    return *this;}
+        -:  359:                };
+        -:  360:    public:
+        -:  361:        // --------------------
+        -:  362:        // const_iterator class
+        -:  363:        // --------------------
+        -:  364:
+        -:  365:        class const_iterator {
+        -:  366:            public:
+        -:  367:                // --------
+        -:  368:                // typedefs
+        -:  369:                // --------
+        -:  370:
+        -:  371:                typedef std::bidirectional_iterator_tag   iterator_category;
+        -:  372:                typedef typename my_deque::value_type      value_type;
+        -:  373:                typedef typename my_deque::difference_type difference_type;
+        -:  374:                typedef typename my_deque::const_pointer   pointer;
+        -:  375:                typedef typename my_deque::const_reference reference;
+        -:  376:
+        -:  377:            public:
+        -:  378:                // -----------
+        -:  379:                // operator ==
+        -:  380:                // -----------
+        -:  381:
+        -:  382:                /**
+        -:  383:             * ==operator
+        -:  384:             * @param lhs an iterator to compare
+        -:  385:             * @param rhs an iterator to compare
+        -:  386:             * @return whether the iterators are equal
+        -:  387:             */
+function _ZeqRKN8my_dequeIiSaIiEE14const_iteratorES4_ called 3382 returned 100% blocks executed 100%
+function _ZeqRKN8my_dequeIdSaIdEE14const_iteratorES4_ called 3382 returned 100% blocks executed 100%
+     6764:  388:                friend bool operator == (const const_iterator& lhs, const const_iterator& rhs) {
+        -:  389:                    // <your code>
+     6764:  390:                    return (lhs.idx == rhs.idx) && (lhs._d == rhs._d);
+branch  0 taken 20% (fallthrough)
+branch  1 taken 80%
+branch  2 taken 99% (fallthrough)
+branch  3 taken 1%
+branch  4 taken 20% (fallthrough)
+branch  5 taken 80%
+branch  6 taken 99% (fallthrough)
+branch  7 taken 1%
+        -:  391:                }
+        -:  392:
+        -:  393:                /**
+        -:  394:                * @return true if the operator == returns false
+        -:  395:                         */
+function _ZneRKN8my_dequeIiSaIiEE14const_iteratorES4_ called 2805 returned 100% blocks executed 100%
+function _ZneRKN8my_dequeIdSaIdEE14const_iteratorES4_ called 2805 returned 100% blocks executed 100%
+     5610:  396:                friend bool operator != (const const_iterator& lhs, const const_iterator& rhs) {
+     5610:  397:                    return !(lhs == rhs);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  398:
+        -:  399:                // ----------
+        -:  400:                // operator +
+        -:  401:                // ----------
+        -:  402:
+        -:  403:               /**
+        -:  404:             * !=operator
+        -:  405:             * @param lhs an iterator to compare
+        -:  406:             * @param rhs an iterator to compare
+        -:  407:             * @return whether the iterators are not equal
+        -:  408:             */
+function _ZplN8my_dequeIiSaIiEE14const_iteratorEl called 362 returned 100% blocks executed 100%
+function _ZplN8my_dequeIdSaIdEE14const_iteratorEl called 362 returned 100% blocks executed 100%
+      724:  409:                friend const_iterator operator + (const_iterator lhs, difference_type rhs) {
+      724:  410:                    return lhs += rhs;}
+call    0 returned 100%
+call    1 returned 100%
+        -:  411:
+        -:  412:                // ----------
+        -:  413:                // operator -
+        -:  414:                // ----------
+        -:  415:
+        -:  416:                /**
+        -:  417:             * +operator for iterator and number
+        -:  418:             * @param lhs an iterator
+        -:  419:             * @param rhs integral type to change the position of the iterator
+        -:  420:             * @return lhs + rhs
+        -:  421:             */
+function _ZmiN8my_dequeIiSaIiEE14const_iteratorEl called 252 returned 100% blocks executed 100%
+function _ZmiN8my_dequeIdSaIdEE14const_iteratorEl called 252 returned 100% blocks executed 100%
+      504:  422:                friend const_iterator operator - (const_iterator lhs, difference_type rhs) {
+      504:  423:                    return lhs -= rhs;}
+call    0 returned 100%
+call    1 returned 100%
+        -:  424:
+        -:  425:            private:
+        -:  426:                // ----
+        -:  427:                // data
+        -:  428:                // ----
+        -:  429:
+        -:  430:                // <your data>
+        -:  431:                const my_deque* _d;
+        -:  432:                std::size_t idx;
+        -:  433:                
+        -:  434:
+        -:  435:            private:
+        -:  436:                // -----
+        -:  437:                // valid
+        -:  438:                // -----
+        -:  439:
+function _ZNK8my_dequeIiSaIiEE14const_iterator5validEv called 6430 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE14const_iterator5validEv called 6430 returned 100% blocks executed 100%
+    12860:  440:                bool valid () const {
+        -:  441:                    // <your code>
+    12860:  442:                    return idx >= 0;
+        -:  443:                }
+        -:  444:
+        -:  445:            public:
+        -:  446:                // -----------
+        -:  447:                // constructor
+        -:  448:                // -----------
+        -:  449:
+        -:  450:                /**
+        -:  451:             * default constructor
+        -:  452:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratorC2EPKS1_m called 1095 returned 100% blocks executed 75%
+function _ZN8my_dequeIdSaIdEE14const_iteratorC2EPKS1_m called 1095 returned 100% blocks executed 75%
+     2190:  453:                const_iterator (const my_deque* d, std::size_t i){
+     2190:  454:                    _d = d; 
+     2190:  455:                    idx = i; 
+     2190:  456:                    assert(valid());}
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+        -:  457:
+        -:  458:                /**
+        -:  459:                 * constructor talking a non constant iterator
+        -:  460:                 */
+        -:  461:
+        -:  462:                // Default copy, destructor, and copy assignment.
+        -:  463:                // const_iterator (const const_iterator&);
+        -:  464:                // ~const_iterator ();
+        -:  465:                // const_iterator& operator = (const const_iterator&);
+        -:  466:
+        -:  467:                // ----------
+        -:  468:                // operator *
+        -:  469:                // ----------
+        -:  470:
+        -:  471:                /**
+        -:  472:             * deference operator
+        -:  473:             * @return a reference to the current element the iterator at
+        -:  474:             */
+function _ZNK8my_dequeIiSaIiEE14const_iteratordeEv called 3050 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE14const_iteratordeEv called 3050 returned 100% blocks executed 100%
+     6100:  475:                reference operator * () const {
+        -:  476:                    // <your code>
+     6100:  477:                    return _d->operator[](idx);
+call    0 returned 100%
+call    1 returned 100%
+        -:  478:
+        -:  479:                }
+        -:  480:
+        -:  481:                // -----------
+        -:  482:                // operator ->
+        -:  483:                // -----------
+        -:  484:
+        -:  485:                /**
+        -:  486:             * structure dereference operator
+        -:  487:             * @return the desired member of the current element the iterator at 
+        -:  488:             */
+        -:  489:                pointer operator -> () const {
+        -:  490:                    return &**this;}
+        -:  491:
+        -:  492:                // -----------
+        -:  493:                // operator ++
+        -:  494:                // -----------
+        -:  495:
+        -:  496:                /**
+        -:  497:             * increment operator (pre)
+        -:  498:             * @return reference of the iterator after incrementation
+        -:  499:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratorppEv called 2630 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE14const_iteratorppEv called 2630 returned 100% blocks executed 80%
+     5260:  500:                const_iterator& operator ++ () {
+        -:  501:                    // <your code>
+     5260:  502:                    ++idx;
+     5260:  503:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     5260:  504:                    return *this;
+        -:  505:                }
+        -:  506:
+        -:  507:                /**
+        -:  508:             * increment operator (post)
+        -:  509:             * @return reference of the iterator before incrementation
+        -:  510:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratorppEi called 635 returned 100% blocks executed 71%
+function _ZN8my_dequeIdSaIdEE14const_iteratorppEi called 635 returned 100% blocks executed 71%
+     1270:  511:                const_iterator operator ++ (int) {
+     1270:  512:                    const_iterator x = *this;
+     1270:  513:                    ++(*this);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+     1270:  514:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     1270:  515:                    return x;}
+call    0 never executed
+call    1 never executed
+        -:  516:
+        -:  517:                // -----------
+        -:  518:                // operator --
+        -:  519:                // -----------
+        -:  520:
+        -:  521:                /**
+        -:  522:             * decrement operator (pre)
+        -:  523:             * @return reference of the iterator after decrementation
+        -:  524:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratormmEv called 648 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE14const_iteratormmEv called 648 returned 100% blocks executed 80%
+     1296:  525:                const_iterator& operator -- () {
+        -:  526:                    // <your code>
+     1296:  527:                    --idx;
+     1296:  528:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     1296:  529:                    return *this;}
+        -:  530:
+        -:  531:                /**
+        -:  532:             * decrement operator (post)
+        -:  533:             * @return reference of the iterator before decrementation
+        -:  534:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratormmEi called 281 returned 100% blocks executed 71%
+function _ZN8my_dequeIdSaIdEE14const_iteratormmEi called 281 returned 100% blocks executed 71%
+      562:  535:                const_iterator operator -- (int) {
+      562:  536:                    const_iterator x = *this;
+      562:  537:                    --(*this);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+      562:  538:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      562:  539:                    return x;}
+call    0 never executed
+call    1 never executed
+        -:  540:
+        -:  541:                // -----------
+        -:  542:                // operator +=
+        -:  543:                // -----------
+        -:  544:
+        -:  545:                /**
+        -:  546:             * += operator
+        -:  547:             * @param d the number of incrememtation
+        -:  548:             * @return reference of the iterator after incrementation
+        -:  549:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratorpLEl called 678 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE14const_iteratorpLEl called 678 returned 100% blocks executed 80%
+     1356:  550:                const_iterator& operator += (difference_type d) {
+        -:  551:                    // <your code>
+     1356:  552:                    idx += d;
+     1356:  553:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     1356:  554:                    return *this;
+        -:  555:                }
+        -:  556:
+        -:  557:                // -----------
+        -:  558:                // operator -=
+        -:  559:                // -----------
+        -:  560:
+        -:  561:                /**
+        -:  562:             * -= operator
+        -:  563:             * @param d the number of decrememtation
+        -:  564:             * @return reference of the iterator after decrementation
+        -:  565:             */
+function _ZN8my_dequeIiSaIiEE14const_iteratormIEl called 463 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE14const_iteratormIEl called 463 returned 100% blocks executed 80%
+      926:  566:                const_iterator& operator -= (difference_type d) {
+        -:  567:                    // <your code>
+      926:  568:                    idx -= d;
+      926:  569:                    assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      926:  570:                    return *this;
+        -:  571:                }
+        -:  572:            };
+        -:  573: 
+        -:  574:    public:
+        -:  575:        // ------------
+        -:  576:        // constructors
+        -:  577:        // ------------
+        -:  578:
+        -:  579:        /**
+        -:  580:         * @param a the allocator the deque used
+        -:  581:         * default constructor or constructor that takes in an allocator
+        -:  582:         */
+        -:  583:        
+function _ZN8my_dequeIiSaIiEEC2ERKS0_ called 210 returned 100% blocks executed 88%
+function _ZN8my_dequeIdSaIdEEC2ERKS0_ called 210 returned 100% blocks executed 88%
+      420:  584:        explicit my_deque (const allocator_type& a = allocator_type() ){
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+      420:  585:            outer_alloc = a ;_a = a;  outer_front=0; head=0; _begin=0; _end=0; tail=0;
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+      420:  586:            assert(valid() );
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      420:  587:        }
+        -:  588:
+        -:  589:        /**
+        -:  590:         * fill constructor that optionally takes in an allocator
+        -:  591:         * @param s the number of elements
+        -:  592:         */
+function _ZN8my_dequeIiSaIiEEC2EmRKiRKS0_ called 1672 returned 100% blocks executed 76%
+function _ZN8my_dequeIdSaIdEEC2EmRKdRKS0_ called 1672 returned 100% blocks executed 76%
+     3344:  593:        explicit my_deque (std::size_t s, const_reference v = value_type(), const allocator_type& a = allocator_type())
+     3344:  594:        {
+call    0 returned 100%
+call    1 returned 100%
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 returned 100%
+call    6 returned 100%
+call    7 never executed
+call    8 never executed
+call    9 never executed
+        -:  595:            // <your code>
+        -:  596:            _a = a;
+        -:  597:            unsigned int num_arrays;
+     3344:  598:            if(s % ARRAY_SIZE != 0)
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+branch  2 taken 99% (fallthrough)
+branch  3 taken 1%
+     3300:  599:                num_arrays = s / ARRAY_SIZE + 1;
+     3344:  600:            num_arrays = s / ARRAY_SIZE;
+        -:  601:
+     3344:  602:            outer_front= outer_alloc.allocate(num_arrays);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+    10424:  603:            for (unsigned int i = 0; i < num_arrays; ++i)
+branch  0 taken 68%
+branch  1 taken 32% (fallthrough)
+branch  2 taken 68%
+branch  3 taken 32% (fallthrough)
+     7080:  604:                outer_front[i] = _a.allocate(ARRAY_SIZE);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+     3344:  605:            _begin = _a.allocate(s);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+     3344:  606:            _end  = _begin + s;
+     3344:  607:            head = _begin;
+     3344:  608:            tail = _end;
+     3344:  609:            uninitialized_fill(_a, begin(), end(), v);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+     3344:  610:            assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     3344:  611:        }
+        -:  612:
+        -:  613:        /**
+        -:  614:         * copy constructor
+        -:  615:         * @param that my_deque to be get copied
+        -:  616:         */
+function _ZN8my_dequeIiSaIiEEC2ERKS1_ called 73 returned 100% blocks executed 67%
+function _ZN8my_dequeIdSaIdEEC2ERKS1_ called 73 returned 100% blocks executed 67%
+      146:  617:        my_deque (const my_deque& that) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 returned 100%
+call    6 returned 100%
+call    7 never executed
+call    8 never executed
+call    9 never executed
+        -:  618:            // <your code>
+        -:  619:            _a = that._a;
+        -:  620:            outer_alloc = that.outer_alloc;
+      146:  621:            _begin = _a.allocate(that._end - that._begin);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+      146:  622:            _end =  _begin + (that._end - that._begin);            
+      146:  623:            uninitialized_copy(_a, that.begin(), that.end(), begin());             
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0% (throw)
+call   20 returned 100%
+branch 21 taken 100% (fallthrough)
+branch 22 taken 0% (throw)
+call   23 returned 100%
+      146:  624:            head = _begin;
+      146:  625:            tail  = _end;
+      146:  626:            assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      146:  627:        }
+        -:  628:
+        -:  629:        // ----------
+        -:  630:        // destructor
+        -:  631:        // ----------
+        -:  632:        /**
+        -:  633:         * destructor
+        -:  634:         */
+function _ZN8my_dequeIiSaIiEED2Ev called 1955 returned 100% blocks executed 62%
+function _ZN8my_dequeIdSaIdEED2Ev called 1955 returned 100% blocks executed 62%
+     3910:  635:        ~my_deque () {
+        -:  636:            // <your code>
+     3910:  637:            int capacity = tail - head;
+        -:  638:
+     3910:  639:            if (_begin) {
+branch  0 taken 89% (fallthrough)
+branch  1 taken 11%
+branch  2 taken 89% (fallthrough)
+branch  3 taken 11%
+     3490:  640:                clear();
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+     3490:  641:                _a.deallocate(head, capacity);
+call    0 returned 100%
+call    1 returned 100%
+        -:  642:            }
+     3910:  643:            assert(valid() );
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     3910:  644:        }
+call    0 returned 100%
+call    1 returned 100%
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 returned 100%
+call    6 returned 100%
+call    7 never executed
+call    8 never executed
+call    9 never executed
+        -:  645:
+        -:  646:        // ----------
+        -:  647:        // operator =
+        -:  648:        // ----------
+        -:  649:
+        -:  650:        /**
+        -:  651:         * = operator
+        -:  652:         * @param that constant reference to that
+        -:  653:         * @return the copy my_deque
+        -:  654:         */
+        -:  655:         
+function _ZN8my_dequeIiSaIiEEaSERKS1_ called 1 returned 100% blocks executed 36%
+function _ZN8my_dequeIdSaIdEEaSERKS1_ called 1 returned 100% blocks executed 36%
+        2:  656:        my_deque& operator = (const my_deque& rhs) {
+        -:  657:            // <your code>
+        2:  658:           unsigned int filled_space  =  _end - _begin;
+        2:  659:           unsigned int begin_to_back = tail - _begin;
+        2:  660:           if (this == &rhs)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
+    #####:  661:                return *this;
+        2:  662:            if (rhs.size() == filled_space)
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+    #####:  663:                std::copy(rhs.begin(), rhs.end(), begin());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+        -:  664:
+        2:  665:            else if (rhs.size() < filled_space) {
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+    #####:  666:                std::copy(rhs.begin(), rhs.end(), begin());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+    #####:  667:                resize(rhs._end - rhs._begin);
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+call    7 never executed
+        -:  668:            }   
+        -:  669:
+        2:  670:            else if (rhs.size() <= begin_to_back) {
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+    #####:  671:                std::copy(rhs.begin(), rhs.begin() + begin_to_back, begin());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+    #####:  672:                _end = &(*uninitialized_copy(_a, rhs.begin() + begin_to_back, rhs.end(), end()));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+        -:  673:            }
+        -:  674:            else {
+        2:  675:                clear();
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+        2:  676:                my_deque x(rhs);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+        2:  677:                swap(x);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+call    6 never executed
+call    7 never executed
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0% (throw)
+call   10 returned 100%
+branch 11 taken 100% (fallthrough)
+branch 12 taken 0% (throw)
+call   13 returned 100%
+call   14 never executed
+call   15 never executed
+        -:  678:            }
+        2:  679:            assert(valid() );
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+        2:  680:            return *this;
+        -:  681:        }
+        -:  682:
+        -:  683:        // -----------
+        -:  684:        // operator []
+        -:  685:        // -----------
+        -:  686:
+        -:  687:        /**
+        -:  688:         * @param index a std::size_t
+        -:  689:         * @return a reference to an element in the my_deque
+        -:  690:         * Will navigate to the correct position in the two-d container from a single
+        -:  691:         * index and return a reference to the object located there. No bounds checking
+        -:  692:         */
+function _ZN8my_dequeIiSaIiEEixEm called 584644 returned 100% blocks executed 100%
+function _ZN8my_dequeIdSaIdEEixEm called 584644 returned 100% blocks executed 100%
+  1169288:  693:        reference operator [] (std::size_t index) {
+        -:  694:            // <your code>
+  1169288:  695:            pointer r = _begin + index;
+  1169288:  696:            return *r;
+        -:  697:        }
+        -:  698:
+        -:  699:        /**
+        -:  700:         * @param index a std::size_t
+        -:  701:         * @return a const_reference to an element in the my_deque
+        -:  702:         * Will navigate to the correct position in the two-d container from a single
+        -:  703:         * index and return a reference to the object located there. No bounds checking
+        -:  704:         */
+function _ZNK8my_dequeIiSaIiEEixEm called 3334 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEEixEm called 3334 returned 100% blocks executed 100%
+     6668:  705:        const_reference operator [] (std::size_t index) const {
+     6668:  706:            return const_cast<my_deque*>(this)->operator[](index);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  707:
+        -:  708:        // --
+        -:  709:        // at
+        -:  710:        // --
+        -:  711:
+        -:  712:        /**
+        -:  713:         * @param index a std::size_t
+        -:  714:         * @return a reference to an element in the my_deque
+        -:  715:         * Will navigate to the correct position in the two-d container from a single
+        -:  716:         * index and return a reference to the object located there. Does bounds checking
+        -:  717:         * and will throw an out_ofirst_range exception if trying to access out of range.
+        -:  718:         */
+function _ZN8my_dequeIiSaIiEE2atEm called 17 returned 88% blocks executed 65%
+function _ZN8my_dequeIdSaIdEE2atEm called 17 returned 88% blocks executed 65%
+       34:  719:        reference at (std::size_t index) {
+        -:  720:            // <your code>
+       34:  721:            if (index >= size() )
+call    0 returned 100%
+branch  1 taken 12% (fallthrough)
+branch  2 taken 88%
+call    3 returned 100%
+branch  4 taken 12% (fallthrough)
+branch  5 taken 88%
+        4:  722:                throw std::out_of_range("out_of_range");
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+branch  5 taken 100% (fallthrough)
+branch  6 taken 0% (throw)
+call    7 returned 100%
+call    8 returned 100%
+call    9 returned 100%
+call   10 returned 0%
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+call   15 returned 100%
+call   16 returned 100%
+branch 17 taken 100% (fallthrough)
+branch 18 taken 0% (throw)
+call   19 returned 100%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0% (throw)
+call   22 returned 100%
+call   23 returned 100%
+call   24 returned 100%
+call   25 returned 0%
+call   26 never executed
+call   27 never executed
+call   28 never executed
+call   29 never executed
+       30:  723:            return (*this)[index];
+call    0 returned 100%
+call    1 returned 100%
+        -:  724:        }
+        -:  725:
+        -:  726:        /**
+        -:  727:         * @param index a std::size_t
+        -:  728:         * @return a const_reference to an element in the my_deque
+        -:  729:         * Will navigate to the correct position in the two-d container from a single
+        -:  730:         * index and return a read only reference to the object located there. Does 
+        -:  731:         * bounds checking and will throw an out_ofirst_range exception if trying to 
+        -:  732:         * access out of range.
+        -:  733:         */
+function _ZNK8my_dequeIiSaIiEE2atEm called 6 returned 83% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE2atEm called 6 returned 83% blocks executed 100%
+       12:  734:        const_reference at (std::size_t index) const {
+       12:  735:            return const_cast<my_deque*>(this)->at(index);}
+call    0 returned 83%
+call    1 returned 83%
+        -:  736:
+        -:  737:        // ----
+        -:  738:        // back
+        -:  739:        // ----
+        -:  740:
+        -:  741:        /**
+        -:  742:         * @return a reference
+        -:  743:         * Will return a read/write reference to the last element in the deque.
+        -:  744:         */
+function _ZN8my_dequeIiSaIiEE4backEv called 15 returned 100% blocks executed 80%
+function _ZN8my_dequeIdSaIdEE4backEv called 15 returned 100% blocks executed 80%
+       30:  745:        reference back () {
+        -:  746:            // <your code>
+        -:  747:            // assert(!empty());
+        -:  748:            // return *(end() - 1);
+       30:  749:            assert(! empty());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+       30:  750:            return *(_end - 1);
+        -:  751:        }
+        -:  752:
+        -:  753:        /**
+        -:  754:         * @return a const_reference
+        -:  755:         * Will return a read only reference to the last element in the deque.
+        -:  756:         */
+        -:  757:        const_reference back () const {
+        -:  758:            return const_cast<my_deque*>(this)->back();}
+        -:  759:
+        -:  760:        // -----
+        -:  761:        // begin
+        -:  762:        // -----
+        -:  763:
+        -:  764:        /**
+        -:  765:         * @return a iterator
+        -:  766:         * Will create and return a read/write iterator to the front of the deque
+        -:  767:         */
+function _ZN8my_dequeIiSaIiEE5beginEv called 12423 returned 100% blocks executed 100%
+function _ZN8my_dequeIdSaIdEE5beginEv called 12423 returned 100% blocks executed 100%
+    24846:  768:        iterator begin () {
+        -:  769:            // <your code>
+    24846:  770:            return iterator(this, 0);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  771:
+        -:  772:        /**
+        -:  773:         * @return a const_iterator
+        -:  774:         * Will create and return a read only iterator to the front of the deque
+        -:  775:         */
+function _ZNK8my_dequeIiSaIiEE5beginEv called 485 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE5beginEv called 485 returned 100% blocks executed 100%
+      970:  776:        const_iterator begin () const {
+        -:  777:            // <your code>
+      970:  778:            return const_iterator(this, 0);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  779:
+        -:  780:        // -----
+        -:  781:        // clear
+        -:  782:        // -----
+        -:  783:
+        -:  784:        /**
+        -:  785:         * Will remove all elements from the deque by leveraging the resize method.
+        -:  786:         */
+function _ZN8my_dequeIiSaIiEE5clearEv called 1752 returned 100% blocks executed 67%
+function _ZN8my_dequeIdSaIdEE5clearEv called 1752 returned 100% blocks executed 67%
+     3504:  787:        void clear () {
+        -:  788:            // <your code>
+     3504:  789:            resize(0);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+call    3 never executed
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+     3504:  790:            assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     3504:  791:        }
+        -:  792:
+        -:  793:        // -----
+        -:  794:        // empty
+        -:  795:        // -----
+        -:  796:
+        -:  797:        /**
+        -:  798:         * @return a bool
+        -:  799:         * Will return true if the deque is empty and false otherwise.
+        -:  800:         */
+function _ZNK8my_dequeIiSaIiEE5emptyEv called 61 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE5emptyEv called 61 returned 100% blocks executed 100%
+      122:  801:        bool empty () const {
+      122:  802:            return (_end - _begin <= 0);
+        -:  803:        }
+        -:  804:
+        -:  805:        // ---
+        -:  806:        // end
+        -:  807:        // ---
+        -:  808:
+        -:  809:        /**
+        -:  810:         * @return a iterator
+        -:  811:         * Will create and return a read/write iterator to the end
+        -:  812:         * of the deque
+        -:  813:         */
+function _ZN8my_dequeIiSaIiEE3endEv called 11454 returned 100% blocks executed 100%
+function _ZN8my_dequeIdSaIdEE3endEv called 11454 returned 100% blocks executed 100%
+    22908:  814:        iterator end () {
+        -:  815:            // <your code>
+    22908:  816:            return iterator(this, _end - _begin);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  817:
+        -:  818:        /**
+        -:  819:         * @return a const_iterator
+        -:  820:         * Will create and return a read only iterator to the end
+        -:  821:         * of the deque
+        -:  822:         */
+function _ZNK8my_dequeIiSaIiEE3endEv called 610 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE3endEv called 610 returned 100% blocks executed 100%
+     1220:  823:        const_iterator end () const {
+        -:  824:            // <your code>
+     1220:  825:            return const_iterator(this, _end - _begin);}
+call    0 returned 100%
+call    1 returned 100%
+        -:  826:
+        -:  827:        // -----
+        -:  828:        // erase
+        -:  829:        // -----
+        -:  830:
+        -:  831:        /**
+        -:  832:         * @param pos an iterator
+        -:  833:         * @return an interator
+        -:  834:         * Will remove the value at the given iterator position and
+        -:  835:         * move all the following elements forward. 
+        -:  836:         */
+function _ZN8my_dequeIiSaIiEE5eraseENS1_8iteratorE called 130 returned 100% blocks executed 73%
+function _ZN8my_dequeIdSaIdEE5eraseENS1_8iteratorE called 130 returned 100% blocks executed 73%
+      260:  837:        iterator erase (iterator pos) {
+        -:  838:            // <your code>
+      260:  839:            iterator it(pos);
+      260:  840:            std::copy(pos +1, end(), pos);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+      260:  841:            resize(_end - _begin - 1);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+call    3 never executed
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+      260:  842:            assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      260:  843:            return it;
+        -:  844:        }
+        -:  845:
+        -:  846:        // -----
+        -:  847:        // front
+        -:  848:        // -----
+        -:  849:
+        -:  850:        /**
+        -:  851:         * @return a reference
+        -:  852:         * Will return a read/write reference to the value at the front
+        -:  853:         * of the deque.
+        -:  854:         */
+function _ZN8my_dequeIiSaIiEE5frontEv called 17 returned 100% blocks executed 75%
+function _ZN8my_dequeIdSaIdEE5frontEv called 17 returned 100% blocks executed 75%
+       34:  855:        reference front () {
+        -:  856:            // <your code>
+       34:  857:            assert(!empty());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+       34:  858:            return *begin();
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+call    9 never executed
+        -:  859:        }
+        -:  860:
+        -:  861:        /**
+        -:  862:         * @return a const_reference
+        -:  863:         * Will return a read only reference to the value at the front
+        -:  864:         * of the deque.
+        -:  865:         */
+function _ZNK8my_dequeIiSaIiEE5frontEv called 2 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE5frontEv called 2 returned 100% blocks executed 100%
+        4:  866:        const_reference front () const {
+        4:  867:            return const_cast<my_deque*>(this)->front();}
+call    0 returned 100%
+call    1 returned 100%
+        -:  868:
+        -:  869:        // ------
+        -:  870:        // insert
+        -:  871:        // ------
+        -:  872:
+        -:  873:        /**
+        -:  874:         * @param i an iterator
+        -:  875:         * @param v a const_reference
+        -:  876:         * @return an iterator
+        -:  877:         * Will insert the given value into the deque at the iterator
+        -:  878:         * position and move all the elements after that position down in the deque.
+        -:  879:         */
+function _ZN8my_dequeIiSaIiEE6insertENS1_8iteratorERKi called 8 returned 100% blocks executed 85%
+function _ZN8my_dequeIdSaIdEE6insertENS1_8iteratorERKd called 8 returned 100% blocks executed 85%
+       16:  880:        iterator insert (iterator i, const_reference v) {
+        -:  881:            // <your code>
+       16:  882:            if (i == begin()) {
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 38% (fallthrough)
+branch  3 taken 63%
+call    4 returned 100%
+call    5 returned 100%
+branch  6 taken 38% (fallthrough)
+branch  7 taken 63%
+        6:  883:                push_front(v);
+call    0 returned 100%
+call    1 returned 100%
+        6:  884:                return begin();
+call    0 returned 100%
+call    1 returned 100%
+        -:  885:            }
+       10:  886:            else if (i == end()) {
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 20% (fallthrough)
+branch  3 taken 80%
+call    4 returned 100%
+call    5 returned 100%
+branch  6 taken 20% (fallthrough)
+branch  7 taken 80%
+        2:  887:                push_back(v);
+call    0 returned 100%
+call    1 returned 100%
+        2:  888:                return --(end());
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+call    9 never executed
+        -:  889:            }
+        -:  890:            else {
+        8:  891:                iterator it(i);
+        8:  892:                resize(_end - _begin + 1);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+call    3 never executed
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+        8:  893:                std::copy_backward(i, end() -1, end());
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0% (throw)
+call   20 returned 100%
+branch 21 taken 100% (fallthrough)
+branch 22 taken 0% (throw)
+call   23 returned 100%
+        8:  894:                *it = v;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+        8:  895:                assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+        8:  896:                return it;
+        -:  897:            }  
+        -:  898:   
+        -:  899:        }
+        -:  900:
+        -:  901:        // ---
+        -:  902:        // pop
+        -:  903:        // ---
+        -:  904:
+        -:  905:        /**
+        -:  906:         * Will remove the element at the back of the deque,
+        -:  907:         * and decrement the size by one
+        -:  908:         */
+function _ZN8my_dequeIiSaIiEE8pop_backEv called 251 returned 100% blocks executed 67%
+function _ZN8my_dequeIdSaIdEE8pop_backEv called 251 returned 100% blocks executed 67%
+      502:  909:        void pop_back () {
+        -:  910:            // <your code>
+      502:  911:            resize(_end - _begin - 1);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+call    3 never executed
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+      502:  912:            assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+      502:  913:        }
+        -:  914:
+        -:  915:        /**
+        -:  916:         * Will remove the element at the front of the deque,
+        -:  917:         * and decrement the size by one
+        -:  918:         */
+function _ZN8my_dequeIiSaIiEE9pop_frontEv called 20 returned 100% blocks executed 75%
+function _ZN8my_dequeIdSaIdEE9pop_frontEv called 20 returned 100% blocks executed 75%
+       40:  919:        void pop_front () {
+        -:  920:            // <your code>
+       40:  921:            assert(!empty());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+       40:  922:            _a.destroy(_begin);
+call    0 returned 100%
+call    1 returned 100%
+       40:  923:            ++_begin;
+       40:  924:            assert(valid());    
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+       40:  925:        }
+        -:  926:
+        -:  927:        // ----
+        -:  928:        // push
+        -:  929:        // ----
+        -:  930:
+        -:  931:        /**
+        -:  932:         * @param val a const_reference
+        -:  933:         * Will push the given value onto the back of the deque
+        -:  934:         * and increment the size by one
+        -:  935:         */
+function _ZN8my_dequeIiSaIiEE9push_backERKi called 1362 returned 100% blocks executed 73%
+function _ZN8my_dequeIdSaIdEE9push_backERKd called 1362 returned 100% blocks executed 73%
+     2724:  936:        void push_back (const_reference v) {
+        -:  937:            // <your code>
+     2724:  938:            resize(size() + 1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+call    9 never executed
+     2724:  939:            *(end() - 1) = v;
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+call    5 never executed
+call    6 returned 100%
+call    7 returned 100%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0% (throw)
+call   10 returned 100%
+call   11 never executed
+     2724:  940:            assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     2724:  941:        }
+        -:  942:
+        -:  943:        /**
+        -:  944:         * @param val a const_reference
+        -:  945:         * Will push the given value onto the front of the deque
+        -:  946:         * and increment the size by one
+        -:  947:         */
+function _ZN8my_dequeIiSaIiEE10push_frontERKi called 1306 returned 100% blocks executed 77%
+function _ZN8my_dequeIdSaIdEE10push_frontERKd called 1306 returned 100% blocks executed 77%
+     2612:  948:        void push_front (const_reference v) {
+        -:  949:            // <your code>
+     2612:  950:            if (head == _begin) {
+branch  0 taken 18% (fallthrough)
+branch  1 taken 82%
+branch  2 taken 18% (fallthrough)
+branch  3 taken 82%
+      458:  951:                 resize(size() + 1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+call    9 never executed
+      458:  952:                 pop_back();
+call    0 returned 100%
+call    1 returned 100%
+        -:  953:             }    
+     2612:  954:             --_begin;
+     2612:  955:             _a.construct(&*begin(), v); 
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 returned 100%
+call    5 never executed
+call    6 returned 100%
+branch  7 taken 100% (fallthrough)
+branch  8 taken 0% (throw)
+call    9 returned 100%
+call   10 returned 100%
+call   11 never executed
+     2612:  956:             assert(valid());
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     2612:  957:        }
+        -:  958:
+        -:  959:        // ------
+        -:  960:        // resize
+        -:  961:        // ------
+        -:  962:
+        -:  963:        /**
+        -:  964:         * @param s a std::size_t
+        -:  965:         * @param v a const_reference(optional)
+        -:  966:         * Will resize the deque to the given size. If it is less than the current size
+        -:  967:         * then the deque will shrink, destroying the elements that are removed from the
+        -:  968:         * end. If the size to resize is greater than the current size it will grow the
+        -:  969:         * the capacity where necessary and fill with the given default value. 
+        -:  970:         */
+function _ZN8my_dequeIiSaIiEE6resizeEmRKi called 3734 returned 100% blocks executed 84%
+function _ZN8my_dequeIdSaIdEE6resizeEmRKd called 3734 returned 100% blocks executed 84%
+     7468:  971:        void resize (std::size_t s, const_reference v = value_type()) {
+        -:  972:            // <your code>
+        -:  973:
+     7468:  974:            if (s < size())
+call    0 returned 100%
+branch  1 taken 57% (fallthrough)
+branch  2 taken 43%
+call    3 returned 100%
+branch  4 taken 57% (fallthrough)
+branch  5 taken 43%
+     4246:  975:                _end = &*destroy(_a, begin() + s, end() );
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+call    8 returned 100%
+call    9 returned 100%
+call   10 returned 100%
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+call   15 never executed
+        -:  976:
+     3222:  977:            else if ((unsigned)s == (unsigned)(size()) && (unsigned)s <= (unsigned)(tail - _begin))
+call    0 returned 100%
+branch  1 taken 1% (fallthrough)
+branch  2 taken 99%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0%
+branch  5 taken 1% (fallthrough)
+branch  6 taken 99%
+call    7 returned 100%
+branch  8 taken 1% (fallthrough)
+branch  9 taken 99%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 1% (fallthrough)
+branch 13 taken 99%
+       24:  978:                _end = &*uninitialized_fill(_a, end(), begin() + s, v);
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+call    8 returned 100%
+call    9 returned 100%
+call   10 returned 100%
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+call   15 never executed
+        -:  979:
+        -:  980:            else {      // need more capacity
+     3198:  981:                unsigned new_capacity = s;
+     3198:  982:                my_deque x(new_capacity + HEAD_SPACE + TAIL_SPACE , v);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 returned 100%
+call    5 never executed
+call    6 returned 100%
+branch  7 taken 100% (fallthrough)
+branch  8 taken 0% (throw)
+call    9 returned 100%
+call   10 returned 100%
+call   11 never executed
+     3198:  983:                std::copy(begin(), end(), x.begin() + HEAD_SPACE);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0% (throw)
+call   20 returned 100%
+branch 21 taken 100% (fallthrough)
+branch 22 taken 0% (throw)
+call   23 returned 100%
+branch 24 taken 100% (fallthrough)
+branch 25 taken 0% (throw)
+call   26 returned 100%
+branch 27 taken 100% (fallthrough)
+branch 28 taken 0% (throw)
+call   29 returned 100%
+     3198:  984:                destroy(x._a, x.begin(), x.begin() + HEAD_SPACE);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0% (throw)
+call   20 returned 100%
+branch 21 taken 100% (fallthrough)
+branch 22 taken 0% (throw)
+call   23 returned 100%
+     3198:  985:                destroy(x._a, x.end()-TAIL_SPACE, x.end());
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0% (throw)
+call    8 returned 100%
+branch  9 taken 100% (fallthrough)
+branch 10 taken 0% (throw)
+call   11 returned 100%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0% (throw)
+call   14 returned 100%
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0% (throw)
+call   17 returned 100%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0% (throw)
+call   20 returned 100%
+branch 21 taken 100% (fallthrough)
+branch 22 taken 0% (throw)
+call   23 returned 100%
+     3198:  986:                x._begin += HEAD_SPACE;
+     3198:  987:                x._end -= TAIL_SPACE;
+     3198:  988:                swap(x);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+call    6 never executed
+call    7 never executed
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0% (throw)
+call   10 returned 100%
+branch 11 taken 100% (fallthrough)
+branch 12 taken 0% (throw)
+call   13 returned 100%
+call   14 never executed
+call   15 never executed
+        -:  989:
+        -:  990:            }
+     7468:  991:            assert(valid() );
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     7468:  992:        }
+        -:  993:
+        -:  994:        // ----
+        -:  995:        // size
+        -:  996:        // ----
+        -:  997:
+        -:  998:        /**
+        -:  999:         * @return a std::size_t
+        -: 1000:         * Returns the size of the deque, not the capacity
+        -: 1001:         */
+function _ZNK8my_dequeIiSaIiEE4sizeEv called 7685 returned 100% blocks executed 100%
+function _ZNK8my_dequeIdSaIdEE4sizeEv called 7685 returned 100% blocks executed 100%
+    15370: 1002:        std::size_t size () const {
+        -: 1003:            // <your code>
+    15370: 1004:            return _end - _begin;
+        -: 1005:        }
+        -: 1006:
+        -: 1007:        // ----
+        -: 1008:        // swap
+        -: 1009:        // ----
+        -: 1010:
+        -: 1011:        /**
+        -: 1012:         * @param that a my_deque reference
+        -: 1013:         * Will swap this deque with the one given as a parameter.
+        -: 1014:         */
+function _ZN8my_dequeIiSaIiEE4swapERS1_ called 1603 returned 100% blocks executed 50%
+function _ZN8my_dequeIdSaIdEE4swapERS1_ called 1603 returned 100% blocks executed 50%
+     3206: 1015:        void swap (my_deque& that) {
+        -: 1016:            // <your code>
+     3206: 1017:            if (_a == that._a) {
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+     3206: 1018:                std::swap(head, that.head);
+call    0 returned 100%
+call    1 returned 100%
+     3206: 1019:                std::swap(_begin, that._begin);
+call    0 returned 100%
+call    1 returned 100%
+     3206: 1020:                std::swap(_end, that._end);
+call    0 returned 100%
+call    1 returned 100%
+     3206: 1021:                std::swap(tail, that.tail);}
+call    0 returned 100%
+call    1 returned 100%
+        -: 1022:            else {
+    #####: 1023:                my_deque x(*this);
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    #####: 1024:                *this = that;
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+    #####: 1025:                that = x;}
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+call   14 never executed
+call   15 never executed
+     3206: 1026:            assert(valid() );
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+call    4 returned 100%
+branch  5 taken 0% (fallthrough)
+branch  6 taken 100%
+call    7 never executed
+     3206: 1027:        }
+        -: 1028:
+        -: 1029:
+        -: 1030:    };
+        -: 1031:
+        -: 1032:#endif // Deque_h
