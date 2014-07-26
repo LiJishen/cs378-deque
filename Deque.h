@@ -984,13 +984,13 @@ return (!_front && !_begin && !_end && !_back) ||
             // <your code>
             if (s == size())
                 _end = &*uninitialized_fill(_a, end(), begin() + s, v);
-            
+
             if (s < size())
                 _end = &*destroy(_a, begin() + s, end() );
 
             else if ( (unsigned)s <= (unsigned)(_back - _begin))
                 _end = &*uninitialized_fill(_a, end(), begin() + s, v);
-
+    
             else {      // allocate more capacity
                 size_type capacity = std::max(s, 2 * size());
                 size_type temp1 = (capacity - s) / 2;
