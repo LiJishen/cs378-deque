@@ -6,7 +6,10 @@
 
 #ifndef Deque_h
 #define Deque_h
-#define WIDTH 50 
+#define ARRAY_SIZE 36
+#define HEAD_SPACE 6
+#define TAIL_SPACE 6
+
 // --------
 // includes
 // --------
@@ -600,13 +603,13 @@ class my_deque {
             // <your code>
             _a = a;
             unsigned int num_arrays;
-            if(s % WIDTH != 0)
-                num_arrays = s / WIDTH + 1;
-            num_arrays = s / WIDTH;
+            if(s % ARRAY_SIZE != 0)
+                num_arrays = s / ARRAY_SIZE + 1;
+            num_arrays = s / ARRAY_SIZE;
 
             _fr = _pa.allocate(num_arrays);
             for (unsigned int i = 0; i < num_arrays; ++i)
-                _fr[i] = _a.allocate(WIDTH);
+                _fr[i] = _a.allocate(ARRAY_SIZE);
             _begin = _a.allocate(s);
             _end  = _begin + s;
             _front = _begin;
@@ -997,15 +1000,16 @@ class my_deque {
                 _end = &*uninitialized_fill(_a, end(), begin() + s, v);
 
 
-            else {      // allocate more capacity
+            else {      // need more capacity
+                unsigned new_capacity = s;
+                my_deque x(new_capacity + HEAD_SPACE + TAIL_SPACE , v);
+                std::copy(begin(), end(), x.begin() + HEAD_SPACE);
+                destroy(x._a, x.begin(), x.begin() + HEAD_SPACE);
+                destroy(x._a, x.end()-TAIL_SPACE, x.end());
+                x._begin += HEAD_SPACE;
+                x._end -= TAIL_SPACE;
+                swap(x);
 
-
-                size_type c = std::max(s, (size() * 2));
-                if (c > _back - _front) {
-                    my_deque x(*this, c);
-                    swap(x); 
-                }
-                resize(s, v);
             }
             assert(valid() );
         }
