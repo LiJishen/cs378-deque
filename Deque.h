@@ -156,13 +156,6 @@ class my_deque {
             ((head <= _begin) && (_begin <= _end) && (_end <= tail));
         }
 
-        // void reserve (size_type c) {
-        //     if (c > tail - head) {
-        //         my_deque x(*this, c);
-        //         swap(x); 
-        //     }
-        // }
-
     //iterator class
     public:
         // --------
@@ -221,7 +214,6 @@ class my_deque {
                  */
                 friend iterator operator - (iterator lhs, difference_type rhs) {
                     return lhs -= rhs;}
-            // data
             private:
                 // ----
                 // data
@@ -229,10 +221,8 @@ class my_deque {
 
                 // <your data>
                 my_deque* _d;
-                size_type idx;
-                //std::size_t idx;
+                std::size_t idx;
 
-            // valid()
             private:
                 // -----
                 // valid
@@ -252,7 +242,7 @@ class my_deque {
                 /**
                  * <your documentation>
                  */
-                iterator (my_deque* d, size_type i = 0) {
+                iterator (my_deque* d, std::size_t i = 0) {
                     // <your code>
                     idx = i;
                     _d = d;
@@ -356,15 +346,13 @@ class my_deque {
                     idx -= d; 
                     assert(valid());
                     return *this;}
-                };//end of iterator class
-    // const_iterator class
+                };
     public:
         // --------------------
         // const_iterator class
         // --------------------
 
         class const_iterator {
-            // typedefs
             public:
                 // --------
                 // typedefs
@@ -376,7 +364,6 @@ class my_deque {
                 typedef typename my_deque::const_pointer   pointer;
                 typedef typename my_deque::const_reference reference;
 
-            //== != + -
             public:
                 // -----------
                 // operator ==
@@ -415,8 +402,7 @@ class my_deque {
                  */
                 friend const_iterator operator - (const_iterator lhs, difference_type rhs) {
                     return lhs -= rhs;}
-            
-            //data
+
             private:
                 // ----
                 // data
@@ -424,10 +410,9 @@ class my_deque {
 
                 // <your data>
                 const my_deque* _d;
-                size_type idx;
-                //std::size_t idx;
+                std::size_t idx;
                 
-            //valid()
+
             private:
                 // -----
                 // valid
@@ -436,10 +421,8 @@ class my_deque {
                 bool valid () const {
                     // <your code>
                     return idx >= 0;
-                }//valid()
+                }
 
-            //###const_iterator constructor###
-            //* -> ++ -- += -= 
             public:
                 // -----------
                 // constructor
@@ -448,7 +431,7 @@ class my_deque {
                 /**
                  * <your documentation>
                  */
-                const_iterator (const my_deque* d, size_type i){
+                const_iterator (const my_deque* d, std::size_t i){
                     _d = d; 
                     idx = i; 
                     assert(valid());}
@@ -558,9 +541,7 @@ class my_deque {
                     return *this;
                 }
             };
-    // ###my_deque constructor and destructor###
-    // operator: = [] at back begin clear empty end front insert 
-    // popback popfront pushback pushfront resize size swap
+ 
     public:
         // ------------
         // constructors
@@ -571,7 +552,7 @@ class my_deque {
          * default constructor or constructor that takes in an allocator
          */
          /**
-         * @param a an allocator_type (optional)
+         * @param a an allocator_type 
          * Constructs the my_deque class with the given allocator or the standard allocator
          * by default. Will initialize the size and capacity to 0 and the pointers to the
          * beginning and the end to 0.
@@ -586,7 +567,7 @@ class my_deque {
          * @param s the number of elements
          */
          /**
-         * @param s a size_type 
+         * @param s a std::size_t 
          * @param v a const_reference (optional)
          * @param a an allocator_type (optional)
          * Will create an instance of my_deque with the given size and fill the deque with the
@@ -594,7 +575,7 @@ class my_deque {
          * type of the contents of the deque. It will also use the standard allocator if none is
          * given.
          */
-        explicit my_deque (size_type s, const_reference v = value_type(), const allocator_type& a = allocator_type())
+        explicit my_deque (std::size_t s, const_reference v = value_type(), const allocator_type& a = allocator_type())
         {
             // <your code>
             _a = a;
@@ -699,24 +680,24 @@ class my_deque {
         // -----------
 
         /**
-         * @param index a size_type
+         * @param index a std::size_t
          * @return a reference to an element in the my_deque
          * Will navigate to the correct position in the two-d container from a single
          * index and return a reference to the object located there. No bounds checking
          */
-        reference operator [] (size_type index) {
+        reference operator [] (std::size_t index) {
             // <your code>
             pointer r = _begin + index;
             return *r;
         }
 
         /**
-         * @param index a size_type
+         * @param index a std::size_t
          * @return a const_reference to an element in the my_deque
          * Will navigate to the correct position in the two-d container from a single
          * index and return a reference to the object located there. No bounds checking
          */
-        const_reference operator [] (size_type index) const {
+        const_reference operator [] (std::size_t index) const {
             return const_cast<my_deque*>(this)->operator[](index);}
 
         // --
@@ -724,13 +705,13 @@ class my_deque {
         // --
 
         /**
-         * @param index a size_type
+         * @param index a std::size_t
          * @return a reference to an element in the my_deque
          * Will navigate to the correct position in the two-d container from a single
          * index and return a reference to the object located there. Does bounds checking
          * and will throw an out_ofirst_range exception if trying to access out of range.
          */
-        reference at (size_type index) {
+        reference at (std::size_t index) {
             // <your code>
             if (index >= size() )
                 throw std::out_of_range("out_of_range");
@@ -738,14 +719,14 @@ class my_deque {
         }
 
         /**
-         * @param index a size_type
+         * @param index a std::size_t
          * @return a const_reference to an element in the my_deque
          * Will navigate to the correct position in the two-d container from a single
          * index and return a read only reference to the object located there. Does 
          * bounds checking and will throw an out_ofirst_range exception if trying to 
          * access out of range.
          */
-        const_reference at (size_type index) const {
+        const_reference at (std::size_t index) const {
             return const_cast<my_deque*>(this)->at(index);}
 
         // ----
@@ -850,8 +831,6 @@ class my_deque {
          */
         iterator erase (iterator pos) {
             // <your code>
-            //assert(valid());
-            //return iterator();
             iterator it(pos);
             std::copy(pos +1, end(), pos);
             resize(_end - _begin - 1);
@@ -977,7 +956,7 @@ class my_deque {
         // ------
 
         /**
-         * @param s a size_type
+         * @param s a std::size_t
          * @param v a const_reference(optional)
          * Will resize the deque to the given size. If it is less than the current size
          * then the deque will shrink, destroying the elements that are removed from the
@@ -986,15 +965,14 @@ class my_deque {
          * default value is given, the default constructor for the deque's value type will
          * be used. 
          */
-        void resize (size_type s, const_reference v = value_type()) {
+        void resize (std::size_t s, const_reference v = value_type()) {
             // <your code>
 
             if (s < size())
                 _end = &*destroy(_a, begin() + s, end() );
-            //_end -head
+
             else if ((unsigned)s == (unsigned)(size()) && (unsigned)s <= (unsigned)(tail - _begin))
                 _end = &*uninitialized_fill(_a, end(), begin() + s, v);
-
 
             else {      // need more capacity
                 unsigned new_capacity = s;
@@ -1015,10 +993,10 @@ class my_deque {
         // ----
 
         /**
-         * @return a size_type
+         * @return a std::size_t
          * Returns the size of the deque, not the capacity
          */
-        size_type size () const {
+        std::size_t size () const {
             // <your code>
             return _end - _begin;
         }
