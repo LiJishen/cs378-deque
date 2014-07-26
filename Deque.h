@@ -924,7 +924,12 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void pop_front () {
             // <your code>
-
+            cout << "here >> "<< _size <<endl;
+            assert(!empty());
+            _a.destroy(_begin);
+            _begin = &at(1);
+            --_size;
+            cout << "here >> "<< _size <<endl;
         }
 
         // ----
@@ -938,11 +943,11 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void push_back (const_reference v) {
             // <your code>
-            resize(size() + 1, v);
-            assert(valid());
-            // resize(_size + 1);
-            // *(end() - 1) = v;
+            // resize(size() + 1, v);
             // assert(valid());
+            resize(_size + 1);
+            *(end() - 1) = v;
+            assert(valid());
         }
 
         /**
@@ -952,7 +957,21 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void push_front (const_reference v) {
             // <your code>
-            
+            using namespace std;
+            if (*_obegin != _begin) {
+            //space available on this row
+                --_begin;
+                *begin() = v;
+                ++_size;
+            }
+            else if (_obegin != _ofirst) {
+                //space available for a new row
+                --_obegin;
+                *_obegin = _a.allocate(_arraySize);
+                _begin = *_obegin + _arraySize - 1;
+                *begin() = v;
+                ++_size;
+            }
         }
 
         // ------
