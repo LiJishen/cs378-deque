@@ -145,7 +145,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/0.constructor_size_1
 [       OK ] TestDeque/0.constructor_size_1 (0 ms)
 [ RUN      ] TestDeque/0.constructor_size_2
-[       OK ] TestDeque/0.constructor_size_2 (0 ms)
+[       OK ] TestDeque/0.constructor_size_2 (1 ms)
 [ RUN      ] TestDeque/0.constructor_size_3
 [       OK ] TestDeque/0.constructor_size_3 (0 ms)
 [ RUN      ] TestDeque/0.constructor_that_1
@@ -495,7 +495,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/0.Iterator_Dereference_2
 [       OK ] TestDeque/0.Iterator_Dereference_2 (0 ms)
 [ RUN      ] TestDeque/0.Iterator_Dereference_3
-[       OK ] TestDeque/0.Iterator_Dereference_3 (0 ms)
+[       OK ] TestDeque/0.Iterator_Dereference_3 (1 ms)
 [ RUN      ] TestDeque/0.Iterator_PrePlusPlus_1
 [       OK ] TestDeque/0.Iterator_PrePlusPlus_1 (0 ms)
 [ RUN      ] TestDeque/0.Iterator_PrePlusPlus_2
@@ -532,7 +532,7 @@ Running main() from gtest_main.cc
 [       OK ] TestDeque/0.Iterator_Plus_1 (0 ms)
 [ RUN      ] TestDeque/0.Iterator_Minus_1
 [       OK ] TestDeque/0.Iterator_Minus_1 (0 ms)
-[----------] 265 tests from TestDeque/0 (3 ms total)
+[----------] 265 tests from TestDeque/0 (4 ms total)
 
 [----------] 265 tests from TestDeque/1, where TypeParam = std::deque<double, std::allocator<double> >
 [ RUN      ] TestDeque/1.Empty
@@ -614,7 +614,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/1.back_3
 [       OK ] TestDeque/1.back_3 (0 ms)
 [ RUN      ] TestDeque/1.back_4
-[       OK ] TestDeque/1.back_4 (1 ms)
+[       OK ] TestDeque/1.back_4 (0 ms)
 [ RUN      ] TestDeque/1.back_5
 [       OK ] TestDeque/1.back_5 (0 ms)
 [ RUN      ] TestDeque/1.back_6
@@ -816,7 +816,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/1.plus_eq_2
 [       OK ] TestDeque/1.plus_eq_2 (0 ms)
 [ RUN      ] TestDeque/1.plus_eq_3
-[       OK ] TestDeque/1.plus_eq_3 (1 ms)
+[       OK ] TestDeque/1.plus_eq_3 (0 ms)
 [ RUN      ] TestDeque/1.minus_eq_1
 [       OK ] TestDeque/1.minus_eq_1 (0 ms)
 [ RUN      ] TestDeque/1.minus_eq_2
@@ -1036,7 +1036,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/1.Iterator_PrePlusPlus_3
 [       OK ] TestDeque/1.Iterator_PrePlusPlus_3 (0 ms)
 [ RUN      ] TestDeque/1.Iterator_PostPlusPlus_1
-[       OK ] TestDeque/1.Iterator_PostPlusPlus_1 (0 ms)
+[       OK ] TestDeque/1.Iterator_PostPlusPlus_1 (1 ms)
 [ RUN      ] TestDeque/1.Iterator_PostPlusPlus_2
 [       OK ] TestDeque/1.Iterator_PostPlusPlus_2 (0 ms)
 [ RUN      ] TestDeque/1.Iterator_PostPlusPlus_3
@@ -1085,7 +1085,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.push_back_6
 [       OK ] TestDeque/2.push_back_6 (0 ms)
 [ RUN      ] TestDeque/2.push_back_7
-[       OK ] TestDeque/2.push_back_7 (1 ms)
+[       OK ] TestDeque/2.push_back_7 (0 ms)
 [ RUN      ] TestDeque/2.push_front_1
 [       OK ] TestDeque/2.push_front_1 (0 ms)
 [ RUN      ] TestDeque/2.push_front_2
@@ -1199,7 +1199,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.const_end_1
 [       OK ] TestDeque/2.const_end_1 (0 ms)
 [ RUN      ] TestDeque/2.const_end_2
-[       OK ] TestDeque/2.const_end_2 (1 ms)
+[       OK ] TestDeque/2.const_end_2 (0 ms)
 [ RUN      ] TestDeque/2.const_end_3
 [       OK ] TestDeque/2.const_end_3 (0 ms)
 [ RUN      ] TestDeque/2.constructor_1
@@ -1259,7 +1259,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.erase_4
 [       OK ] TestDeque/2.erase_4 (0 ms)
 [ RUN      ] TestDeque/2.insert_1
-[       OK ] TestDeque/2.insert_1 (0 ms)
+[       OK ] TestDeque/2.insert_1 (1 ms)
 [ RUN      ] TestDeque/2.insert_2
 [       OK ] TestDeque/2.insert_2 (0 ms)
 [ RUN      ] TestDeque/2.insert_3
@@ -1363,7 +1363,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.it_cons_3
 [       OK ] TestDeque/2.it_cons_3 (0 ms)
 [ RUN      ] TestDeque/2.const_it_equals_1
-[       OK ] TestDeque/2.const_it_equals_1 (1 ms)
+[       OK ] TestDeque/2.const_it_equals_1 (0 ms)
 [ RUN      ] TestDeque/2.const_it_equals_2
 [       OK ] TestDeque/2.const_it_equals_2 (0 ms)
 [ RUN      ] TestDeque/2.const_it_equals_3
@@ -1419,7 +1419,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.const_plus_eq_1
 [       OK ] TestDeque/2.const_plus_eq_1 (0 ms)
 [ RUN      ] TestDeque/2.const_plus_eq_2
-[       OK ] TestDeque/2.const_plus_eq_2 (0 ms)
+[       OK ] TestDeque/2.const_plus_eq_2 (1 ms)
 [ RUN      ] TestDeque/2.const_plus_eq_3
 [       OK ] TestDeque/2.const_plus_eq_3 (0 ms)
 [ RUN      ] TestDeque/2.const_minus_eq_1
@@ -1461,9 +1461,9 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.Const_Iterator_PostPlusPlus_1
 [       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_1 (0 ms)
 [ RUN      ] TestDeque/2.Const_Iterator_PostPlusPlus_2
-[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_2 (1 ms)
+[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_2 (0 ms)
 [ RUN      ] TestDeque/2.Const_Iterator_PostPlusPlus_3
-[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_3 (0 ms)
+[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_3 (1 ms)
 [ RUN      ] TestDeque/2.Const_Iterator_PreMinusMinus_1
 [       OK ] TestDeque/2.Const_Iterator_PreMinusMinus_1 (0 ms)
 [ RUN      ] TestDeque/2.Const_Iterator_PreMinusMinus_2
@@ -1541,7 +1541,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.Push_Front_1
 [       OK ] TestDeque/2.Push_Front_1 (0 ms)
 [ RUN      ] TestDeque/2.Push_Front_2
-[       OK ] TestDeque/2.Push_Front_2 (6 ms)
+[       OK ] TestDeque/2.Push_Front_2 (7 ms)
 [ RUN      ] TestDeque/2.Push_Front_3
 [       OK ] TestDeque/2.Push_Front_3 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_EqualEqual_1
@@ -1567,17 +1567,17 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/2.Iterator_PrePlusPlus_2
 [       OK ] TestDeque/2.Iterator_PrePlusPlus_2 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_PrePlusPlus_3
-[       OK ] TestDeque/2.Iterator_PrePlusPlus_3 (1 ms)
+[       OK ] TestDeque/2.Iterator_PrePlusPlus_3 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_PostPlusPlus_1
-[       OK ] TestDeque/2.Iterator_PostPlusPlus_1 (0 ms)
+[       OK ] TestDeque/2.Iterator_PostPlusPlus_1 (1 ms)
 [ RUN      ] TestDeque/2.Iterator_PostPlusPlus_2
-[       OK ] TestDeque/2.Iterator_PostPlusPlus_2 (1 ms)
+[       OK ] TestDeque/2.Iterator_PostPlusPlus_2 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_PostPlusPlus_3
-[       OK ] TestDeque/2.Iterator_PostPlusPlus_3 (0 ms)
+[       OK ] TestDeque/2.Iterator_PostPlusPlus_3 (1 ms)
 [ RUN      ] TestDeque/2.Iterator_PreMinusMinus_1
 [       OK ] TestDeque/2.Iterator_PreMinusMinus_1 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_PreMinusMinus_2
-[       OK ] TestDeque/2.Iterator_PreMinusMinus_2 (1 ms)
+[       OK ] TestDeque/2.Iterator_PreMinusMinus_2 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_PreMinusMinus_3
 [       OK ] TestDeque/2.Iterator_PreMinusMinus_3 (0 ms)
 [ RUN      ] TestDeque/2.Iterator_PostMinusMinus_1
@@ -1704,7 +1704,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.bracket_2
 [       OK ] TestDeque/3.bracket_2 (0 ms)
 [ RUN      ] TestDeque/3.bracket_3
-[       OK ] TestDeque/3.bracket_3 (1 ms)
+[       OK ] TestDeque/3.bracket_3 (0 ms)
 [ RUN      ] TestDeque/3.const_bracket_1
 [       OK ] TestDeque/3.const_bracket_1 (0 ms)
 [ RUN      ] TestDeque/3.const_bracket_2
@@ -1856,7 +1856,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.inc_pre_1
 [       OK ] TestDeque/3.inc_pre_1 (0 ms)
 [ RUN      ] TestDeque/3.inc_pre_2
-[       OK ] TestDeque/3.inc_pre_2 (1 ms)
+[       OK ] TestDeque/3.inc_pre_2 (0 ms)
 [ RUN      ] TestDeque/3.inc_pre_3
 [       OK ] TestDeque/3.inc_pre_3 (0 ms)
 [ RUN      ] TestDeque/3.inc_post_1
@@ -1902,7 +1902,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.const_it_equals_3
 [       OK ] TestDeque/3.const_it_equals_3 (0 ms)
 [ RUN      ] TestDeque/3.const_it_notequals_1
-[       OK ] TestDeque/3.const_it_notequals_1 (0 ms)
+[       OK ] TestDeque/3.const_it_notequals_1 (1 ms)
 [ RUN      ] TestDeque/3.const_it_notequals_2
 [       OK ] TestDeque/3.const_it_notequals_2 (0 ms)
 [ RUN      ] TestDeque/3.const_it_notequals_3
@@ -1994,7 +1994,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.Const_Iterator_PostPlusPlus_1
 [       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_1 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_PostPlusPlus_2
-[       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_2 (0 ms)
+[       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_2 (1 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_PostPlusPlus_3
 [       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_3 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_PreMinusMinus_1
@@ -2004,7 +2004,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.Const_Iterator_PreMinusMinus_3
 [       OK ] TestDeque/3.Const_Iterator_PreMinusMinus_3 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_PostMinusMinus_1
-[       OK ] TestDeque/3.Const_Iterator_PostMinusMinus_1 (1 ms)
+[       OK ] TestDeque/3.Const_Iterator_PostMinusMinus_1 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_PostMinusMinus_2
 [       OK ] TestDeque/3.Const_Iterator_PostMinusMinus_2 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_PostMinusMinus_3
@@ -2026,7 +2026,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.Const_Iterator_Plus_1
 [       OK ] TestDeque/3.Const_Iterator_Plus_1 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_Plus_2
-[       OK ] TestDeque/3.Const_Iterator_Plus_2 (0 ms)
+[       OK ] TestDeque/3.Const_Iterator_Plus_2 (1 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_Plus_3
 [       OK ] TestDeque/3.Const_Iterator_Plus_3 (0 ms)
 [ RUN      ] TestDeque/3.Const_Iterator_Minus_1
@@ -2092,7 +2092,7 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.Iterator_Dereference_1
 [       OK ] TestDeque/3.Iterator_Dereference_1 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_Dereference_2
-[       OK ] TestDeque/3.Iterator_Dereference_2 (1 ms)
+[       OK ] TestDeque/3.Iterator_Dereference_2 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_Dereference_3
 [       OK ] TestDeque/3.Iterator_Dereference_3 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_PrePlusPlus_1
@@ -2104,15 +2104,15 @@ Running main() from gtest_main.cc
 [ RUN      ] TestDeque/3.Iterator_PostPlusPlus_1
 [       OK ] TestDeque/3.Iterator_PostPlusPlus_1 (1 ms)
 [ RUN      ] TestDeque/3.Iterator_PostPlusPlus_2
-[       OK ] TestDeque/3.Iterator_PostPlusPlus_2 (0 ms)
+[       OK ] TestDeque/3.Iterator_PostPlusPlus_2 (1 ms)
 [ RUN      ] TestDeque/3.Iterator_PostPlusPlus_3
 [       OK ] TestDeque/3.Iterator_PostPlusPlus_3 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_PreMinusMinus_1
 [       OK ] TestDeque/3.Iterator_PreMinusMinus_1 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_PreMinusMinus_2
-[       OK ] TestDeque/3.Iterator_PreMinusMinus_2 (1 ms)
+[       OK ] TestDeque/3.Iterator_PreMinusMinus_2 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_PreMinusMinus_3
-[       OK ] TestDeque/3.Iterator_PreMinusMinus_3 (0 ms)
+[       OK ] TestDeque/3.Iterator_PreMinusMinus_3 (1 ms)
 [ RUN      ] TestDeque/3.Iterator_PostMinusMinus_1
 [       OK ] TestDeque/3.Iterator_PostMinusMinus_1 (0 ms)
 [ RUN      ] TestDeque/3.Iterator_PostMinusMinus_2
@@ -2134,5 +2134,5 @@ Running main() from gtest_main.cc
 [----------] 265 tests from TestDeque/3 (14 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1060 tests from 4 test cases ran. (34 ms total)
+[==========] 1060 tests from 4 test cases ran. (35 ms total)
 [  PASSED  ] 1060 tests.
