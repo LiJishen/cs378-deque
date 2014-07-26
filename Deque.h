@@ -29,7 +29,6 @@ using std::rel_ops::operator!=;
 using std::rel_ops::operator<=;
 using std::rel_ops::operator>;
 using std::rel_ops::operator>=;
-//using namespace std;
 
 // -------
 // destroy
