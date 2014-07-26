@@ -153,9 +153,16 @@ class my_deque {
 
         bool valid () const {
             // <your code>
-return (!_front && !_begin && !_end && !_back) ||
-        ((_front <= _begin) && (_begin <= _end) && (_end <= _back));
-      }
+            return (!_front && !_begin && !_end && !_back) ||
+            ((_front <= _begin) && (_begin <= _end) && (_end <= _back));
+        }
+
+        // void reserve (size_type c) {
+        //     if (c > _back - _front) {
+        //         my_deque x(*this, c);
+        //         swap(x); 
+        //     }
+        // }
 
     //iterator class
     public:
@@ -982,29 +989,24 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void resize (size_type s, const_reference v = value_type()) {
             // <your code>
-            if (s == size())
-                _end = &*uninitialized_fill(_a, end(), begin() + s, v);
 
             if (s < size())
                 _end = &*destroy(_a, begin() + s, end() );
-
-            else if ( (unsigned)s <= (unsigned)(_back - _begin))
+            //_end -_front
+            else if ((unsigned)s == (unsigned)(size()) && (unsigned)s <= (unsigned)(_back - _begin))
                 _end = &*uninitialized_fill(_a, end(), begin() + s, v);
-    
+
+
             else {      // allocate more capacity
-                size_type capacity = std::max(s, 2 * size());
-                size_type temp1 = (capacity - s) / 2;
-                if (temp1 == 0) {
-                    capacity += 5;}
-                temp1 = (capacity - s) / 2;
-                size_type temp2 = (capacity - s) % 2? temp1 + 1: temp1;
-                my_deque x(capacity, v);
-                std::copy(begin(), end(), x.begin()+temp1);
-                destroy(x._a, x.begin(), x.begin()+temp1);
-                destroy(x._a, x.end()-temp2, x.end());
-                x._begin += temp1;
-                x._end -= temp2;
-                swap(x);}
+
+
+                size_type c = std::max(s, (size() * 2));
+                if (c > _back - _front) {
+                    my_deque x(*this, c);
+                    swap(x); 
+                }
+                resize(s, v);
+            }
             assert(valid() );
         }
 
