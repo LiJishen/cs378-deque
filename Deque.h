@@ -134,17 +134,13 @@ class my_deque {
         // ----
         // data
         // ----
-
         allocator_type _a;      //inner allocator
-        pointer_allocator_type _pa; // T* allocator (outer array allocator )
-        
-        pointer_pointer _fr;    // front of outer array (dFro)
-
-
-        pointer _front;     // front of allocated space
+        pointer_allocator_type outer_alloc; // outer array allocator
+        pointer_pointer outer_front;    // front of outer array 
+        pointer head;     // head of allocated space
+        pointer tail;      // tail of allocated space
         pointer _begin;     // beginning of used space
         pointer _end;       // end of used space
-        pointer _back;      // back of allocated space
 
 
 
@@ -156,12 +152,12 @@ class my_deque {
 
         bool valid () const {
             // <your code>
-            return (!_front && !_begin && !_end && !_back) ||
-            ((_front <= _begin) && (_begin <= _end) && (_end <= _back));
+            return (!head && !_begin && !_end && !tail) ||
+            ((head <= _begin) && (_begin <= _end) && (_end <= tail));
         }
 
         // void reserve (size_type c) {
-        //     if (c > _back - _front) {
+        //     if (c > tail - head) {
         //         my_deque x(*this, c);
         //         swap(x); 
         //     }
@@ -581,7 +577,7 @@ class my_deque {
          * beginning and the end to 0.
          */
         explicit my_deque (const allocator_type& a = allocator_type() ){
-            _pa = a ;_a = a;  _fr=0; _front=0; _begin=0; _end=0; _back=0;
+            outer_alloc = a ;_a = a;  outer_front=0; head=0; _begin=0; _end=0; tail=0;
             assert(valid() );
         }
 
@@ -607,13 +603,13 @@ class my_deque {
                 num_arrays = s / ARRAY_SIZE + 1;
             num_arrays = s / ARRAY_SIZE;
 
-            _fr = _pa.allocate(num_arrays);
+            outer_front= outer_alloc.allocate(num_arrays);
             for (unsigned int i = 0; i < num_arrays; ++i)
-                _fr[i] = _a.allocate(ARRAY_SIZE);
+                outer_front[i] = _a.allocate(ARRAY_SIZE);
             _begin = _a.allocate(s);
             _end  = _begin + s;
-            _front = _begin;
-            _back = _end;
+            head = _begin;
+            tail = _end;
             uninitialized_fill(_a, begin(), end(), v);
             assert(valid());
         }
@@ -630,12 +626,12 @@ class my_deque {
         my_deque (const my_deque& that) {
             // <your code>
             _a = that._a;
-            _pa = that._pa;
+            outer_alloc = that.outer_alloc;
             _begin = _a.allocate(that._end - that._begin);
             _end =  _begin + (that._end - that._begin);            
             uninitialized_copy(_a, that.begin(), that.end(), begin());             
-            _front = _begin;
-            _back  = _end;
+            head = _begin;
+            tail  = _end;
             assert(valid());
         }
 
@@ -648,11 +644,11 @@ class my_deque {
          */
         ~my_deque () {
             // <your code>
-            int capacity = _back - _front;
+            int capacity = tail - head;
 
             if (_begin) {
                 clear();
-                _a.deallocate(_front, capacity);
+                _a.deallocate(head, capacity);
             }
             assert(valid() );
         }
@@ -674,7 +670,7 @@ class my_deque {
         my_deque& operator = (const my_deque& rhs) {
             // <your code>
            unsigned int filled_space  =  _end - _begin;
-           unsigned int begin_to_back = _back - _begin;
+           unsigned int begin_to_back = tail - _begin;
            if (this == &rhs)
                 return *this;
             if (rhs.size() == filled_space)
@@ -967,13 +963,13 @@ class my_deque {
          */
         void push_front (const_reference v) {
             // <your code>
-            if (_front == _begin) {
+            if (head == _begin) {
                  resize(size() + 1);
-                 pop_back();}    
+                 pop_back();
+             }    
              --_begin;
              _a.construct(&*begin(), v); 
              assert(valid());
-            
         }
 
         // ------
@@ -995,8 +991,8 @@ class my_deque {
 
             if (s < size())
                 _end = &*destroy(_a, begin() + s, end() );
-            //_end -_front
-            else if ((unsigned)s == (unsigned)(size()) && (unsigned)s <= (unsigned)(_back - _begin))
+            //_end -head
+            else if ((unsigned)s == (unsigned)(size()) && (unsigned)s <= (unsigned)(tail - _begin))
                 _end = &*uninitialized_fill(_a, end(), begin() + s, v);
 
 
@@ -1038,10 +1034,10 @@ class my_deque {
         void swap (my_deque& that) {
             // <your code>
             if (_a == that._a) {
-                std::swap(_front, that._front);
+                std::swap(head, that.head);
                 std::swap(_begin, that._begin);
                 std::swap(_end, that._end);
-                std::swap(_back, that._back);}
+                std::swap(tail, that.tail);}
             else {
                 my_deque x(*this);
                 *this = that;
