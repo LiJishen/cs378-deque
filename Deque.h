@@ -900,6 +900,14 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         iterator insert (iterator pos, const_reference v) {
             // <your code>
+                    if(pos == end() )
+                push_back(v);
+            else {
+                resize(size()+1);
+                std::copy(pos, end(), pos+1);
+                *pos = v;}
+            assert(valid());
+            return iterator(this); 
    
         }
 
@@ -924,12 +932,16 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void pop_front () {
             // <your code>
-            cout << "here >> "<< _size <<endl;
-            assert(!empty());
-            _a.destroy(_begin);
-            _begin = &at(1);
-            --_size;
-            cout << "here >> "<< _size <<endl;
+            destroy(_a, begin(), begin()+1);
+            ++_begin;
+            assert(valid() );
+            //cout << "here >> "<< _size <<endl;
+            // assert(!empty());
+            // _a.destroy(_begin);
+            // _begin = &at(1);
+            // --_size;
+            //cout << "here >> "<< _size <<endl;
+            assert(valid());    
         }
 
         // ----
@@ -990,7 +1002,35 @@ return (!_front && !_begin && !_end && !_back) ||
          */
         void resize (size_type s, const_reference v = value_type()) {
             // <your code>
+                if(endRowNum == (_oend - _obegin)) {
+                   // cout<<"3_1 "<<endl;
+                    _size = s;
+                    eIter = uninitialized_fill(_a, end(), begin() + difference_type(s), v);
+                    _end = &*eIter;
+                    // _oe stays the same
+                } 
+                else if (endRowNum < (_olast - _obegin)) {
+                    //cout<<"3_2 "<<endl;
 
+                    _size = s;          
+                    int moreRows = endRowNum - (_oend - _obegin);
+
+                    for (int i = 0; i < moreRows; ++i) {
+                        ++_oend;
+                        *_oend = _a.allocate(_arraySize);       
+                    }
+
+                    eIter = uninitialized_fill(_a, end(), begin() + difference_type(s), v);
+                    _end = &*eIter;
+                } 
+                else{
+                    //cout<<"3_3 "<<endl;
+
+                    int moreRows = endRowNum - (_olast - _obegin) + 1;
+                    int totalRows = _olast - _ofirst + moreRows;
+                    my_deque x(*this, totalRows);
+                    swap(x);
+                    resize(s, v);
         }
 
         // ----
