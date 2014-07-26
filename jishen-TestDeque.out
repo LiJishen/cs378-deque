@@ -1,0 +1,2138 @@
+Running main() from gtest_main.cc
+[==========] Running 1060 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 265 tests from TestDeque/0, where TypeParam = std::deque<int, std::allocator<int> >
+[ RUN      ] TestDeque/0.Empty
+[       OK ] TestDeque/0.Empty (0 ms)
+[ RUN      ] TestDeque/0.Size
+[       OK ] TestDeque/0.Size (0 ms)
+[ RUN      ] TestDeque/0.push_back_1
+[       OK ] TestDeque/0.push_back_1 (0 ms)
+[ RUN      ] TestDeque/0.push_back_2
+[       OK ] TestDeque/0.push_back_2 (0 ms)
+[ RUN      ] TestDeque/0.push_back_3
+[       OK ] TestDeque/0.push_back_3 (0 ms)
+[ RUN      ] TestDeque/0.push_back_4
+[       OK ] TestDeque/0.push_back_4 (0 ms)
+[ RUN      ] TestDeque/0.push_back_5
+[       OK ] TestDeque/0.push_back_5 (0 ms)
+[ RUN      ] TestDeque/0.push_back_6
+[       OK ] TestDeque/0.push_back_6 (0 ms)
+[ RUN      ] TestDeque/0.push_back_7
+[       OK ] TestDeque/0.push_back_7 (0 ms)
+[ RUN      ] TestDeque/0.push_front_1
+[       OK ] TestDeque/0.push_front_1 (0 ms)
+[ RUN      ] TestDeque/0.push_front_2
+[       OK ] TestDeque/0.push_front_2 (0 ms)
+[ RUN      ] TestDeque/0.push_front_3
+[       OK ] TestDeque/0.push_front_3 (0 ms)
+[ RUN      ] TestDeque/0.push_front_4
+[       OK ] TestDeque/0.push_front_4 (0 ms)
+[ RUN      ] TestDeque/0.push_front_5
+[       OK ] TestDeque/0.push_front_5 (0 ms)
+[ RUN      ] TestDeque/0.push_front_6
+[       OK ] TestDeque/0.push_front_6 (0 ms)
+[ RUN      ] TestDeque/0.pop_front_1
+[       OK ] TestDeque/0.pop_front_1 (0 ms)
+[ RUN      ] TestDeque/0.pop_front_2
+[       OK ] TestDeque/0.pop_front_2 (0 ms)
+[ RUN      ] TestDeque/0.pop_front_3
+[       OK ] TestDeque/0.pop_front_3 (0 ms)
+[ RUN      ] TestDeque/0.pop_front_4
+[       OK ] TestDeque/0.pop_front_4 (0 ms)
+[ RUN      ] TestDeque/0.pop_front_5
+[       OK ] TestDeque/0.pop_front_5 (0 ms)
+[ RUN      ] TestDeque/0.pop_front_6
+[       OK ] TestDeque/0.pop_front_6 (0 ms)
+[ RUN      ] TestDeque/0.pop_back_1
+[       OK ] TestDeque/0.pop_back_1 (0 ms)
+[ RUN      ] TestDeque/0.pop_back_2
+[       OK ] TestDeque/0.pop_back_2 (0 ms)
+[ RUN      ] TestDeque/0.pop_back_3
+[       OK ] TestDeque/0.pop_back_3 (0 ms)
+[ RUN      ] TestDeque/0.pop_back_4
+[       OK ] TestDeque/0.pop_back_4 (0 ms)
+[ RUN      ] TestDeque/0.pop_back_5
+[       OK ] TestDeque/0.pop_back_5 (0 ms)
+[ RUN      ] TestDeque/0.pop_back_6
+[       OK ] TestDeque/0.pop_back_6 (0 ms)
+[ RUN      ] TestDeque/0.front_1
+[       OK ] TestDeque/0.front_1 (0 ms)
+[ RUN      ] TestDeque/0.front_2
+[       OK ] TestDeque/0.front_2 (0 ms)
+[ RUN      ] TestDeque/0.front_3
+[       OK ] TestDeque/0.front_3 (0 ms)
+[ RUN      ] TestDeque/0.front_4
+[       OK ] TestDeque/0.front_4 (0 ms)
+[ RUN      ] TestDeque/0.front_5
+[       OK ] TestDeque/0.front_5 (0 ms)
+[ RUN      ] TestDeque/0.front_6
+[       OK ] TestDeque/0.front_6 (0 ms)
+[ RUN      ] TestDeque/0.const_front_1
+[       OK ] TestDeque/0.const_front_1 (0 ms)
+[ RUN      ] TestDeque/0.const_front_2
+[       OK ] TestDeque/0.const_front_2 (0 ms)
+[ RUN      ] TestDeque/0.const_front_3
+[       OK ] TestDeque/0.const_front_3 (0 ms)
+[ RUN      ] TestDeque/0.back_1
+[       OK ] TestDeque/0.back_1 (0 ms)
+[ RUN      ] TestDeque/0.back_2
+[       OK ] TestDeque/0.back_2 (0 ms)
+[ RUN      ] TestDeque/0.back_3
+[       OK ] TestDeque/0.back_3 (0 ms)
+[ RUN      ] TestDeque/0.back_4
+[       OK ] TestDeque/0.back_4 (0 ms)
+[ RUN      ] TestDeque/0.back_5
+[       OK ] TestDeque/0.back_5 (0 ms)
+[ RUN      ] TestDeque/0.back_6
+[       OK ] TestDeque/0.back_6 (0 ms)
+[ RUN      ] TestDeque/0.back_7
+[       OK ] TestDeque/0.back_7 (0 ms)
+[ RUN      ] TestDeque/0.at_1
+[       OK ] TestDeque/0.at_1 (0 ms)
+[ RUN      ] TestDeque/0.at_2
+[       OK ] TestDeque/0.at_2 (0 ms)
+[ RUN      ] TestDeque/0.at_3
+[       OK ] TestDeque/0.at_3 (0 ms)
+[ RUN      ] TestDeque/0.const_at_1
+[       OK ] TestDeque/0.const_at_1 (0 ms)
+[ RUN      ] TestDeque/0.const_at_2
+[       OK ] TestDeque/0.const_at_2 (0 ms)
+[ RUN      ] TestDeque/0.const_at_3
+[       OK ] TestDeque/0.const_at_3 (0 ms)
+[ RUN      ] TestDeque/0.bracket_1
+[       OK ] TestDeque/0.bracket_1 (0 ms)
+[ RUN      ] TestDeque/0.bracket_2
+[       OK ] TestDeque/0.bracket_2 (0 ms)
+[ RUN      ] TestDeque/0.bracket_3
+[       OK ] TestDeque/0.bracket_3 (0 ms)
+[ RUN      ] TestDeque/0.const_bracket_1
+[       OK ] TestDeque/0.const_bracket_1 (0 ms)
+[ RUN      ] TestDeque/0.const_bracket_2
+[       OK ] TestDeque/0.const_bracket_2 (0 ms)
+[ RUN      ] TestDeque/0.const_bracket_3
+[       OK ] TestDeque/0.const_bracket_3 (0 ms)
+[ RUN      ] TestDeque/0.begin_1
+[       OK ] TestDeque/0.begin_1 (0 ms)
+[ RUN      ] TestDeque/0.begin_2
+[       OK ] TestDeque/0.begin_2 (0 ms)
+[ RUN      ] TestDeque/0.begin_3
+[       OK ] TestDeque/0.begin_3 (0 ms)
+[ RUN      ] TestDeque/0.const_begin_1
+[       OK ] TestDeque/0.const_begin_1 (0 ms)
+[ RUN      ] TestDeque/0.const_begin_2
+[       OK ] TestDeque/0.const_begin_2 (0 ms)
+[ RUN      ] TestDeque/0.const_begin_3
+[       OK ] TestDeque/0.const_begin_3 (0 ms)
+[ RUN      ] TestDeque/0.end_1
+[       OK ] TestDeque/0.end_1 (0 ms)
+[ RUN      ] TestDeque/0.end_2
+[       OK ] TestDeque/0.end_2 (0 ms)
+[ RUN      ] TestDeque/0.end_3
+[       OK ] TestDeque/0.end_3 (0 ms)
+[ RUN      ] TestDeque/0.const_end_1
+[       OK ] TestDeque/0.const_end_1 (0 ms)
+[ RUN      ] TestDeque/0.const_end_2
+[       OK ] TestDeque/0.const_end_2 (0 ms)
+[ RUN      ] TestDeque/0.const_end_3
+[       OK ] TestDeque/0.const_end_3 (0 ms)
+[ RUN      ] TestDeque/0.constructor_1
+[       OK ] TestDeque/0.constructor_1 (0 ms)
+[ RUN      ] TestDeque/0.constructor_2
+[       OK ] TestDeque/0.constructor_2 (0 ms)
+[ RUN      ] TestDeque/0.constructor_3
+[       OK ] TestDeque/0.constructor_3 (0 ms)
+[ RUN      ] TestDeque/0.constructor_size_1
+[       OK ] TestDeque/0.constructor_size_1 (0 ms)
+[ RUN      ] TestDeque/0.constructor_size_2
+[       OK ] TestDeque/0.constructor_size_2 (0 ms)
+[ RUN      ] TestDeque/0.constructor_size_3
+[       OK ] TestDeque/0.constructor_size_3 (0 ms)
+[ RUN      ] TestDeque/0.constructor_that_1
+[       OK ] TestDeque/0.constructor_that_1 (0 ms)
+[ RUN      ] TestDeque/0.constructor_that_2
+[       OK ] TestDeque/0.constructor_that_2 (0 ms)
+[ RUN      ] TestDeque/0.constructor_that_3
+[       OK ] TestDeque/0.constructor_that_3 (0 ms)
+[ RUN      ] TestDeque/0.assignment_1
+[       OK ] TestDeque/0.assignment_1 (0 ms)
+[ RUN      ] TestDeque/0.assignment_2
+[       OK ] TestDeque/0.assignment_2 (0 ms)
+[ RUN      ] TestDeque/0.assignment_3
+[       OK ] TestDeque/0.assignment_3 (0 ms)
+[ RUN      ] TestDeque/0.swap_1
+[       OK ] TestDeque/0.swap_1 (0 ms)
+[ RUN      ] TestDeque/0.swap_2
+[       OK ] TestDeque/0.swap_2 (0 ms)
+[ RUN      ] TestDeque/0.swap_3
+[       OK ] TestDeque/0.swap_3 (0 ms)
+[ RUN      ] TestDeque/0.size_1
+[       OK ] TestDeque/0.size_1 (0 ms)
+[ RUN      ] TestDeque/0.size_2
+[       OK ] TestDeque/0.size_2 (0 ms)
+[ RUN      ] TestDeque/0.size_3
+[       OK ] TestDeque/0.size_3 (0 ms)
+[ RUN      ] TestDeque/0.resize_1
+[       OK ] TestDeque/0.resize_1 (0 ms)
+[ RUN      ] TestDeque/0.resize_2
+[       OK ] TestDeque/0.resize_2 (0 ms)
+[ RUN      ] TestDeque/0.resize_3
+[       OK ] TestDeque/0.resize_3 (0 ms)
+[ RUN      ] TestDeque/0.clear_1
+[       OK ] TestDeque/0.clear_1 (0 ms)
+[ RUN      ] TestDeque/0.clear_2
+[       OK ] TestDeque/0.clear_2 (0 ms)
+[ RUN      ] TestDeque/0.clear_3
+[       OK ] TestDeque/0.clear_3 (0 ms)
+[ RUN      ] TestDeque/0.erase_1
+[       OK ] TestDeque/0.erase_1 (0 ms)
+[ RUN      ] TestDeque/0.erase_2
+[       OK ] TestDeque/0.erase_2 (0 ms)
+[ RUN      ] TestDeque/0.erase_3
+[       OK ] TestDeque/0.erase_3 (0 ms)
+[ RUN      ] TestDeque/0.erase_4
+[       OK ] TestDeque/0.erase_4 (0 ms)
+[ RUN      ] TestDeque/0.insert_1
+[       OK ] TestDeque/0.insert_1 (0 ms)
+[ RUN      ] TestDeque/0.insert_2
+[       OK ] TestDeque/0.insert_2 (0 ms)
+[ RUN      ] TestDeque/0.insert_3
+[       OK ] TestDeque/0.insert_3 (0 ms)
+[ RUN      ] TestDeque/0.insert_4
+[       OK ] TestDeque/0.insert_4 (0 ms)
+[ RUN      ] TestDeque/0.equals_1
+[       OK ] TestDeque/0.equals_1 (0 ms)
+[ RUN      ] TestDeque/0.equals_2
+[       OK ] TestDeque/0.equals_2 (0 ms)
+[ RUN      ] TestDeque/0.equals_3
+[       OK ] TestDeque/0.equals_3 (0 ms)
+[ RUN      ] TestDeque/0.compare_1
+[       OK ] TestDeque/0.compare_1 (0 ms)
+[ RUN      ] TestDeque/0.compare_2
+[       OK ] TestDeque/0.compare_2 (0 ms)
+[ RUN      ] TestDeque/0.compare_3
+[       OK ] TestDeque/0.compare_3 (0 ms)
+[ RUN      ] TestDeque/0.empty_1
+[       OK ] TestDeque/0.empty_1 (0 ms)
+[ RUN      ] TestDeque/0.empty_2
+[       OK ] TestDeque/0.empty_2 (0 ms)
+[ RUN      ] TestDeque/0.empty_3
+[       OK ] TestDeque/0.empty_3 (0 ms)
+[ RUN      ] TestDeque/0.destruct_1
+[       OK ] TestDeque/0.destruct_1 (0 ms)
+[ RUN      ] TestDeque/0.destruct_2
+[       OK ] TestDeque/0.destruct_2 (0 ms)
+[ RUN      ] TestDeque/0.destruct_3
+[       OK ] TestDeque/0.destruct_3 (0 ms)
+[ RUN      ] TestDeque/0.it_equals_1
+[       OK ] TestDeque/0.it_equals_1 (0 ms)
+[ RUN      ] TestDeque/0.it_equals_2
+[       OK ] TestDeque/0.it_equals_2 (0 ms)
+[ RUN      ] TestDeque/0.it_equals_3
+[       OK ] TestDeque/0.it_equals_3 (0 ms)
+[ RUN      ] TestDeque/0.it_notequals_1
+[       OK ] TestDeque/0.it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/0.it_notequals_2
+[       OK ] TestDeque/0.it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/0.it_notequals_3
+[       OK ] TestDeque/0.it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/0.plus_1
+[       OK ] TestDeque/0.plus_1 (0 ms)
+[ RUN      ] TestDeque/0.plus_2
+[       OK ] TestDeque/0.plus_2 (0 ms)
+[ RUN      ] TestDeque/0.plus_3
+[       OK ] TestDeque/0.plus_3 (0 ms)
+[ RUN      ] TestDeque/0.subtract_1
+[       OK ] TestDeque/0.subtract_1 (0 ms)
+[ RUN      ] TestDeque/0.subtract_2
+[       OK ] TestDeque/0.subtract_2 (0 ms)
+[ RUN      ] TestDeque/0.subtarct_3
+[       OK ] TestDeque/0.subtarct_3 (0 ms)
+[ RUN      ] TestDeque/0.star_1
+[       OK ] TestDeque/0.star_1 (0 ms)
+[ RUN      ] TestDeque/0.star_2
+[       OK ] TestDeque/0.star_2 (0 ms)
+[ RUN      ] TestDeque/0.star_3
+[       OK ] TestDeque/0.star_3 (0 ms)
+[ RUN      ] TestDeque/0.inc_pre_1
+[       OK ] TestDeque/0.inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/0.inc_pre_2
+[       OK ] TestDeque/0.inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/0.inc_pre_3
+[       OK ] TestDeque/0.inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/0.inc_post_1
+[       OK ] TestDeque/0.inc_post_1 (0 ms)
+[ RUN      ] TestDeque/0.inc_post_2
+[       OK ] TestDeque/0.inc_post_2 (0 ms)
+[ RUN      ] TestDeque/0.inc_post_3
+[       OK ] TestDeque/0.inc_post_3 (0 ms)
+[ RUN      ] TestDeque/0.dec_pre_1
+[       OK ] TestDeque/0.dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/0.dec_pre_2
+[       OK ] TestDeque/0.dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/0.dec_pre_3
+[       OK ] TestDeque/0.dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/0.dec_post_1
+[       OK ] TestDeque/0.dec_post_1 (0 ms)
+[ RUN      ] TestDeque/0.dec_post_2
+[       OK ] TestDeque/0.dec_post_2 (0 ms)
+[ RUN      ] TestDeque/0.dec_post_3
+[       OK ] TestDeque/0.dec_post_3 (0 ms)
+[ RUN      ] TestDeque/0.plus_eq_1
+[       OK ] TestDeque/0.plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/0.plus_eq_2
+[       OK ] TestDeque/0.plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/0.plus_eq_3
+[       OK ] TestDeque/0.plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/0.minus_eq_1
+[       OK ] TestDeque/0.minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/0.minus_eq_2
+[       OK ] TestDeque/0.minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/0.minus_eq_3
+[       OK ] TestDeque/0.minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/0.it_cons_1
+[       OK ] TestDeque/0.it_cons_1 (0 ms)
+[ RUN      ] TestDeque/0.it_cons_2
+[       OK ] TestDeque/0.it_cons_2 (0 ms)
+[ RUN      ] TestDeque/0.it_cons_3
+[       OK ] TestDeque/0.it_cons_3 (0 ms)
+[ RUN      ] TestDeque/0.const_it_equals_1
+[       OK ] TestDeque/0.const_it_equals_1 (0 ms)
+[ RUN      ] TestDeque/0.const_it_equals_2
+[       OK ] TestDeque/0.const_it_equals_2 (0 ms)
+[ RUN      ] TestDeque/0.const_it_equals_3
+[       OK ] TestDeque/0.const_it_equals_3 (0 ms)
+[ RUN      ] TestDeque/0.const_it_notequals_1
+[       OK ] TestDeque/0.const_it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/0.const_it_notequals_2
+[       OK ] TestDeque/0.const_it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/0.const_it_notequals_3
+[       OK ] TestDeque/0.const_it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/0.const_plus_1
+[       OK ] TestDeque/0.const_plus_1 (0 ms)
+[ RUN      ] TestDeque/0.const_plus_2
+[       OK ] TestDeque/0.const_plus_2 (0 ms)
+[ RUN      ] TestDeque/0.const_plus_3
+[       OK ] TestDeque/0.const_plus_3 (0 ms)
+[ RUN      ] TestDeque/0.const_subtract_1
+[       OK ] TestDeque/0.const_subtract_1 (0 ms)
+[ RUN      ] TestDeque/0.const_subtract_2
+[       OK ] TestDeque/0.const_subtract_2 (0 ms)
+[ RUN      ] TestDeque/0.const_subtract_3
+[       OK ] TestDeque/0.const_subtract_3 (0 ms)
+[ RUN      ] TestDeque/0.const_star_1
+[       OK ] TestDeque/0.const_star_1 (0 ms)
+[ RUN      ] TestDeque/0.const_star_2
+[       OK ] TestDeque/0.const_star_2 (0 ms)
+[ RUN      ] TestDeque/0.const_star_3
+[       OK ] TestDeque/0.const_star_3 (0 ms)
+[ RUN      ] TestDeque/0.const_inc_pre_1
+[       OK ] TestDeque/0.const_inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/0.const_inc_pre_2
+[       OK ] TestDeque/0.const_inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/0.const_inc_pre_3
+[       OK ] TestDeque/0.const_inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/0.const_inc_post_1
+[       OK ] TestDeque/0.const_inc_post_1 (0 ms)
+[ RUN      ] TestDeque/0.const_inc_post_2
+[       OK ] TestDeque/0.const_inc_post_2 (0 ms)
+[ RUN      ] TestDeque/0.const_inc_post_3
+[       OK ] TestDeque/0.const_inc_post_3 (0 ms)
+[ RUN      ] TestDeque/0.const_dec_pre_1
+[       OK ] TestDeque/0.const_dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/0.const_dec_pre_2
+[       OK ] TestDeque/0.const_dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/0.const_dec_pre_3
+[       OK ] TestDeque/0.const_dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/0.const_dec_post_1
+[       OK ] TestDeque/0.const_dec_post_1 (0 ms)
+[ RUN      ] TestDeque/0.const_dec_post_2
+[       OK ] TestDeque/0.const_dec_post_2 (0 ms)
+[ RUN      ] TestDeque/0.const_dec_post_3
+[       OK ] TestDeque/0.const_dec_post_3 (0 ms)
+[ RUN      ] TestDeque/0.const_plus_eq_1
+[       OK ] TestDeque/0.const_plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/0.const_plus_eq_2
+[       OK ] TestDeque/0.const_plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/0.const_plus_eq_3
+[       OK ] TestDeque/0.const_plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/0.const_minus_eq_1
+[       OK ] TestDeque/0.const_minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/0.const_minus_eq_2
+[       OK ] TestDeque/0.const_minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/0.const_minus_eq_3
+[       OK ] TestDeque/0.const_minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/0.const_it_cons_1
+[       OK ] TestDeque/0.const_it_cons_1 (0 ms)
+[ RUN      ] TestDeque/0.const_it_cons_2
+[       OK ] TestDeque/0.const_it_cons_2 (0 ms)
+[ RUN      ] TestDeque/0.const_it_cons_3
+[       OK ] TestDeque/0.const_it_cons_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_EqualEqual_1
+[       OK ] TestDeque/0.Const_Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_EqualEqual_2
+[       OK ] TestDeque/0.Const_Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_EqualEqual_3
+[       OK ] TestDeque/0.Const_Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_NotEqual_1
+[       OK ] TestDeque/0.Const_Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_NotEqual_2
+[       OK ] TestDeque/0.Const_Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_NotEqual_3
+[       OK ] TestDeque/0.Const_Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Dereference_1
+[       OK ] TestDeque/0.Const_Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Dereference_2
+[       OK ] TestDeque/0.Const_Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Dereference_3
+[       OK ] TestDeque/0.Const_Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PrePlusPlus_1
+[       OK ] TestDeque/0.Const_Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PrePlusPlus_2
+[       OK ] TestDeque/0.Const_Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PrePlusPlus_3
+[       OK ] TestDeque/0.Const_Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PostPlusPlus_1
+[       OK ] TestDeque/0.Const_Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PostPlusPlus_2
+[       OK ] TestDeque/0.Const_Iterator_PostPlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PostPlusPlus_3
+[       OK ] TestDeque/0.Const_Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PreMinusMinus_1
+[       OK ] TestDeque/0.Const_Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PreMinusMinus_2
+[       OK ] TestDeque/0.Const_Iterator_PreMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PreMinusMinus_3
+[       OK ] TestDeque/0.Const_Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PostMinusMinus_1
+[       OK ] TestDeque/0.Const_Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PostMinusMinus_2
+[       OK ] TestDeque/0.Const_Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PostMinusMinus_3
+[       OK ] TestDeque/0.Const_Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PlusEq_1
+[       OK ] TestDeque/0.Const_Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PlusEq_2
+[       OK ] TestDeque/0.Const_Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_PlusEq_3
+[       OK ] TestDeque/0.Const_Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_MinusEq_1
+[       OK ] TestDeque/0.Const_Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_MinusEq_2
+[       OK ] TestDeque/0.Const_Iterator_MinusEq_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_MinusEq_3
+[       OK ] TestDeque/0.Const_Iterator_MinusEq_3 (0 ms)
+[ RUN      ] TestDeque/0.Resize_1
+[       OK ] TestDeque/0.Resize_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Plus_1
+[       OK ] TestDeque/0.Const_Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Plus_2
+[       OK ] TestDeque/0.Const_Iterator_Plus_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Plus_3
+[       OK ] TestDeque/0.Const_Iterator_Plus_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Minus_1
+[       OK ] TestDeque/0.Const_Iterator_Minus_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Minus_2
+[       OK ] TestDeque/0.Const_Iterator_Minus_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Minus_3
+[       OK ] TestDeque/0.Const_Iterator_Minus_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Constructor
+[       OK ] TestDeque/0.Const_Iterator_Constructor (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Constructor_1
+[       OK ] TestDeque/0.Const_Iterator_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Constructor_2
+[       OK ] TestDeque/0.Const_Iterator_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Constructor_3
+[       OK ] TestDeque/0.Const_Iterator_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Copy_Constructor_1
+[       OK ] TestDeque/0.Const_Iterator_Copy_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Copy_Constructor_2
+[       OK ] TestDeque/0.Const_Iterator_Copy_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/0.Const_Iterator_Copy_Constructor_3
+[       OK ] TestDeque/0.Const_Iterator_Copy_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/0.Resize_3
+[       OK ] TestDeque/0.Resize_3 (0 ms)
+[ RUN      ] TestDeque/0.Resize_4
+[       OK ] TestDeque/0.Resize_4 (0 ms)
+[ RUN      ] TestDeque/0.Resize_5
+[       OK ] TestDeque/0.Resize_5 (0 ms)
+[ RUN      ] TestDeque/0.Copy_1
+[       OK ] TestDeque/0.Copy_1 (0 ms)
+[ RUN      ] TestDeque/0.Insert_1
+[       OK ] TestDeque/0.Insert_1 (0 ms)
+[ RUN      ] TestDeque/0.Insert_2
+[       OK ] TestDeque/0.Insert_2 (0 ms)
+[ RUN      ] TestDeque/0.Insert_3
+[       OK ] TestDeque/0.Insert_3 (0 ms)
+[ RUN      ] TestDeque/0.Insert_4
+[       OK ] TestDeque/0.Insert_4 (0 ms)
+[ RUN      ] TestDeque/0.Less_Than_1
+[       OK ] TestDeque/0.Less_Than_1 (0 ms)
+[ RUN      ] TestDeque/0.Less_Than_2
+[       OK ] TestDeque/0.Less_Than_2 (0 ms)
+[ RUN      ] TestDeque/0.Less_Than_3
+[       OK ] TestDeque/0.Less_Than_3 (0 ms)
+[ RUN      ] TestDeque/0.Push_Front_1
+[       OK ] TestDeque/0.Push_Front_1 (0 ms)
+[ RUN      ] TestDeque/0.Push_Front_2
+[       OK ] TestDeque/0.Push_Front_2 (0 ms)
+[ RUN      ] TestDeque/0.Push_Front_3
+[       OK ] TestDeque/0.Push_Front_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_EqualEqual_1
+[       OK ] TestDeque/0.Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_EqualEqual_2
+[       OK ] TestDeque/0.Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_EqualEqual_3
+[       OK ] TestDeque/0.Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_NotEqual_1
+[       OK ] TestDeque/0.Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_NotEqual_2
+[       OK ] TestDeque/0.Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_NotEqual_3
+[       OK ] TestDeque/0.Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_Dereference_1
+[       OK ] TestDeque/0.Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_Dereference_2
+[       OK ] TestDeque/0.Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_Dereference_3
+[       OK ] TestDeque/0.Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PrePlusPlus_1
+[       OK ] TestDeque/0.Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PrePlusPlus_2
+[       OK ] TestDeque/0.Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PrePlusPlus_3
+[       OK ] TestDeque/0.Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PostPlusPlus_1
+[       OK ] TestDeque/0.Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PostPlusPlus_2
+[       OK ] TestDeque/0.Iterator_PostPlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PostPlusPlus_3
+[       OK ] TestDeque/0.Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PreMinusMinus_1
+[       OK ] TestDeque/0.Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PreMinusMinus_2
+[       OK ] TestDeque/0.Iterator_PreMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PreMinusMinus_3
+[       OK ] TestDeque/0.Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PostMinusMinus_1
+[       OK ] TestDeque/0.Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PostMinusMinus_2
+[       OK ] TestDeque/0.Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PostMinusMinus_3
+[       OK ] TestDeque/0.Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PlusEq_1
+[       OK ] TestDeque/0.Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PlusEq_2
+[       OK ] TestDeque/0.Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_PlusEq_3
+[       OK ] TestDeque/0.Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_MinusEq_1
+[       OK ] TestDeque/0.Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_Plus_1
+[       OK ] TestDeque/0.Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/0.Iterator_Minus_1
+[       OK ] TestDeque/0.Iterator_Minus_1 (0 ms)
+[----------] 265 tests from TestDeque/0 (3 ms total)
+
+[----------] 265 tests from TestDeque/1, where TypeParam = std::deque<double, std::allocator<double> >
+[ RUN      ] TestDeque/1.Empty
+[       OK ] TestDeque/1.Empty (0 ms)
+[ RUN      ] TestDeque/1.Size
+[       OK ] TestDeque/1.Size (0 ms)
+[ RUN      ] TestDeque/1.push_back_1
+[       OK ] TestDeque/1.push_back_1 (0 ms)
+[ RUN      ] TestDeque/1.push_back_2
+[       OK ] TestDeque/1.push_back_2 (0 ms)
+[ RUN      ] TestDeque/1.push_back_3
+[       OK ] TestDeque/1.push_back_3 (0 ms)
+[ RUN      ] TestDeque/1.push_back_4
+[       OK ] TestDeque/1.push_back_4 (0 ms)
+[ RUN      ] TestDeque/1.push_back_5
+[       OK ] TestDeque/1.push_back_5 (0 ms)
+[ RUN      ] TestDeque/1.push_back_6
+[       OK ] TestDeque/1.push_back_6 (0 ms)
+[ RUN      ] TestDeque/1.push_back_7
+[       OK ] TestDeque/1.push_back_7 (0 ms)
+[ RUN      ] TestDeque/1.push_front_1
+[       OK ] TestDeque/1.push_front_1 (0 ms)
+[ RUN      ] TestDeque/1.push_front_2
+[       OK ] TestDeque/1.push_front_2 (0 ms)
+[ RUN      ] TestDeque/1.push_front_3
+[       OK ] TestDeque/1.push_front_3 (0 ms)
+[ RUN      ] TestDeque/1.push_front_4
+[       OK ] TestDeque/1.push_front_4 (0 ms)
+[ RUN      ] TestDeque/1.push_front_5
+[       OK ] TestDeque/1.push_front_5 (0 ms)
+[ RUN      ] TestDeque/1.push_front_6
+[       OK ] TestDeque/1.push_front_6 (0 ms)
+[ RUN      ] TestDeque/1.pop_front_1
+[       OK ] TestDeque/1.pop_front_1 (0 ms)
+[ RUN      ] TestDeque/1.pop_front_2
+[       OK ] TestDeque/1.pop_front_2 (0 ms)
+[ RUN      ] TestDeque/1.pop_front_3
+[       OK ] TestDeque/1.pop_front_3 (0 ms)
+[ RUN      ] TestDeque/1.pop_front_4
+[       OK ] TestDeque/1.pop_front_4 (0 ms)
+[ RUN      ] TestDeque/1.pop_front_5
+[       OK ] TestDeque/1.pop_front_5 (0 ms)
+[ RUN      ] TestDeque/1.pop_front_6
+[       OK ] TestDeque/1.pop_front_6 (0 ms)
+[ RUN      ] TestDeque/1.pop_back_1
+[       OK ] TestDeque/1.pop_back_1 (0 ms)
+[ RUN      ] TestDeque/1.pop_back_2
+[       OK ] TestDeque/1.pop_back_2 (0 ms)
+[ RUN      ] TestDeque/1.pop_back_3
+[       OK ] TestDeque/1.pop_back_3 (0 ms)
+[ RUN      ] TestDeque/1.pop_back_4
+[       OK ] TestDeque/1.pop_back_4 (0 ms)
+[ RUN      ] TestDeque/1.pop_back_5
+[       OK ] TestDeque/1.pop_back_5 (0 ms)
+[ RUN      ] TestDeque/1.pop_back_6
+[       OK ] TestDeque/1.pop_back_6 (0 ms)
+[ RUN      ] TestDeque/1.front_1
+[       OK ] TestDeque/1.front_1 (0 ms)
+[ RUN      ] TestDeque/1.front_2
+[       OK ] TestDeque/1.front_2 (0 ms)
+[ RUN      ] TestDeque/1.front_3
+[       OK ] TestDeque/1.front_3 (0 ms)
+[ RUN      ] TestDeque/1.front_4
+[       OK ] TestDeque/1.front_4 (0 ms)
+[ RUN      ] TestDeque/1.front_5
+[       OK ] TestDeque/1.front_5 (0 ms)
+[ RUN      ] TestDeque/1.front_6
+[       OK ] TestDeque/1.front_6 (0 ms)
+[ RUN      ] TestDeque/1.const_front_1
+[       OK ] TestDeque/1.const_front_1 (0 ms)
+[ RUN      ] TestDeque/1.const_front_2
+[       OK ] TestDeque/1.const_front_2 (0 ms)
+[ RUN      ] TestDeque/1.const_front_3
+[       OK ] TestDeque/1.const_front_3 (0 ms)
+[ RUN      ] TestDeque/1.back_1
+[       OK ] TestDeque/1.back_1 (0 ms)
+[ RUN      ] TestDeque/1.back_2
+[       OK ] TestDeque/1.back_2 (0 ms)
+[ RUN      ] TestDeque/1.back_3
+[       OK ] TestDeque/1.back_3 (0 ms)
+[ RUN      ] TestDeque/1.back_4
+[       OK ] TestDeque/1.back_4 (1 ms)
+[ RUN      ] TestDeque/1.back_5
+[       OK ] TestDeque/1.back_5 (0 ms)
+[ RUN      ] TestDeque/1.back_6
+[       OK ] TestDeque/1.back_6 (0 ms)
+[ RUN      ] TestDeque/1.back_7
+[       OK ] TestDeque/1.back_7 (0 ms)
+[ RUN      ] TestDeque/1.at_1
+[       OK ] TestDeque/1.at_1 (0 ms)
+[ RUN      ] TestDeque/1.at_2
+[       OK ] TestDeque/1.at_2 (0 ms)
+[ RUN      ] TestDeque/1.at_3
+[       OK ] TestDeque/1.at_3 (0 ms)
+[ RUN      ] TestDeque/1.const_at_1
+[       OK ] TestDeque/1.const_at_1 (0 ms)
+[ RUN      ] TestDeque/1.const_at_2
+[       OK ] TestDeque/1.const_at_2 (0 ms)
+[ RUN      ] TestDeque/1.const_at_3
+[       OK ] TestDeque/1.const_at_3 (0 ms)
+[ RUN      ] TestDeque/1.bracket_1
+[       OK ] TestDeque/1.bracket_1 (0 ms)
+[ RUN      ] TestDeque/1.bracket_2
+[       OK ] TestDeque/1.bracket_2 (0 ms)
+[ RUN      ] TestDeque/1.bracket_3
+[       OK ] TestDeque/1.bracket_3 (0 ms)
+[ RUN      ] TestDeque/1.const_bracket_1
+[       OK ] TestDeque/1.const_bracket_1 (0 ms)
+[ RUN      ] TestDeque/1.const_bracket_2
+[       OK ] TestDeque/1.const_bracket_2 (0 ms)
+[ RUN      ] TestDeque/1.const_bracket_3
+[       OK ] TestDeque/1.const_bracket_3 (0 ms)
+[ RUN      ] TestDeque/1.begin_1
+[       OK ] TestDeque/1.begin_1 (0 ms)
+[ RUN      ] TestDeque/1.begin_2
+[       OK ] TestDeque/1.begin_2 (0 ms)
+[ RUN      ] TestDeque/1.begin_3
+[       OK ] TestDeque/1.begin_3 (0 ms)
+[ RUN      ] TestDeque/1.const_begin_1
+[       OK ] TestDeque/1.const_begin_1 (0 ms)
+[ RUN      ] TestDeque/1.const_begin_2
+[       OK ] TestDeque/1.const_begin_2 (0 ms)
+[ RUN      ] TestDeque/1.const_begin_3
+[       OK ] TestDeque/1.const_begin_3 (0 ms)
+[ RUN      ] TestDeque/1.end_1
+[       OK ] TestDeque/1.end_1 (0 ms)
+[ RUN      ] TestDeque/1.end_2
+[       OK ] TestDeque/1.end_2 (0 ms)
+[ RUN      ] TestDeque/1.end_3
+[       OK ] TestDeque/1.end_3 (0 ms)
+[ RUN      ] TestDeque/1.const_end_1
+[       OK ] TestDeque/1.const_end_1 (0 ms)
+[ RUN      ] TestDeque/1.const_end_2
+[       OK ] TestDeque/1.const_end_2 (0 ms)
+[ RUN      ] TestDeque/1.const_end_3
+[       OK ] TestDeque/1.const_end_3 (0 ms)
+[ RUN      ] TestDeque/1.constructor_1
+[       OK ] TestDeque/1.constructor_1 (0 ms)
+[ RUN      ] TestDeque/1.constructor_2
+[       OK ] TestDeque/1.constructor_2 (0 ms)
+[ RUN      ] TestDeque/1.constructor_3
+[       OK ] TestDeque/1.constructor_3 (0 ms)
+[ RUN      ] TestDeque/1.constructor_size_1
+[       OK ] TestDeque/1.constructor_size_1 (0 ms)
+[ RUN      ] TestDeque/1.constructor_size_2
+[       OK ] TestDeque/1.constructor_size_2 (0 ms)
+[ RUN      ] TestDeque/1.constructor_size_3
+[       OK ] TestDeque/1.constructor_size_3 (0 ms)
+[ RUN      ] TestDeque/1.constructor_that_1
+[       OK ] TestDeque/1.constructor_that_1 (0 ms)
+[ RUN      ] TestDeque/1.constructor_that_2
+[       OK ] TestDeque/1.constructor_that_2 (0 ms)
+[ RUN      ] TestDeque/1.constructor_that_3
+[       OK ] TestDeque/1.constructor_that_3 (0 ms)
+[ RUN      ] TestDeque/1.assignment_1
+[       OK ] TestDeque/1.assignment_1 (0 ms)
+[ RUN      ] TestDeque/1.assignment_2
+[       OK ] TestDeque/1.assignment_2 (0 ms)
+[ RUN      ] TestDeque/1.assignment_3
+[       OK ] TestDeque/1.assignment_3 (0 ms)
+[ RUN      ] TestDeque/1.swap_1
+[       OK ] TestDeque/1.swap_1 (0 ms)
+[ RUN      ] TestDeque/1.swap_2
+[       OK ] TestDeque/1.swap_2 (0 ms)
+[ RUN      ] TestDeque/1.swap_3
+[       OK ] TestDeque/1.swap_3 (0 ms)
+[ RUN      ] TestDeque/1.size_1
+[       OK ] TestDeque/1.size_1 (0 ms)
+[ RUN      ] TestDeque/1.size_2
+[       OK ] TestDeque/1.size_2 (0 ms)
+[ RUN      ] TestDeque/1.size_3
+[       OK ] TestDeque/1.size_3 (0 ms)
+[ RUN      ] TestDeque/1.resize_1
+[       OK ] TestDeque/1.resize_1 (0 ms)
+[ RUN      ] TestDeque/1.resize_2
+[       OK ] TestDeque/1.resize_2 (0 ms)
+[ RUN      ] TestDeque/1.resize_3
+[       OK ] TestDeque/1.resize_3 (0 ms)
+[ RUN      ] TestDeque/1.clear_1
+[       OK ] TestDeque/1.clear_1 (0 ms)
+[ RUN      ] TestDeque/1.clear_2
+[       OK ] TestDeque/1.clear_2 (0 ms)
+[ RUN      ] TestDeque/1.clear_3
+[       OK ] TestDeque/1.clear_3 (0 ms)
+[ RUN      ] TestDeque/1.erase_1
+[       OK ] TestDeque/1.erase_1 (0 ms)
+[ RUN      ] TestDeque/1.erase_2
+[       OK ] TestDeque/1.erase_2 (0 ms)
+[ RUN      ] TestDeque/1.erase_3
+[       OK ] TestDeque/1.erase_3 (0 ms)
+[ RUN      ] TestDeque/1.erase_4
+[       OK ] TestDeque/1.erase_4 (0 ms)
+[ RUN      ] TestDeque/1.insert_1
+[       OK ] TestDeque/1.insert_1 (0 ms)
+[ RUN      ] TestDeque/1.insert_2
+[       OK ] TestDeque/1.insert_2 (0 ms)
+[ RUN      ] TestDeque/1.insert_3
+[       OK ] TestDeque/1.insert_3 (0 ms)
+[ RUN      ] TestDeque/1.insert_4
+[       OK ] TestDeque/1.insert_4 (0 ms)
+[ RUN      ] TestDeque/1.equals_1
+[       OK ] TestDeque/1.equals_1 (0 ms)
+[ RUN      ] TestDeque/1.equals_2
+[       OK ] TestDeque/1.equals_2 (0 ms)
+[ RUN      ] TestDeque/1.equals_3
+[       OK ] TestDeque/1.equals_3 (0 ms)
+[ RUN      ] TestDeque/1.compare_1
+[       OK ] TestDeque/1.compare_1 (0 ms)
+[ RUN      ] TestDeque/1.compare_2
+[       OK ] TestDeque/1.compare_2 (0 ms)
+[ RUN      ] TestDeque/1.compare_3
+[       OK ] TestDeque/1.compare_3 (0 ms)
+[ RUN      ] TestDeque/1.empty_1
+[       OK ] TestDeque/1.empty_1 (0 ms)
+[ RUN      ] TestDeque/1.empty_2
+[       OK ] TestDeque/1.empty_2 (0 ms)
+[ RUN      ] TestDeque/1.empty_3
+[       OK ] TestDeque/1.empty_3 (0 ms)
+[ RUN      ] TestDeque/1.destruct_1
+[       OK ] TestDeque/1.destruct_1 (0 ms)
+[ RUN      ] TestDeque/1.destruct_2
+[       OK ] TestDeque/1.destruct_2 (0 ms)
+[ RUN      ] TestDeque/1.destruct_3
+[       OK ] TestDeque/1.destruct_3 (0 ms)
+[ RUN      ] TestDeque/1.it_equals_1
+[       OK ] TestDeque/1.it_equals_1 (0 ms)
+[ RUN      ] TestDeque/1.it_equals_2
+[       OK ] TestDeque/1.it_equals_2 (0 ms)
+[ RUN      ] TestDeque/1.it_equals_3
+[       OK ] TestDeque/1.it_equals_3 (0 ms)
+[ RUN      ] TestDeque/1.it_notequals_1
+[       OK ] TestDeque/1.it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/1.it_notequals_2
+[       OK ] TestDeque/1.it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/1.it_notequals_3
+[       OK ] TestDeque/1.it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/1.plus_1
+[       OK ] TestDeque/1.plus_1 (0 ms)
+[ RUN      ] TestDeque/1.plus_2
+[       OK ] TestDeque/1.plus_2 (0 ms)
+[ RUN      ] TestDeque/1.plus_3
+[       OK ] TestDeque/1.plus_3 (0 ms)
+[ RUN      ] TestDeque/1.subtract_1
+[       OK ] TestDeque/1.subtract_1 (0 ms)
+[ RUN      ] TestDeque/1.subtract_2
+[       OK ] TestDeque/1.subtract_2 (0 ms)
+[ RUN      ] TestDeque/1.subtarct_3
+[       OK ] TestDeque/1.subtarct_3 (0 ms)
+[ RUN      ] TestDeque/1.star_1
+[       OK ] TestDeque/1.star_1 (0 ms)
+[ RUN      ] TestDeque/1.star_2
+[       OK ] TestDeque/1.star_2 (0 ms)
+[ RUN      ] TestDeque/1.star_3
+[       OK ] TestDeque/1.star_3 (0 ms)
+[ RUN      ] TestDeque/1.inc_pre_1
+[       OK ] TestDeque/1.inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/1.inc_pre_2
+[       OK ] TestDeque/1.inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/1.inc_pre_3
+[       OK ] TestDeque/1.inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/1.inc_post_1
+[       OK ] TestDeque/1.inc_post_1 (0 ms)
+[ RUN      ] TestDeque/1.inc_post_2
+[       OK ] TestDeque/1.inc_post_2 (0 ms)
+[ RUN      ] TestDeque/1.inc_post_3
+[       OK ] TestDeque/1.inc_post_3 (0 ms)
+[ RUN      ] TestDeque/1.dec_pre_1
+[       OK ] TestDeque/1.dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/1.dec_pre_2
+[       OK ] TestDeque/1.dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/1.dec_pre_3
+[       OK ] TestDeque/1.dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/1.dec_post_1
+[       OK ] TestDeque/1.dec_post_1 (0 ms)
+[ RUN      ] TestDeque/1.dec_post_2
+[       OK ] TestDeque/1.dec_post_2 (0 ms)
+[ RUN      ] TestDeque/1.dec_post_3
+[       OK ] TestDeque/1.dec_post_3 (0 ms)
+[ RUN      ] TestDeque/1.plus_eq_1
+[       OK ] TestDeque/1.plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/1.plus_eq_2
+[       OK ] TestDeque/1.plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/1.plus_eq_3
+[       OK ] TestDeque/1.plus_eq_3 (1 ms)
+[ RUN      ] TestDeque/1.minus_eq_1
+[       OK ] TestDeque/1.minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/1.minus_eq_2
+[       OK ] TestDeque/1.minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/1.minus_eq_3
+[       OK ] TestDeque/1.minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/1.it_cons_1
+[       OK ] TestDeque/1.it_cons_1 (0 ms)
+[ RUN      ] TestDeque/1.it_cons_2
+[       OK ] TestDeque/1.it_cons_2 (0 ms)
+[ RUN      ] TestDeque/1.it_cons_3
+[       OK ] TestDeque/1.it_cons_3 (0 ms)
+[ RUN      ] TestDeque/1.const_it_equals_1
+[       OK ] TestDeque/1.const_it_equals_1 (0 ms)
+[ RUN      ] TestDeque/1.const_it_equals_2
+[       OK ] TestDeque/1.const_it_equals_2 (0 ms)
+[ RUN      ] TestDeque/1.const_it_equals_3
+[       OK ] TestDeque/1.const_it_equals_3 (0 ms)
+[ RUN      ] TestDeque/1.const_it_notequals_1
+[       OK ] TestDeque/1.const_it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/1.const_it_notequals_2
+[       OK ] TestDeque/1.const_it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/1.const_it_notequals_3
+[       OK ] TestDeque/1.const_it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/1.const_plus_1
+[       OK ] TestDeque/1.const_plus_1 (0 ms)
+[ RUN      ] TestDeque/1.const_plus_2
+[       OK ] TestDeque/1.const_plus_2 (0 ms)
+[ RUN      ] TestDeque/1.const_plus_3
+[       OK ] TestDeque/1.const_plus_3 (0 ms)
+[ RUN      ] TestDeque/1.const_subtract_1
+[       OK ] TestDeque/1.const_subtract_1 (0 ms)
+[ RUN      ] TestDeque/1.const_subtract_2
+[       OK ] TestDeque/1.const_subtract_2 (0 ms)
+[ RUN      ] TestDeque/1.const_subtract_3
+[       OK ] TestDeque/1.const_subtract_3 (0 ms)
+[ RUN      ] TestDeque/1.const_star_1
+[       OK ] TestDeque/1.const_star_1 (0 ms)
+[ RUN      ] TestDeque/1.const_star_2
+[       OK ] TestDeque/1.const_star_2 (0 ms)
+[ RUN      ] TestDeque/1.const_star_3
+[       OK ] TestDeque/1.const_star_3 (0 ms)
+[ RUN      ] TestDeque/1.const_inc_pre_1
+[       OK ] TestDeque/1.const_inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/1.const_inc_pre_2
+[       OK ] TestDeque/1.const_inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/1.const_inc_pre_3
+[       OK ] TestDeque/1.const_inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/1.const_inc_post_1
+[       OK ] TestDeque/1.const_inc_post_1 (0 ms)
+[ RUN      ] TestDeque/1.const_inc_post_2
+[       OK ] TestDeque/1.const_inc_post_2 (0 ms)
+[ RUN      ] TestDeque/1.const_inc_post_3
+[       OK ] TestDeque/1.const_inc_post_3 (0 ms)
+[ RUN      ] TestDeque/1.const_dec_pre_1
+[       OK ] TestDeque/1.const_dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/1.const_dec_pre_2
+[       OK ] TestDeque/1.const_dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/1.const_dec_pre_3
+[       OK ] TestDeque/1.const_dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/1.const_dec_post_1
+[       OK ] TestDeque/1.const_dec_post_1 (0 ms)
+[ RUN      ] TestDeque/1.const_dec_post_2
+[       OK ] TestDeque/1.const_dec_post_2 (0 ms)
+[ RUN      ] TestDeque/1.const_dec_post_3
+[       OK ] TestDeque/1.const_dec_post_3 (0 ms)
+[ RUN      ] TestDeque/1.const_plus_eq_1
+[       OK ] TestDeque/1.const_plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/1.const_plus_eq_2
+[       OK ] TestDeque/1.const_plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/1.const_plus_eq_3
+[       OK ] TestDeque/1.const_plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/1.const_minus_eq_1
+[       OK ] TestDeque/1.const_minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/1.const_minus_eq_2
+[       OK ] TestDeque/1.const_minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/1.const_minus_eq_3
+[       OK ] TestDeque/1.const_minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/1.const_it_cons_1
+[       OK ] TestDeque/1.const_it_cons_1 (0 ms)
+[ RUN      ] TestDeque/1.const_it_cons_2
+[       OK ] TestDeque/1.const_it_cons_2 (0 ms)
+[ RUN      ] TestDeque/1.const_it_cons_3
+[       OK ] TestDeque/1.const_it_cons_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_EqualEqual_1
+[       OK ] TestDeque/1.Const_Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_EqualEqual_2
+[       OK ] TestDeque/1.Const_Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_EqualEqual_3
+[       OK ] TestDeque/1.Const_Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_NotEqual_1
+[       OK ] TestDeque/1.Const_Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_NotEqual_2
+[       OK ] TestDeque/1.Const_Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_NotEqual_3
+[       OK ] TestDeque/1.Const_Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Dereference_1
+[       OK ] TestDeque/1.Const_Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Dereference_2
+[       OK ] TestDeque/1.Const_Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Dereference_3
+[       OK ] TestDeque/1.Const_Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PrePlusPlus_1
+[       OK ] TestDeque/1.Const_Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PrePlusPlus_2
+[       OK ] TestDeque/1.Const_Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PrePlusPlus_3
+[       OK ] TestDeque/1.Const_Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PostPlusPlus_1
+[       OK ] TestDeque/1.Const_Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PostPlusPlus_2
+[       OK ] TestDeque/1.Const_Iterator_PostPlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PostPlusPlus_3
+[       OK ] TestDeque/1.Const_Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PreMinusMinus_1
+[       OK ] TestDeque/1.Const_Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PreMinusMinus_2
+[       OK ] TestDeque/1.Const_Iterator_PreMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PreMinusMinus_3
+[       OK ] TestDeque/1.Const_Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PostMinusMinus_1
+[       OK ] TestDeque/1.Const_Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PostMinusMinus_2
+[       OK ] TestDeque/1.Const_Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PostMinusMinus_3
+[       OK ] TestDeque/1.Const_Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PlusEq_1
+[       OK ] TestDeque/1.Const_Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PlusEq_2
+[       OK ] TestDeque/1.Const_Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_PlusEq_3
+[       OK ] TestDeque/1.Const_Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_MinusEq_1
+[       OK ] TestDeque/1.Const_Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_MinusEq_2
+[       OK ] TestDeque/1.Const_Iterator_MinusEq_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_MinusEq_3
+[       OK ] TestDeque/1.Const_Iterator_MinusEq_3 (0 ms)
+[ RUN      ] TestDeque/1.Resize_1
+[       OK ] TestDeque/1.Resize_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Plus_1
+[       OK ] TestDeque/1.Const_Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Plus_2
+[       OK ] TestDeque/1.Const_Iterator_Plus_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Plus_3
+[       OK ] TestDeque/1.Const_Iterator_Plus_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Minus_1
+[       OK ] TestDeque/1.Const_Iterator_Minus_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Minus_2
+[       OK ] TestDeque/1.Const_Iterator_Minus_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Minus_3
+[       OK ] TestDeque/1.Const_Iterator_Minus_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Constructor
+[       OK ] TestDeque/1.Const_Iterator_Constructor (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Constructor_1
+[       OK ] TestDeque/1.Const_Iterator_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Constructor_2
+[       OK ] TestDeque/1.Const_Iterator_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Constructor_3
+[       OK ] TestDeque/1.Const_Iterator_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Copy_Constructor_1
+[       OK ] TestDeque/1.Const_Iterator_Copy_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Copy_Constructor_2
+[       OK ] TestDeque/1.Const_Iterator_Copy_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/1.Const_Iterator_Copy_Constructor_3
+[       OK ] TestDeque/1.Const_Iterator_Copy_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/1.Resize_3
+[       OK ] TestDeque/1.Resize_3 (0 ms)
+[ RUN      ] TestDeque/1.Resize_4
+[       OK ] TestDeque/1.Resize_4 (0 ms)
+[ RUN      ] TestDeque/1.Resize_5
+[       OK ] TestDeque/1.Resize_5 (0 ms)
+[ RUN      ] TestDeque/1.Copy_1
+[       OK ] TestDeque/1.Copy_1 (0 ms)
+[ RUN      ] TestDeque/1.Insert_1
+[       OK ] TestDeque/1.Insert_1 (0 ms)
+[ RUN      ] TestDeque/1.Insert_2
+[       OK ] TestDeque/1.Insert_2 (0 ms)
+[ RUN      ] TestDeque/1.Insert_3
+[       OK ] TestDeque/1.Insert_3 (0 ms)
+[ RUN      ] TestDeque/1.Insert_4
+[       OK ] TestDeque/1.Insert_4 (0 ms)
+[ RUN      ] TestDeque/1.Less_Than_1
+[       OK ] TestDeque/1.Less_Than_1 (0 ms)
+[ RUN      ] TestDeque/1.Less_Than_2
+[       OK ] TestDeque/1.Less_Than_2 (0 ms)
+[ RUN      ] TestDeque/1.Less_Than_3
+[       OK ] TestDeque/1.Less_Than_3 (0 ms)
+[ RUN      ] TestDeque/1.Push_Front_1
+[       OK ] TestDeque/1.Push_Front_1 (0 ms)
+[ RUN      ] TestDeque/1.Push_Front_2
+[       OK ] TestDeque/1.Push_Front_2 (0 ms)
+[ RUN      ] TestDeque/1.Push_Front_3
+[       OK ] TestDeque/1.Push_Front_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_EqualEqual_1
+[       OK ] TestDeque/1.Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_EqualEqual_2
+[       OK ] TestDeque/1.Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_EqualEqual_3
+[       OK ] TestDeque/1.Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_NotEqual_1
+[       OK ] TestDeque/1.Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_NotEqual_2
+[       OK ] TestDeque/1.Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_NotEqual_3
+[       OK ] TestDeque/1.Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_Dereference_1
+[       OK ] TestDeque/1.Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_Dereference_2
+[       OK ] TestDeque/1.Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_Dereference_3
+[       OK ] TestDeque/1.Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PrePlusPlus_1
+[       OK ] TestDeque/1.Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PrePlusPlus_2
+[       OK ] TestDeque/1.Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PrePlusPlus_3
+[       OK ] TestDeque/1.Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PostPlusPlus_1
+[       OK ] TestDeque/1.Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PostPlusPlus_2
+[       OK ] TestDeque/1.Iterator_PostPlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PostPlusPlus_3
+[       OK ] TestDeque/1.Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PreMinusMinus_1
+[       OK ] TestDeque/1.Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PreMinusMinus_2
+[       OK ] TestDeque/1.Iterator_PreMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PreMinusMinus_3
+[       OK ] TestDeque/1.Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PostMinusMinus_1
+[       OK ] TestDeque/1.Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PostMinusMinus_2
+[       OK ] TestDeque/1.Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PostMinusMinus_3
+[       OK ] TestDeque/1.Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PlusEq_1
+[       OK ] TestDeque/1.Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PlusEq_2
+[       OK ] TestDeque/1.Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_PlusEq_3
+[       OK ] TestDeque/1.Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_MinusEq_1
+[       OK ] TestDeque/1.Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_Plus_1
+[       OK ] TestDeque/1.Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/1.Iterator_Minus_1
+[       OK ] TestDeque/1.Iterator_Minus_1 (0 ms)
+[----------] 265 tests from TestDeque/1 (3 ms total)
+
+[----------] 265 tests from TestDeque/2, where TypeParam = my_deque<int, std::allocator<int> >
+[ RUN      ] TestDeque/2.Empty
+[       OK ] TestDeque/2.Empty (0 ms)
+[ RUN      ] TestDeque/2.Size
+[       OK ] TestDeque/2.Size (0 ms)
+[ RUN      ] TestDeque/2.push_back_1
+[       OK ] TestDeque/2.push_back_1 (0 ms)
+[ RUN      ] TestDeque/2.push_back_2
+[       OK ] TestDeque/2.push_back_2 (0 ms)
+[ RUN      ] TestDeque/2.push_back_3
+[       OK ] TestDeque/2.push_back_3 (0 ms)
+[ RUN      ] TestDeque/2.push_back_4
+[       OK ] TestDeque/2.push_back_4 (0 ms)
+[ RUN      ] TestDeque/2.push_back_5
+[       OK ] TestDeque/2.push_back_5 (0 ms)
+[ RUN      ] TestDeque/2.push_back_6
+[       OK ] TestDeque/2.push_back_6 (0 ms)
+[ RUN      ] TestDeque/2.push_back_7
+[       OK ] TestDeque/2.push_back_7 (1 ms)
+[ RUN      ] TestDeque/2.push_front_1
+[       OK ] TestDeque/2.push_front_1 (0 ms)
+[ RUN      ] TestDeque/2.push_front_2
+[       OK ] TestDeque/2.push_front_2 (0 ms)
+[ RUN      ] TestDeque/2.push_front_3
+[       OK ] TestDeque/2.push_front_3 (0 ms)
+[ RUN      ] TestDeque/2.push_front_4
+[       OK ] TestDeque/2.push_front_4 (0 ms)
+[ RUN      ] TestDeque/2.push_front_5
+[       OK ] TestDeque/2.push_front_5 (0 ms)
+[ RUN      ] TestDeque/2.push_front_6
+[       OK ] TestDeque/2.push_front_6 (0 ms)
+[ RUN      ] TestDeque/2.pop_front_1
+[       OK ] TestDeque/2.pop_front_1 (0 ms)
+[ RUN      ] TestDeque/2.pop_front_2
+[       OK ] TestDeque/2.pop_front_2 (0 ms)
+[ RUN      ] TestDeque/2.pop_front_3
+[       OK ] TestDeque/2.pop_front_3 (0 ms)
+[ RUN      ] TestDeque/2.pop_front_4
+[       OK ] TestDeque/2.pop_front_4 (0 ms)
+[ RUN      ] TestDeque/2.pop_front_5
+[       OK ] TestDeque/2.pop_front_5 (0 ms)
+[ RUN      ] TestDeque/2.pop_front_6
+[       OK ] TestDeque/2.pop_front_6 (0 ms)
+[ RUN      ] TestDeque/2.pop_back_1
+[       OK ] TestDeque/2.pop_back_1 (0 ms)
+[ RUN      ] TestDeque/2.pop_back_2
+[       OK ] TestDeque/2.pop_back_2 (0 ms)
+[ RUN      ] TestDeque/2.pop_back_3
+[       OK ] TestDeque/2.pop_back_3 (0 ms)
+[ RUN      ] TestDeque/2.pop_back_4
+[       OK ] TestDeque/2.pop_back_4 (0 ms)
+[ RUN      ] TestDeque/2.pop_back_5
+[       OK ] TestDeque/2.pop_back_5 (0 ms)
+[ RUN      ] TestDeque/2.pop_back_6
+[       OK ] TestDeque/2.pop_back_6 (0 ms)
+[ RUN      ] TestDeque/2.front_1
+[       OK ] TestDeque/2.front_1 (0 ms)
+[ RUN      ] TestDeque/2.front_2
+[       OK ] TestDeque/2.front_2 (0 ms)
+[ RUN      ] TestDeque/2.front_3
+[       OK ] TestDeque/2.front_3 (0 ms)
+[ RUN      ] TestDeque/2.front_4
+[       OK ] TestDeque/2.front_4 (0 ms)
+[ RUN      ] TestDeque/2.front_5
+[       OK ] TestDeque/2.front_5 (0 ms)
+[ RUN      ] TestDeque/2.front_6
+[       OK ] TestDeque/2.front_6 (0 ms)
+[ RUN      ] TestDeque/2.const_front_1
+[       OK ] TestDeque/2.const_front_1 (0 ms)
+[ RUN      ] TestDeque/2.const_front_2
+[       OK ] TestDeque/2.const_front_2 (0 ms)
+[ RUN      ] TestDeque/2.const_front_3
+[       OK ] TestDeque/2.const_front_3 (0 ms)
+[ RUN      ] TestDeque/2.back_1
+[       OK ] TestDeque/2.back_1 (0 ms)
+[ RUN      ] TestDeque/2.back_2
+[       OK ] TestDeque/2.back_2 (0 ms)
+[ RUN      ] TestDeque/2.back_3
+[       OK ] TestDeque/2.back_3 (0 ms)
+[ RUN      ] TestDeque/2.back_4
+[       OK ] TestDeque/2.back_4 (0 ms)
+[ RUN      ] TestDeque/2.back_5
+[       OK ] TestDeque/2.back_5 (0 ms)
+[ RUN      ] TestDeque/2.back_6
+[       OK ] TestDeque/2.back_6 (0 ms)
+[ RUN      ] TestDeque/2.back_7
+[       OK ] TestDeque/2.back_7 (0 ms)
+[ RUN      ] TestDeque/2.at_1
+[       OK ] TestDeque/2.at_1 (0 ms)
+[ RUN      ] TestDeque/2.at_2
+[       OK ] TestDeque/2.at_2 (0 ms)
+[ RUN      ] TestDeque/2.at_3
+[       OK ] TestDeque/2.at_3 (0 ms)
+[ RUN      ] TestDeque/2.const_at_1
+[       OK ] TestDeque/2.const_at_1 (0 ms)
+[ RUN      ] TestDeque/2.const_at_2
+[       OK ] TestDeque/2.const_at_2 (0 ms)
+[ RUN      ] TestDeque/2.const_at_3
+[       OK ] TestDeque/2.const_at_3 (0 ms)
+[ RUN      ] TestDeque/2.bracket_1
+[       OK ] TestDeque/2.bracket_1 (0 ms)
+[ RUN      ] TestDeque/2.bracket_2
+[       OK ] TestDeque/2.bracket_2 (0 ms)
+[ RUN      ] TestDeque/2.bracket_3
+[       OK ] TestDeque/2.bracket_3 (0 ms)
+[ RUN      ] TestDeque/2.const_bracket_1
+[       OK ] TestDeque/2.const_bracket_1 (0 ms)
+[ RUN      ] TestDeque/2.const_bracket_2
+[       OK ] TestDeque/2.const_bracket_2 (0 ms)
+[ RUN      ] TestDeque/2.const_bracket_3
+[       OK ] TestDeque/2.const_bracket_3 (0 ms)
+[ RUN      ] TestDeque/2.begin_1
+[       OK ] TestDeque/2.begin_1 (0 ms)
+[ RUN      ] TestDeque/2.begin_2
+[       OK ] TestDeque/2.begin_2 (0 ms)
+[ RUN      ] TestDeque/2.begin_3
+[       OK ] TestDeque/2.begin_3 (0 ms)
+[ RUN      ] TestDeque/2.const_begin_1
+[       OK ] TestDeque/2.const_begin_1 (0 ms)
+[ RUN      ] TestDeque/2.const_begin_2
+[       OK ] TestDeque/2.const_begin_2 (0 ms)
+[ RUN      ] TestDeque/2.const_begin_3
+[       OK ] TestDeque/2.const_begin_3 (0 ms)
+[ RUN      ] TestDeque/2.end_1
+[       OK ] TestDeque/2.end_1 (0 ms)
+[ RUN      ] TestDeque/2.end_2
+[       OK ] TestDeque/2.end_2 (0 ms)
+[ RUN      ] TestDeque/2.end_3
+[       OK ] TestDeque/2.end_3 (0 ms)
+[ RUN      ] TestDeque/2.const_end_1
+[       OK ] TestDeque/2.const_end_1 (0 ms)
+[ RUN      ] TestDeque/2.const_end_2
+[       OK ] TestDeque/2.const_end_2 (1 ms)
+[ RUN      ] TestDeque/2.const_end_3
+[       OK ] TestDeque/2.const_end_3 (0 ms)
+[ RUN      ] TestDeque/2.constructor_1
+[       OK ] TestDeque/2.constructor_1 (0 ms)
+[ RUN      ] TestDeque/2.constructor_2
+[       OK ] TestDeque/2.constructor_2 (0 ms)
+[ RUN      ] TestDeque/2.constructor_3
+[       OK ] TestDeque/2.constructor_3 (0 ms)
+[ RUN      ] TestDeque/2.constructor_size_1
+[       OK ] TestDeque/2.constructor_size_1 (0 ms)
+[ RUN      ] TestDeque/2.constructor_size_2
+[       OK ] TestDeque/2.constructor_size_2 (0 ms)
+[ RUN      ] TestDeque/2.constructor_size_3
+[       OK ] TestDeque/2.constructor_size_3 (0 ms)
+[ RUN      ] TestDeque/2.constructor_that_1
+[       OK ] TestDeque/2.constructor_that_1 (0 ms)
+[ RUN      ] TestDeque/2.constructor_that_2
+[       OK ] TestDeque/2.constructor_that_2 (0 ms)
+[ RUN      ] TestDeque/2.constructor_that_3
+[       OK ] TestDeque/2.constructor_that_3 (0 ms)
+[ RUN      ] TestDeque/2.assignment_1
+[       OK ] TestDeque/2.assignment_1 (0 ms)
+[ RUN      ] TestDeque/2.assignment_2
+[       OK ] TestDeque/2.assignment_2 (0 ms)
+[ RUN      ] TestDeque/2.assignment_3
+[       OK ] TestDeque/2.assignment_3 (0 ms)
+[ RUN      ] TestDeque/2.swap_1
+[       OK ] TestDeque/2.swap_1 (0 ms)
+[ RUN      ] TestDeque/2.swap_2
+[       OK ] TestDeque/2.swap_2 (0 ms)
+[ RUN      ] TestDeque/2.swap_3
+[       OK ] TestDeque/2.swap_3 (0 ms)
+[ RUN      ] TestDeque/2.size_1
+[       OK ] TestDeque/2.size_1 (0 ms)
+[ RUN      ] TestDeque/2.size_2
+[       OK ] TestDeque/2.size_2 (0 ms)
+[ RUN      ] TestDeque/2.size_3
+[       OK ] TestDeque/2.size_3 (0 ms)
+[ RUN      ] TestDeque/2.resize_1
+[       OK ] TestDeque/2.resize_1 (0 ms)
+[ RUN      ] TestDeque/2.resize_2
+[       OK ] TestDeque/2.resize_2 (0 ms)
+[ RUN      ] TestDeque/2.resize_3
+[       OK ] TestDeque/2.resize_3 (0 ms)
+[ RUN      ] TestDeque/2.clear_1
+[       OK ] TestDeque/2.clear_1 (0 ms)
+[ RUN      ] TestDeque/2.clear_2
+[       OK ] TestDeque/2.clear_2 (0 ms)
+[ RUN      ] TestDeque/2.clear_3
+[       OK ] TestDeque/2.clear_3 (0 ms)
+[ RUN      ] TestDeque/2.erase_1
+[       OK ] TestDeque/2.erase_1 (0 ms)
+[ RUN      ] TestDeque/2.erase_2
+[       OK ] TestDeque/2.erase_2 (0 ms)
+[ RUN      ] TestDeque/2.erase_3
+[       OK ] TestDeque/2.erase_3 (0 ms)
+[ RUN      ] TestDeque/2.erase_4
+[       OK ] TestDeque/2.erase_4 (0 ms)
+[ RUN      ] TestDeque/2.insert_1
+[       OK ] TestDeque/2.insert_1 (0 ms)
+[ RUN      ] TestDeque/2.insert_2
+[       OK ] TestDeque/2.insert_2 (0 ms)
+[ RUN      ] TestDeque/2.insert_3
+[       OK ] TestDeque/2.insert_3 (0 ms)
+[ RUN      ] TestDeque/2.insert_4
+[       OK ] TestDeque/2.insert_4 (0 ms)
+[ RUN      ] TestDeque/2.equals_1
+[       OK ] TestDeque/2.equals_1 (0 ms)
+[ RUN      ] TestDeque/2.equals_2
+[       OK ] TestDeque/2.equals_2 (0 ms)
+[ RUN      ] TestDeque/2.equals_3
+[       OK ] TestDeque/2.equals_3 (0 ms)
+[ RUN      ] TestDeque/2.compare_1
+[       OK ] TestDeque/2.compare_1 (0 ms)
+[ RUN      ] TestDeque/2.compare_2
+[       OK ] TestDeque/2.compare_2 (0 ms)
+[ RUN      ] TestDeque/2.compare_3
+[       OK ] TestDeque/2.compare_3 (0 ms)
+[ RUN      ] TestDeque/2.empty_1
+[       OK ] TestDeque/2.empty_1 (0 ms)
+[ RUN      ] TestDeque/2.empty_2
+[       OK ] TestDeque/2.empty_2 (0 ms)
+[ RUN      ] TestDeque/2.empty_3
+[       OK ] TestDeque/2.empty_3 (0 ms)
+[ RUN      ] TestDeque/2.destruct_1
+[       OK ] TestDeque/2.destruct_1 (0 ms)
+[ RUN      ] TestDeque/2.destruct_2
+[       OK ] TestDeque/2.destruct_2 (0 ms)
+[ RUN      ] TestDeque/2.destruct_3
+[       OK ] TestDeque/2.destruct_3 (0 ms)
+[ RUN      ] TestDeque/2.it_equals_1
+[       OK ] TestDeque/2.it_equals_1 (0 ms)
+[ RUN      ] TestDeque/2.it_equals_2
+[       OK ] TestDeque/2.it_equals_2 (0 ms)
+[ RUN      ] TestDeque/2.it_equals_3
+[       OK ] TestDeque/2.it_equals_3 (0 ms)
+[ RUN      ] TestDeque/2.it_notequals_1
+[       OK ] TestDeque/2.it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/2.it_notequals_2
+[       OK ] TestDeque/2.it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/2.it_notequals_3
+[       OK ] TestDeque/2.it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/2.plus_1
+[       OK ] TestDeque/2.plus_1 (0 ms)
+[ RUN      ] TestDeque/2.plus_2
+[       OK ] TestDeque/2.plus_2 (0 ms)
+[ RUN      ] TestDeque/2.plus_3
+[       OK ] TestDeque/2.plus_3 (0 ms)
+[ RUN      ] TestDeque/2.subtract_1
+[       OK ] TestDeque/2.subtract_1 (0 ms)
+[ RUN      ] TestDeque/2.subtract_2
+[       OK ] TestDeque/2.subtract_2 (0 ms)
+[ RUN      ] TestDeque/2.subtarct_3
+[       OK ] TestDeque/2.subtarct_3 (0 ms)
+[ RUN      ] TestDeque/2.star_1
+[       OK ] TestDeque/2.star_1 (0 ms)
+[ RUN      ] TestDeque/2.star_2
+[       OK ] TestDeque/2.star_2 (0 ms)
+[ RUN      ] TestDeque/2.star_3
+[       OK ] TestDeque/2.star_3 (0 ms)
+[ RUN      ] TestDeque/2.inc_pre_1
+[       OK ] TestDeque/2.inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/2.inc_pre_2
+[       OK ] TestDeque/2.inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/2.inc_pre_3
+[       OK ] TestDeque/2.inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/2.inc_post_1
+[       OK ] TestDeque/2.inc_post_1 (0 ms)
+[ RUN      ] TestDeque/2.inc_post_2
+[       OK ] TestDeque/2.inc_post_2 (0 ms)
+[ RUN      ] TestDeque/2.inc_post_3
+[       OK ] TestDeque/2.inc_post_3 (0 ms)
+[ RUN      ] TestDeque/2.dec_pre_1
+[       OK ] TestDeque/2.dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/2.dec_pre_2
+[       OK ] TestDeque/2.dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/2.dec_pre_3
+[       OK ] TestDeque/2.dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/2.dec_post_1
+[       OK ] TestDeque/2.dec_post_1 (0 ms)
+[ RUN      ] TestDeque/2.dec_post_2
+[       OK ] TestDeque/2.dec_post_2 (0 ms)
+[ RUN      ] TestDeque/2.dec_post_3
+[       OK ] TestDeque/2.dec_post_3 (0 ms)
+[ RUN      ] TestDeque/2.plus_eq_1
+[       OK ] TestDeque/2.plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/2.plus_eq_2
+[       OK ] TestDeque/2.plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/2.plus_eq_3
+[       OK ] TestDeque/2.plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/2.minus_eq_1
+[       OK ] TestDeque/2.minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/2.minus_eq_2
+[       OK ] TestDeque/2.minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/2.minus_eq_3
+[       OK ] TestDeque/2.minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/2.it_cons_1
+[       OK ] TestDeque/2.it_cons_1 (0 ms)
+[ RUN      ] TestDeque/2.it_cons_2
+[       OK ] TestDeque/2.it_cons_2 (0 ms)
+[ RUN      ] TestDeque/2.it_cons_3
+[       OK ] TestDeque/2.it_cons_3 (0 ms)
+[ RUN      ] TestDeque/2.const_it_equals_1
+[       OK ] TestDeque/2.const_it_equals_1 (1 ms)
+[ RUN      ] TestDeque/2.const_it_equals_2
+[       OK ] TestDeque/2.const_it_equals_2 (0 ms)
+[ RUN      ] TestDeque/2.const_it_equals_3
+[       OK ] TestDeque/2.const_it_equals_3 (0 ms)
+[ RUN      ] TestDeque/2.const_it_notequals_1
+[       OK ] TestDeque/2.const_it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/2.const_it_notequals_2
+[       OK ] TestDeque/2.const_it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/2.const_it_notequals_3
+[       OK ] TestDeque/2.const_it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/2.const_plus_1
+[       OK ] TestDeque/2.const_plus_1 (0 ms)
+[ RUN      ] TestDeque/2.const_plus_2
+[       OK ] TestDeque/2.const_plus_2 (0 ms)
+[ RUN      ] TestDeque/2.const_plus_3
+[       OK ] TestDeque/2.const_plus_3 (0 ms)
+[ RUN      ] TestDeque/2.const_subtract_1
+[       OK ] TestDeque/2.const_subtract_1 (0 ms)
+[ RUN      ] TestDeque/2.const_subtract_2
+[       OK ] TestDeque/2.const_subtract_2 (0 ms)
+[ RUN      ] TestDeque/2.const_subtract_3
+[       OK ] TestDeque/2.const_subtract_3 (0 ms)
+[ RUN      ] TestDeque/2.const_star_1
+[       OK ] TestDeque/2.const_star_1 (0 ms)
+[ RUN      ] TestDeque/2.const_star_2
+[       OK ] TestDeque/2.const_star_2 (0 ms)
+[ RUN      ] TestDeque/2.const_star_3
+[       OK ] TestDeque/2.const_star_3 (0 ms)
+[ RUN      ] TestDeque/2.const_inc_pre_1
+[       OK ] TestDeque/2.const_inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/2.const_inc_pre_2
+[       OK ] TestDeque/2.const_inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/2.const_inc_pre_3
+[       OK ] TestDeque/2.const_inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/2.const_inc_post_1
+[       OK ] TestDeque/2.const_inc_post_1 (0 ms)
+[ RUN      ] TestDeque/2.const_inc_post_2
+[       OK ] TestDeque/2.const_inc_post_2 (0 ms)
+[ RUN      ] TestDeque/2.const_inc_post_3
+[       OK ] TestDeque/2.const_inc_post_3 (0 ms)
+[ RUN      ] TestDeque/2.const_dec_pre_1
+[       OK ] TestDeque/2.const_dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/2.const_dec_pre_2
+[       OK ] TestDeque/2.const_dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/2.const_dec_pre_3
+[       OK ] TestDeque/2.const_dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/2.const_dec_post_1
+[       OK ] TestDeque/2.const_dec_post_1 (0 ms)
+[ RUN      ] TestDeque/2.const_dec_post_2
+[       OK ] TestDeque/2.const_dec_post_2 (0 ms)
+[ RUN      ] TestDeque/2.const_dec_post_3
+[       OK ] TestDeque/2.const_dec_post_3 (0 ms)
+[ RUN      ] TestDeque/2.const_plus_eq_1
+[       OK ] TestDeque/2.const_plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/2.const_plus_eq_2
+[       OK ] TestDeque/2.const_plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/2.const_plus_eq_3
+[       OK ] TestDeque/2.const_plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/2.const_minus_eq_1
+[       OK ] TestDeque/2.const_minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/2.const_minus_eq_2
+[       OK ] TestDeque/2.const_minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/2.const_minus_eq_3
+[       OK ] TestDeque/2.const_minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/2.const_it_cons_1
+[       OK ] TestDeque/2.const_it_cons_1 (0 ms)
+[ RUN      ] TestDeque/2.const_it_cons_2
+[       OK ] TestDeque/2.const_it_cons_2 (0 ms)
+[ RUN      ] TestDeque/2.const_it_cons_3
+[       OK ] TestDeque/2.const_it_cons_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_EqualEqual_1
+[       OK ] TestDeque/2.Const_Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_EqualEqual_2
+[       OK ] TestDeque/2.Const_Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_EqualEqual_3
+[       OK ] TestDeque/2.Const_Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_NotEqual_1
+[       OK ] TestDeque/2.Const_Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_NotEqual_2
+[       OK ] TestDeque/2.Const_Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_NotEqual_3
+[       OK ] TestDeque/2.Const_Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Dereference_1
+[       OK ] TestDeque/2.Const_Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Dereference_2
+[       OK ] TestDeque/2.Const_Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Dereference_3
+[       OK ] TestDeque/2.Const_Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PrePlusPlus_1
+[       OK ] TestDeque/2.Const_Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PrePlusPlus_2
+[       OK ] TestDeque/2.Const_Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PrePlusPlus_3
+[       OK ] TestDeque/2.Const_Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PostPlusPlus_1
+[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PostPlusPlus_2
+[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_2 (1 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PostPlusPlus_3
+[       OK ] TestDeque/2.Const_Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PreMinusMinus_1
+[       OK ] TestDeque/2.Const_Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PreMinusMinus_2
+[       OK ] TestDeque/2.Const_Iterator_PreMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PreMinusMinus_3
+[       OK ] TestDeque/2.Const_Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PostMinusMinus_1
+[       OK ] TestDeque/2.Const_Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PostMinusMinus_2
+[       OK ] TestDeque/2.Const_Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PostMinusMinus_3
+[       OK ] TestDeque/2.Const_Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PlusEq_1
+[       OK ] TestDeque/2.Const_Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PlusEq_2
+[       OK ] TestDeque/2.Const_Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_PlusEq_3
+[       OK ] TestDeque/2.Const_Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_MinusEq_1
+[       OK ] TestDeque/2.Const_Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_MinusEq_2
+[       OK ] TestDeque/2.Const_Iterator_MinusEq_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_MinusEq_3
+[       OK ] TestDeque/2.Const_Iterator_MinusEq_3 (0 ms)
+[ RUN      ] TestDeque/2.Resize_1
+[       OK ] TestDeque/2.Resize_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Plus_1
+[       OK ] TestDeque/2.Const_Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Plus_2
+[       OK ] TestDeque/2.Const_Iterator_Plus_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Plus_3
+[       OK ] TestDeque/2.Const_Iterator_Plus_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Minus_1
+[       OK ] TestDeque/2.Const_Iterator_Minus_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Minus_2
+[       OK ] TestDeque/2.Const_Iterator_Minus_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Minus_3
+[       OK ] TestDeque/2.Const_Iterator_Minus_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Constructor
+[       OK ] TestDeque/2.Const_Iterator_Constructor (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Constructor_1
+[       OK ] TestDeque/2.Const_Iterator_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Constructor_2
+[       OK ] TestDeque/2.Const_Iterator_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Constructor_3
+[       OK ] TestDeque/2.Const_Iterator_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Copy_Constructor_1
+[       OK ] TestDeque/2.Const_Iterator_Copy_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Copy_Constructor_2
+[       OK ] TestDeque/2.Const_Iterator_Copy_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/2.Const_Iterator_Copy_Constructor_3
+[       OK ] TestDeque/2.Const_Iterator_Copy_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/2.Resize_3
+[       OK ] TestDeque/2.Resize_3 (0 ms)
+[ RUN      ] TestDeque/2.Resize_4
+[       OK ] TestDeque/2.Resize_4 (0 ms)
+[ RUN      ] TestDeque/2.Resize_5
+[       OK ] TestDeque/2.Resize_5 (0 ms)
+[ RUN      ] TestDeque/2.Copy_1
+[       OK ] TestDeque/2.Copy_1 (0 ms)
+[ RUN      ] TestDeque/2.Insert_1
+[       OK ] TestDeque/2.Insert_1 (0 ms)
+[ RUN      ] TestDeque/2.Insert_2
+[       OK ] TestDeque/2.Insert_2 (0 ms)
+[ RUN      ] TestDeque/2.Insert_3
+[       OK ] TestDeque/2.Insert_3 (0 ms)
+[ RUN      ] TestDeque/2.Insert_4
+[       OK ] TestDeque/2.Insert_4 (0 ms)
+[ RUN      ] TestDeque/2.Less_Than_1
+[       OK ] TestDeque/2.Less_Than_1 (0 ms)
+[ RUN      ] TestDeque/2.Less_Than_2
+[       OK ] TestDeque/2.Less_Than_2 (0 ms)
+[ RUN      ] TestDeque/2.Less_Than_3
+[       OK ] TestDeque/2.Less_Than_3 (0 ms)
+[ RUN      ] TestDeque/2.Push_Front_1
+[       OK ] TestDeque/2.Push_Front_1 (0 ms)
+[ RUN      ] TestDeque/2.Push_Front_2
+[       OK ] TestDeque/2.Push_Front_2 (6 ms)
+[ RUN      ] TestDeque/2.Push_Front_3
+[       OK ] TestDeque/2.Push_Front_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_EqualEqual_1
+[       OK ] TestDeque/2.Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_EqualEqual_2
+[       OK ] TestDeque/2.Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_EqualEqual_3
+[       OK ] TestDeque/2.Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_NotEqual_1
+[       OK ] TestDeque/2.Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_NotEqual_2
+[       OK ] TestDeque/2.Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_NotEqual_3
+[       OK ] TestDeque/2.Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_Dereference_1
+[       OK ] TestDeque/2.Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_Dereference_2
+[       OK ] TestDeque/2.Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_Dereference_3
+[       OK ] TestDeque/2.Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PrePlusPlus_1
+[       OK ] TestDeque/2.Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PrePlusPlus_2
+[       OK ] TestDeque/2.Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PrePlusPlus_3
+[       OK ] TestDeque/2.Iterator_PrePlusPlus_3 (1 ms)
+[ RUN      ] TestDeque/2.Iterator_PostPlusPlus_1
+[       OK ] TestDeque/2.Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PostPlusPlus_2
+[       OK ] TestDeque/2.Iterator_PostPlusPlus_2 (1 ms)
+[ RUN      ] TestDeque/2.Iterator_PostPlusPlus_3
+[       OK ] TestDeque/2.Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PreMinusMinus_1
+[       OK ] TestDeque/2.Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PreMinusMinus_2
+[       OK ] TestDeque/2.Iterator_PreMinusMinus_2 (1 ms)
+[ RUN      ] TestDeque/2.Iterator_PreMinusMinus_3
+[       OK ] TestDeque/2.Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PostMinusMinus_1
+[       OK ] TestDeque/2.Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PostMinusMinus_2
+[       OK ] TestDeque/2.Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PostMinusMinus_3
+[       OK ] TestDeque/2.Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PlusEq_1
+[       OK ] TestDeque/2.Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PlusEq_2
+[       OK ] TestDeque/2.Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_PlusEq_3
+[       OK ] TestDeque/2.Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_MinusEq_1
+[       OK ] TestDeque/2.Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_Plus_1
+[       OK ] TestDeque/2.Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/2.Iterator_Minus_1
+[       OK ] TestDeque/2.Iterator_Minus_1 (0 ms)
+[----------] 265 tests from TestDeque/2 (14 ms total)
+
+[----------] 265 tests from TestDeque/3, where TypeParam = my_deque<double, std::allocator<double> >
+[ RUN      ] TestDeque/3.Empty
+[       OK ] TestDeque/3.Empty (0 ms)
+[ RUN      ] TestDeque/3.Size
+[       OK ] TestDeque/3.Size (0 ms)
+[ RUN      ] TestDeque/3.push_back_1
+[       OK ] TestDeque/3.push_back_1 (0 ms)
+[ RUN      ] TestDeque/3.push_back_2
+[       OK ] TestDeque/3.push_back_2 (0 ms)
+[ RUN      ] TestDeque/3.push_back_3
+[       OK ] TestDeque/3.push_back_3 (0 ms)
+[ RUN      ] TestDeque/3.push_back_4
+[       OK ] TestDeque/3.push_back_4 (0 ms)
+[ RUN      ] TestDeque/3.push_back_5
+[       OK ] TestDeque/3.push_back_5 (0 ms)
+[ RUN      ] TestDeque/3.push_back_6
+[       OK ] TestDeque/3.push_back_6 (0 ms)
+[ RUN      ] TestDeque/3.push_back_7
+[       OK ] TestDeque/3.push_back_7 (1 ms)
+[ RUN      ] TestDeque/3.push_front_1
+[       OK ] TestDeque/3.push_front_1 (0 ms)
+[ RUN      ] TestDeque/3.push_front_2
+[       OK ] TestDeque/3.push_front_2 (0 ms)
+[ RUN      ] TestDeque/3.push_front_3
+[       OK ] TestDeque/3.push_front_3 (0 ms)
+[ RUN      ] TestDeque/3.push_front_4
+[       OK ] TestDeque/3.push_front_4 (0 ms)
+[ RUN      ] TestDeque/3.push_front_5
+[       OK ] TestDeque/3.push_front_5 (0 ms)
+[ RUN      ] TestDeque/3.push_front_6
+[       OK ] TestDeque/3.push_front_6 (0 ms)
+[ RUN      ] TestDeque/3.pop_front_1
+[       OK ] TestDeque/3.pop_front_1 (0 ms)
+[ RUN      ] TestDeque/3.pop_front_2
+[       OK ] TestDeque/3.pop_front_2 (0 ms)
+[ RUN      ] TestDeque/3.pop_front_3
+[       OK ] TestDeque/3.pop_front_3 (0 ms)
+[ RUN      ] TestDeque/3.pop_front_4
+[       OK ] TestDeque/3.pop_front_4 (0 ms)
+[ RUN      ] TestDeque/3.pop_front_5
+[       OK ] TestDeque/3.pop_front_5 (0 ms)
+[ RUN      ] TestDeque/3.pop_front_6
+[       OK ] TestDeque/3.pop_front_6 (0 ms)
+[ RUN      ] TestDeque/3.pop_back_1
+[       OK ] TestDeque/3.pop_back_1 (0 ms)
+[ RUN      ] TestDeque/3.pop_back_2
+[       OK ] TestDeque/3.pop_back_2 (0 ms)
+[ RUN      ] TestDeque/3.pop_back_3
+[       OK ] TestDeque/3.pop_back_3 (0 ms)
+[ RUN      ] TestDeque/3.pop_back_4
+[       OK ] TestDeque/3.pop_back_4 (0 ms)
+[ RUN      ] TestDeque/3.pop_back_5
+[       OK ] TestDeque/3.pop_back_5 (0 ms)
+[ RUN      ] TestDeque/3.pop_back_6
+[       OK ] TestDeque/3.pop_back_6 (0 ms)
+[ RUN      ] TestDeque/3.front_1
+[       OK ] TestDeque/3.front_1 (0 ms)
+[ RUN      ] TestDeque/3.front_2
+[       OK ] TestDeque/3.front_2 (0 ms)
+[ RUN      ] TestDeque/3.front_3
+[       OK ] TestDeque/3.front_3 (0 ms)
+[ RUN      ] TestDeque/3.front_4
+[       OK ] TestDeque/3.front_4 (0 ms)
+[ RUN      ] TestDeque/3.front_5
+[       OK ] TestDeque/3.front_5 (0 ms)
+[ RUN      ] TestDeque/3.front_6
+[       OK ] TestDeque/3.front_6 (0 ms)
+[ RUN      ] TestDeque/3.const_front_1
+[       OK ] TestDeque/3.const_front_1 (0 ms)
+[ RUN      ] TestDeque/3.const_front_2
+[       OK ] TestDeque/3.const_front_2 (0 ms)
+[ RUN      ] TestDeque/3.const_front_3
+[       OK ] TestDeque/3.const_front_3 (0 ms)
+[ RUN      ] TestDeque/3.back_1
+[       OK ] TestDeque/3.back_1 (0 ms)
+[ RUN      ] TestDeque/3.back_2
+[       OK ] TestDeque/3.back_2 (0 ms)
+[ RUN      ] TestDeque/3.back_3
+[       OK ] TestDeque/3.back_3 (0 ms)
+[ RUN      ] TestDeque/3.back_4
+[       OK ] TestDeque/3.back_4 (0 ms)
+[ RUN      ] TestDeque/3.back_5
+[       OK ] TestDeque/3.back_5 (0 ms)
+[ RUN      ] TestDeque/3.back_6
+[       OK ] TestDeque/3.back_6 (0 ms)
+[ RUN      ] TestDeque/3.back_7
+[       OK ] TestDeque/3.back_7 (0 ms)
+[ RUN      ] TestDeque/3.at_1
+[       OK ] TestDeque/3.at_1 (0 ms)
+[ RUN      ] TestDeque/3.at_2
+[       OK ] TestDeque/3.at_2 (0 ms)
+[ RUN      ] TestDeque/3.at_3
+[       OK ] TestDeque/3.at_3 (0 ms)
+[ RUN      ] TestDeque/3.const_at_1
+[       OK ] TestDeque/3.const_at_1 (0 ms)
+[ RUN      ] TestDeque/3.const_at_2
+[       OK ] TestDeque/3.const_at_2 (0 ms)
+[ RUN      ] TestDeque/3.const_at_3
+[       OK ] TestDeque/3.const_at_3 (0 ms)
+[ RUN      ] TestDeque/3.bracket_1
+[       OK ] TestDeque/3.bracket_1 (0 ms)
+[ RUN      ] TestDeque/3.bracket_2
+[       OK ] TestDeque/3.bracket_2 (0 ms)
+[ RUN      ] TestDeque/3.bracket_3
+[       OK ] TestDeque/3.bracket_3 (1 ms)
+[ RUN      ] TestDeque/3.const_bracket_1
+[       OK ] TestDeque/3.const_bracket_1 (0 ms)
+[ RUN      ] TestDeque/3.const_bracket_2
+[       OK ] TestDeque/3.const_bracket_2 (0 ms)
+[ RUN      ] TestDeque/3.const_bracket_3
+[       OK ] TestDeque/3.const_bracket_3 (0 ms)
+[ RUN      ] TestDeque/3.begin_1
+[       OK ] TestDeque/3.begin_1 (0 ms)
+[ RUN      ] TestDeque/3.begin_2
+[       OK ] TestDeque/3.begin_2 (0 ms)
+[ RUN      ] TestDeque/3.begin_3
+[       OK ] TestDeque/3.begin_3 (0 ms)
+[ RUN      ] TestDeque/3.const_begin_1
+[       OK ] TestDeque/3.const_begin_1 (0 ms)
+[ RUN      ] TestDeque/3.const_begin_2
+[       OK ] TestDeque/3.const_begin_2 (0 ms)
+[ RUN      ] TestDeque/3.const_begin_3
+[       OK ] TestDeque/3.const_begin_3 (0 ms)
+[ RUN      ] TestDeque/3.end_1
+[       OK ] TestDeque/3.end_1 (0 ms)
+[ RUN      ] TestDeque/3.end_2
+[       OK ] TestDeque/3.end_2 (0 ms)
+[ RUN      ] TestDeque/3.end_3
+[       OK ] TestDeque/3.end_3 (0 ms)
+[ RUN      ] TestDeque/3.const_end_1
+[       OK ] TestDeque/3.const_end_1 (0 ms)
+[ RUN      ] TestDeque/3.const_end_2
+[       OK ] TestDeque/3.const_end_2 (0 ms)
+[ RUN      ] TestDeque/3.const_end_3
+[       OK ] TestDeque/3.const_end_3 (0 ms)
+[ RUN      ] TestDeque/3.constructor_1
+[       OK ] TestDeque/3.constructor_1 (0 ms)
+[ RUN      ] TestDeque/3.constructor_2
+[       OK ] TestDeque/3.constructor_2 (0 ms)
+[ RUN      ] TestDeque/3.constructor_3
+[       OK ] TestDeque/3.constructor_3 (0 ms)
+[ RUN      ] TestDeque/3.constructor_size_1
+[       OK ] TestDeque/3.constructor_size_1 (0 ms)
+[ RUN      ] TestDeque/3.constructor_size_2
+[       OK ] TestDeque/3.constructor_size_2 (0 ms)
+[ RUN      ] TestDeque/3.constructor_size_3
+[       OK ] TestDeque/3.constructor_size_3 (0 ms)
+[ RUN      ] TestDeque/3.constructor_that_1
+[       OK ] TestDeque/3.constructor_that_1 (0 ms)
+[ RUN      ] TestDeque/3.constructor_that_2
+[       OK ] TestDeque/3.constructor_that_2 (0 ms)
+[ RUN      ] TestDeque/3.constructor_that_3
+[       OK ] TestDeque/3.constructor_that_3 (0 ms)
+[ RUN      ] TestDeque/3.assignment_1
+[       OK ] TestDeque/3.assignment_1 (0 ms)
+[ RUN      ] TestDeque/3.assignment_2
+[       OK ] TestDeque/3.assignment_2 (0 ms)
+[ RUN      ] TestDeque/3.assignment_3
+[       OK ] TestDeque/3.assignment_3 (0 ms)
+[ RUN      ] TestDeque/3.swap_1
+[       OK ] TestDeque/3.swap_1 (0 ms)
+[ RUN      ] TestDeque/3.swap_2
+[       OK ] TestDeque/3.swap_2 (0 ms)
+[ RUN      ] TestDeque/3.swap_3
+[       OK ] TestDeque/3.swap_3 (0 ms)
+[ RUN      ] TestDeque/3.size_1
+[       OK ] TestDeque/3.size_1 (0 ms)
+[ RUN      ] TestDeque/3.size_2
+[       OK ] TestDeque/3.size_2 (0 ms)
+[ RUN      ] TestDeque/3.size_3
+[       OK ] TestDeque/3.size_3 (0 ms)
+[ RUN      ] TestDeque/3.resize_1
+[       OK ] TestDeque/3.resize_1 (0 ms)
+[ RUN      ] TestDeque/3.resize_2
+[       OK ] TestDeque/3.resize_2 (0 ms)
+[ RUN      ] TestDeque/3.resize_3
+[       OK ] TestDeque/3.resize_3 (0 ms)
+[ RUN      ] TestDeque/3.clear_1
+[       OK ] TestDeque/3.clear_1 (0 ms)
+[ RUN      ] TestDeque/3.clear_2
+[       OK ] TestDeque/3.clear_2 (0 ms)
+[ RUN      ] TestDeque/3.clear_3
+[       OK ] TestDeque/3.clear_3 (0 ms)
+[ RUN      ] TestDeque/3.erase_1
+[       OK ] TestDeque/3.erase_1 (0 ms)
+[ RUN      ] TestDeque/3.erase_2
+[       OK ] TestDeque/3.erase_2 (0 ms)
+[ RUN      ] TestDeque/3.erase_3
+[       OK ] TestDeque/3.erase_3 (0 ms)
+[ RUN      ] TestDeque/3.erase_4
+[       OK ] TestDeque/3.erase_4 (0 ms)
+[ RUN      ] TestDeque/3.insert_1
+[       OK ] TestDeque/3.insert_1 (0 ms)
+[ RUN      ] TestDeque/3.insert_2
+[       OK ] TestDeque/3.insert_2 (0 ms)
+[ RUN      ] TestDeque/3.insert_3
+[       OK ] TestDeque/3.insert_3 (0 ms)
+[ RUN      ] TestDeque/3.insert_4
+[       OK ] TestDeque/3.insert_4 (0 ms)
+[ RUN      ] TestDeque/3.equals_1
+[       OK ] TestDeque/3.equals_1 (0 ms)
+[ RUN      ] TestDeque/3.equals_2
+[       OK ] TestDeque/3.equals_2 (0 ms)
+[ RUN      ] TestDeque/3.equals_3
+[       OK ] TestDeque/3.equals_3 (0 ms)
+[ RUN      ] TestDeque/3.compare_1
+[       OK ] TestDeque/3.compare_1 (0 ms)
+[ RUN      ] TestDeque/3.compare_2
+[       OK ] TestDeque/3.compare_2 (0 ms)
+[ RUN      ] TestDeque/3.compare_3
+[       OK ] TestDeque/3.compare_3 (0 ms)
+[ RUN      ] TestDeque/3.empty_1
+[       OK ] TestDeque/3.empty_1 (0 ms)
+[ RUN      ] TestDeque/3.empty_2
+[       OK ] TestDeque/3.empty_2 (0 ms)
+[ RUN      ] TestDeque/3.empty_3
+[       OK ] TestDeque/3.empty_3 (0 ms)
+[ RUN      ] TestDeque/3.destruct_1
+[       OK ] TestDeque/3.destruct_1 (0 ms)
+[ RUN      ] TestDeque/3.destruct_2
+[       OK ] TestDeque/3.destruct_2 (0 ms)
+[ RUN      ] TestDeque/3.destruct_3
+[       OK ] TestDeque/3.destruct_3 (0 ms)
+[ RUN      ] TestDeque/3.it_equals_1
+[       OK ] TestDeque/3.it_equals_1 (0 ms)
+[ RUN      ] TestDeque/3.it_equals_2
+[       OK ] TestDeque/3.it_equals_2 (0 ms)
+[ RUN      ] TestDeque/3.it_equals_3
+[       OK ] TestDeque/3.it_equals_3 (0 ms)
+[ RUN      ] TestDeque/3.it_notequals_1
+[       OK ] TestDeque/3.it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/3.it_notequals_2
+[       OK ] TestDeque/3.it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/3.it_notequals_3
+[       OK ] TestDeque/3.it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/3.plus_1
+[       OK ] TestDeque/3.plus_1 (0 ms)
+[ RUN      ] TestDeque/3.plus_2
+[       OK ] TestDeque/3.plus_2 (0 ms)
+[ RUN      ] TestDeque/3.plus_3
+[       OK ] TestDeque/3.plus_3 (0 ms)
+[ RUN      ] TestDeque/3.subtract_1
+[       OK ] TestDeque/3.subtract_1 (0 ms)
+[ RUN      ] TestDeque/3.subtract_2
+[       OK ] TestDeque/3.subtract_2 (0 ms)
+[ RUN      ] TestDeque/3.subtarct_3
+[       OK ] TestDeque/3.subtarct_3 (0 ms)
+[ RUN      ] TestDeque/3.star_1
+[       OK ] TestDeque/3.star_1 (0 ms)
+[ RUN      ] TestDeque/3.star_2
+[       OK ] TestDeque/3.star_2 (0 ms)
+[ RUN      ] TestDeque/3.star_3
+[       OK ] TestDeque/3.star_3 (0 ms)
+[ RUN      ] TestDeque/3.inc_pre_1
+[       OK ] TestDeque/3.inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/3.inc_pre_2
+[       OK ] TestDeque/3.inc_pre_2 (1 ms)
+[ RUN      ] TestDeque/3.inc_pre_3
+[       OK ] TestDeque/3.inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/3.inc_post_1
+[       OK ] TestDeque/3.inc_post_1 (0 ms)
+[ RUN      ] TestDeque/3.inc_post_2
+[       OK ] TestDeque/3.inc_post_2 (0 ms)
+[ RUN      ] TestDeque/3.inc_post_3
+[       OK ] TestDeque/3.inc_post_3 (0 ms)
+[ RUN      ] TestDeque/3.dec_pre_1
+[       OK ] TestDeque/3.dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/3.dec_pre_2
+[       OK ] TestDeque/3.dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/3.dec_pre_3
+[       OK ] TestDeque/3.dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/3.dec_post_1
+[       OK ] TestDeque/3.dec_post_1 (0 ms)
+[ RUN      ] TestDeque/3.dec_post_2
+[       OK ] TestDeque/3.dec_post_2 (0 ms)
+[ RUN      ] TestDeque/3.dec_post_3
+[       OK ] TestDeque/3.dec_post_3 (0 ms)
+[ RUN      ] TestDeque/3.plus_eq_1
+[       OK ] TestDeque/3.plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/3.plus_eq_2
+[       OK ] TestDeque/3.plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/3.plus_eq_3
+[       OK ] TestDeque/3.plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/3.minus_eq_1
+[       OK ] TestDeque/3.minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/3.minus_eq_2
+[       OK ] TestDeque/3.minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/3.minus_eq_3
+[       OK ] TestDeque/3.minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/3.it_cons_1
+[       OK ] TestDeque/3.it_cons_1 (0 ms)
+[ RUN      ] TestDeque/3.it_cons_2
+[       OK ] TestDeque/3.it_cons_2 (0 ms)
+[ RUN      ] TestDeque/3.it_cons_3
+[       OK ] TestDeque/3.it_cons_3 (0 ms)
+[ RUN      ] TestDeque/3.const_it_equals_1
+[       OK ] TestDeque/3.const_it_equals_1 (0 ms)
+[ RUN      ] TestDeque/3.const_it_equals_2
+[       OK ] TestDeque/3.const_it_equals_2 (0 ms)
+[ RUN      ] TestDeque/3.const_it_equals_3
+[       OK ] TestDeque/3.const_it_equals_3 (0 ms)
+[ RUN      ] TestDeque/3.const_it_notequals_1
+[       OK ] TestDeque/3.const_it_notequals_1 (0 ms)
+[ RUN      ] TestDeque/3.const_it_notequals_2
+[       OK ] TestDeque/3.const_it_notequals_2 (0 ms)
+[ RUN      ] TestDeque/3.const_it_notequals_3
+[       OK ] TestDeque/3.const_it_notequals_3 (0 ms)
+[ RUN      ] TestDeque/3.const_plus_1
+[       OK ] TestDeque/3.const_plus_1 (0 ms)
+[ RUN      ] TestDeque/3.const_plus_2
+[       OK ] TestDeque/3.const_plus_2 (0 ms)
+[ RUN      ] TestDeque/3.const_plus_3
+[       OK ] TestDeque/3.const_plus_3 (0 ms)
+[ RUN      ] TestDeque/3.const_subtract_1
+[       OK ] TestDeque/3.const_subtract_1 (0 ms)
+[ RUN      ] TestDeque/3.const_subtract_2
+[       OK ] TestDeque/3.const_subtract_2 (0 ms)
+[ RUN      ] TestDeque/3.const_subtract_3
+[       OK ] TestDeque/3.const_subtract_3 (0 ms)
+[ RUN      ] TestDeque/3.const_star_1
+[       OK ] TestDeque/3.const_star_1 (0 ms)
+[ RUN      ] TestDeque/3.const_star_2
+[       OK ] TestDeque/3.const_star_2 (0 ms)
+[ RUN      ] TestDeque/3.const_star_3
+[       OK ] TestDeque/3.const_star_3 (0 ms)
+[ RUN      ] TestDeque/3.const_inc_pre_1
+[       OK ] TestDeque/3.const_inc_pre_1 (0 ms)
+[ RUN      ] TestDeque/3.const_inc_pre_2
+[       OK ] TestDeque/3.const_inc_pre_2 (0 ms)
+[ RUN      ] TestDeque/3.const_inc_pre_3
+[       OK ] TestDeque/3.const_inc_pre_3 (0 ms)
+[ RUN      ] TestDeque/3.const_inc_post_1
+[       OK ] TestDeque/3.const_inc_post_1 (0 ms)
+[ RUN      ] TestDeque/3.const_inc_post_2
+[       OK ] TestDeque/3.const_inc_post_2 (0 ms)
+[ RUN      ] TestDeque/3.const_inc_post_3
+[       OK ] TestDeque/3.const_inc_post_3 (0 ms)
+[ RUN      ] TestDeque/3.const_dec_pre_1
+[       OK ] TestDeque/3.const_dec_pre_1 (0 ms)
+[ RUN      ] TestDeque/3.const_dec_pre_2
+[       OK ] TestDeque/3.const_dec_pre_2 (0 ms)
+[ RUN      ] TestDeque/3.const_dec_pre_3
+[       OK ] TestDeque/3.const_dec_pre_3 (0 ms)
+[ RUN      ] TestDeque/3.const_dec_post_1
+[       OK ] TestDeque/3.const_dec_post_1 (0 ms)
+[ RUN      ] TestDeque/3.const_dec_post_2
+[       OK ] TestDeque/3.const_dec_post_2 (0 ms)
+[ RUN      ] TestDeque/3.const_dec_post_3
+[       OK ] TestDeque/3.const_dec_post_3 (0 ms)
+[ RUN      ] TestDeque/3.const_plus_eq_1
+[       OK ] TestDeque/3.const_plus_eq_1 (0 ms)
+[ RUN      ] TestDeque/3.const_plus_eq_2
+[       OK ] TestDeque/3.const_plus_eq_2 (0 ms)
+[ RUN      ] TestDeque/3.const_plus_eq_3
+[       OK ] TestDeque/3.const_plus_eq_3 (0 ms)
+[ RUN      ] TestDeque/3.const_minus_eq_1
+[       OK ] TestDeque/3.const_minus_eq_1 (0 ms)
+[ RUN      ] TestDeque/3.const_minus_eq_2
+[       OK ] TestDeque/3.const_minus_eq_2 (0 ms)
+[ RUN      ] TestDeque/3.const_minus_eq_3
+[       OK ] TestDeque/3.const_minus_eq_3 (0 ms)
+[ RUN      ] TestDeque/3.const_it_cons_1
+[       OK ] TestDeque/3.const_it_cons_1 (0 ms)
+[ RUN      ] TestDeque/3.const_it_cons_2
+[       OK ] TestDeque/3.const_it_cons_2 (0 ms)
+[ RUN      ] TestDeque/3.const_it_cons_3
+[       OK ] TestDeque/3.const_it_cons_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_EqualEqual_1
+[       OK ] TestDeque/3.Const_Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_EqualEqual_2
+[       OK ] TestDeque/3.Const_Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_EqualEqual_3
+[       OK ] TestDeque/3.Const_Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_NotEqual_1
+[       OK ] TestDeque/3.Const_Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_NotEqual_2
+[       OK ] TestDeque/3.Const_Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_NotEqual_3
+[       OK ] TestDeque/3.Const_Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Dereference_1
+[       OK ] TestDeque/3.Const_Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Dereference_2
+[       OK ] TestDeque/3.Const_Iterator_Dereference_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Dereference_3
+[       OK ] TestDeque/3.Const_Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PrePlusPlus_1
+[       OK ] TestDeque/3.Const_Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PrePlusPlus_2
+[       OK ] TestDeque/3.Const_Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PrePlusPlus_3
+[       OK ] TestDeque/3.Const_Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PostPlusPlus_1
+[       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PostPlusPlus_2
+[       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PostPlusPlus_3
+[       OK ] TestDeque/3.Const_Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PreMinusMinus_1
+[       OK ] TestDeque/3.Const_Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PreMinusMinus_2
+[       OK ] TestDeque/3.Const_Iterator_PreMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PreMinusMinus_3
+[       OK ] TestDeque/3.Const_Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PostMinusMinus_1
+[       OK ] TestDeque/3.Const_Iterator_PostMinusMinus_1 (1 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PostMinusMinus_2
+[       OK ] TestDeque/3.Const_Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PostMinusMinus_3
+[       OK ] TestDeque/3.Const_Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PlusEq_1
+[       OK ] TestDeque/3.Const_Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PlusEq_2
+[       OK ] TestDeque/3.Const_Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_PlusEq_3
+[       OK ] TestDeque/3.Const_Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_MinusEq_1
+[       OK ] TestDeque/3.Const_Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_MinusEq_2
+[       OK ] TestDeque/3.Const_Iterator_MinusEq_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_MinusEq_3
+[       OK ] TestDeque/3.Const_Iterator_MinusEq_3 (0 ms)
+[ RUN      ] TestDeque/3.Resize_1
+[       OK ] TestDeque/3.Resize_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Plus_1
+[       OK ] TestDeque/3.Const_Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Plus_2
+[       OK ] TestDeque/3.Const_Iterator_Plus_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Plus_3
+[       OK ] TestDeque/3.Const_Iterator_Plus_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Minus_1
+[       OK ] TestDeque/3.Const_Iterator_Minus_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Minus_2
+[       OK ] TestDeque/3.Const_Iterator_Minus_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Minus_3
+[       OK ] TestDeque/3.Const_Iterator_Minus_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Constructor
+[       OK ] TestDeque/3.Const_Iterator_Constructor (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Constructor_1
+[       OK ] TestDeque/3.Const_Iterator_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Constructor_2
+[       OK ] TestDeque/3.Const_Iterator_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Constructor_3
+[       OK ] TestDeque/3.Const_Iterator_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Copy_Constructor_1
+[       OK ] TestDeque/3.Const_Iterator_Copy_Constructor_1 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Copy_Constructor_2
+[       OK ] TestDeque/3.Const_Iterator_Copy_Constructor_2 (0 ms)
+[ RUN      ] TestDeque/3.Const_Iterator_Copy_Constructor_3
+[       OK ] TestDeque/3.Const_Iterator_Copy_Constructor_3 (0 ms)
+[ RUN      ] TestDeque/3.Resize_3
+[       OK ] TestDeque/3.Resize_3 (0 ms)
+[ RUN      ] TestDeque/3.Resize_4
+[       OK ] TestDeque/3.Resize_4 (0 ms)
+[ RUN      ] TestDeque/3.Resize_5
+[       OK ] TestDeque/3.Resize_5 (0 ms)
+[ RUN      ] TestDeque/3.Copy_1
+[       OK ] TestDeque/3.Copy_1 (0 ms)
+[ RUN      ] TestDeque/3.Insert_1
+[       OK ] TestDeque/3.Insert_1 (0 ms)
+[ RUN      ] TestDeque/3.Insert_2
+[       OK ] TestDeque/3.Insert_2 (0 ms)
+[ RUN      ] TestDeque/3.Insert_3
+[       OK ] TestDeque/3.Insert_3 (0 ms)
+[ RUN      ] TestDeque/3.Insert_4
+[       OK ] TestDeque/3.Insert_4 (0 ms)
+[ RUN      ] TestDeque/3.Less_Than_1
+[       OK ] TestDeque/3.Less_Than_1 (0 ms)
+[ RUN      ] TestDeque/3.Less_Than_2
+[       OK ] TestDeque/3.Less_Than_2 (0 ms)
+[ RUN      ] TestDeque/3.Less_Than_3
+[       OK ] TestDeque/3.Less_Than_3 (0 ms)
+[ RUN      ] TestDeque/3.Push_Front_1
+[       OK ] TestDeque/3.Push_Front_1 (0 ms)
+[ RUN      ] TestDeque/3.Push_Front_2
+[       OK ] TestDeque/3.Push_Front_2 (6 ms)
+[ RUN      ] TestDeque/3.Push_Front_3
+[       OK ] TestDeque/3.Push_Front_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_EqualEqual_1
+[       OK ] TestDeque/3.Iterator_EqualEqual_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_EqualEqual_2
+[       OK ] TestDeque/3.Iterator_EqualEqual_2 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_EqualEqual_3
+[       OK ] TestDeque/3.Iterator_EqualEqual_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_NotEqual_1
+[       OK ] TestDeque/3.Iterator_NotEqual_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_NotEqual_2
+[       OK ] TestDeque/3.Iterator_NotEqual_2 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_NotEqual_3
+[       OK ] TestDeque/3.Iterator_NotEqual_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_Dereference_1
+[       OK ] TestDeque/3.Iterator_Dereference_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_Dereference_2
+[       OK ] TestDeque/3.Iterator_Dereference_2 (1 ms)
+[ RUN      ] TestDeque/3.Iterator_Dereference_3
+[       OK ] TestDeque/3.Iterator_Dereference_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PrePlusPlus_1
+[       OK ] TestDeque/3.Iterator_PrePlusPlus_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PrePlusPlus_2
+[       OK ] TestDeque/3.Iterator_PrePlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PrePlusPlus_3
+[       OK ] TestDeque/3.Iterator_PrePlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PostPlusPlus_1
+[       OK ] TestDeque/3.Iterator_PostPlusPlus_1 (1 ms)
+[ RUN      ] TestDeque/3.Iterator_PostPlusPlus_2
+[       OK ] TestDeque/3.Iterator_PostPlusPlus_2 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PostPlusPlus_3
+[       OK ] TestDeque/3.Iterator_PostPlusPlus_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PreMinusMinus_1
+[       OK ] TestDeque/3.Iterator_PreMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PreMinusMinus_2
+[       OK ] TestDeque/3.Iterator_PreMinusMinus_2 (1 ms)
+[ RUN      ] TestDeque/3.Iterator_PreMinusMinus_3
+[       OK ] TestDeque/3.Iterator_PreMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PostMinusMinus_1
+[       OK ] TestDeque/3.Iterator_PostMinusMinus_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PostMinusMinus_2
+[       OK ] TestDeque/3.Iterator_PostMinusMinus_2 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PostMinusMinus_3
+[       OK ] TestDeque/3.Iterator_PostMinusMinus_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PlusEq_1
+[       OK ] TestDeque/3.Iterator_PlusEq_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PlusEq_2
+[       OK ] TestDeque/3.Iterator_PlusEq_2 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_PlusEq_3
+[       OK ] TestDeque/3.Iterator_PlusEq_3 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_MinusEq_1
+[       OK ] TestDeque/3.Iterator_MinusEq_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_Plus_1
+[       OK ] TestDeque/3.Iterator_Plus_1 (0 ms)
+[ RUN      ] TestDeque/3.Iterator_Minus_1
+[       OK ] TestDeque/3.Iterator_Minus_1 (0 ms)
+[----------] 265 tests from TestDeque/3 (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1060 tests from 4 test cases ran. (34 ms total)
+[  PASSED  ] 1060 tests.
